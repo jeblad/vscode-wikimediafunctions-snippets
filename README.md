@@ -9,6 +9,8 @@ The snippets has a prefix that is the method name, and inside Visual Studio Code
 
 As this is snippets, there is no Intellisense available. This is a bit unfortunate, as the user must learn the method names. They do although work as a typing aid, and especially well as an aid to get the arguments right.
 
+This set of snippets will not provide the standard functions for Lua.
+
 ## Libraries
 Please don't expect this list to be complete! ;)
 
