@@ -1,29 +1,34 @@
 {
-    "name": "WikimediaLuaFunctionsSnippets",
-    "publisher": "jeblad",
-    "displayName": "Wikimedia function snippets",
-    "description": "Snippets for the functions in use at Wikimedia sites, including, but nnnnnnot limted to Lua as used by Scribunto",
-    "galleryBanner": {
-        "color": "#0273D4",
-        "theme": "dark"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets"
-    },
-    "version": "0.1.0",
-    "engines": {
-        "vscode": "0.10.x"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "lua",
-                "path": "./snippets/lua.json"
-            }
-        ]
-    }
+	"name": "WMFsnippets",
+	"publisher": "jeblad",
+	"displayName": "Wikimedia function snippets",
+	"description": "Snippets for the functions in use at Wikimedia sites, including, but not limted to Lua as used by Scribunto",
+	"license": "GPL v2",
+	"galleryBanner": {
+		"color": "#0273D4",
+		"theme": "dark"
+	},
+	"bugs": {
+		"url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets"
+	},
+	"homepage": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets"
+	},
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "lua",
+				"path": "./snippets/lua.json"
+			}
+		]
+	}
 }
