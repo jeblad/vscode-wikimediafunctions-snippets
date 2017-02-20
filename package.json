@@ -1,8 +1,8 @@
 {
     "name": "WikimediaLuaFunctionsSnippets",
     "publisher": "jeblad",
-    "displayName": "Wikimedia Lua functions snippets",
-    "description": "Snippets for the Lua functions in use at Wikimedia sites. ",
+    "displayName": "Wikimedia function snippets",
+    "description": "Snippets for the functions in use at Wikimedia sites, including, but nnnnnnot limted to Lua as used by Scribunto",
     "galleryBanner": {
         "color": "#0273D4",
         "theme": "dark"
