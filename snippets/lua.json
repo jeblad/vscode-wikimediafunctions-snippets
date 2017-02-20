@@ -1,0 +1,121 @@
+{
+	"mw 001 ( text )": {
+		"prefix": "addWarning",
+		"body": [
+			"addWarning( ${1:text} )"
+		],
+		"description": "mw.addWarning( text )\n text - string with wikitext"
+	},
+	"mw 002 ( ... )": {
+		"prefix": "allToString",
+		"body": [
+			"allToString( ${1:...} )"
+		],
+		"description": "mw.allToString( ... )\n calls tostring() on all args"
+	},
+	"mw 003 ( value )": {
+		"prefix": "clone",
+		"body": [
+			"clone( ${1:value} )"
+		],
+		"description": "mw.clone( value )\n value - any to be converted"
+	},
+	"mw 004 ()": {
+		"prefix": "getCurrentFrame",
+		"body": [
+			"getCurrentFrame()"
+		],
+		"description": "mw.getCurrentFrame()"
+	},
+	"mw 005 ()": {
+		"prefix": "incrementExpensiveFunctionCount",
+		"body": [
+			"incrementExpensiveFunctionCount()"
+		],
+		"description": "mw.incrementExpensiveFunctionCount()"
+	},
+	"mw 006 ()": {
+		"prefix": "isSubsting",
+		"body": [
+			"isSubsting()"
+		],
+		"description": "mw.isSubsting()"
+	},
+	"mw 007 ( module )": {
+		"prefix": "loadData",
+		"body": [
+			"loadData( ${1:module} )"
+		],
+		"description": "mw.loadData( module )\n module - string identifying a page"
+	},
+	"mw 008 ( object )": {
+		"prefix": "dumpObject",
+		"body": [
+			"dumpObject( ${1:object} )"
+		],
+		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
+	},
+	"mw 009 ( ... )": {
+		"prefix": "log",
+		"body": [
+			"log( ${1:...} )"
+		],
+		"description": "mw.log( ... )\n calls tostring() on all args"
+	},
+	"mw 010 ( object [, prefix] )": {
+		"prefix": "logObject",
+		"body": [
+			"logObject( ${1:object}${2:[, prefix]} )"
+		],
+		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
+	},
+	"frame 001": {
+		"prefix": "args",
+		"body": [
+			"args"
+		],
+		"description": "Table for arguments passed to the frame."
+	},
+	"frame 002( name, args )": {
+		"prefix": "callParserFunction",
+		"body": [
+			"callParserFunction( ${1:name}${2:[, args]} )"
+		],
+		"description": "frame:callParserFunction( name, args )\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 003( name, ... )": {
+		"prefix": "callParserFunction",
+		"body": [
+			"callParserFunction( ${1:name}${2:[, ...]} )"
+		],
+		"description": "frame:callParserFunction( name, ... )\n name - string identifying the parser function\n collected arguments"
+	},
+	"frame 004{ name, args }": {
+		"prefix": "callParserFunction",
+		"body": [
+			"callParserFunction{ name = ${1:name}, args = ${2:args} }"
+		],
+		"description": "frame:callParserFunction{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 005{ name, args }": {
+		"prefix": "expandTemplate",
+		"body": [
+			"expandTemplate{ name = ${1:name}, args = ${2:args} }"
+		],
+		"description": "frame:expandTemplate{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 006( name, content, args )": {
+		"prefix": "extensionTag",
+		"body": [
+			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )"
+		],
+		"description": "frame:extensionTag( name, content, args )\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
+	},
+	"frame 007{ name, content, args }": {
+		"prefix": "extensionTag",
+		"body": [
+			"extensionTag{ name = ${1:name}, args = ${2:args} }"
+		],
+		"description": "frame:extensionTag{ name = string, content = string, args = table }\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
+	}
+}
