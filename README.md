@@ -16,8 +16,8 @@ Please don't expect this list to be complete! ;)
 
 Note that this set of snippets will not provide the standard functions for Lua.
 
- - mw; basic functions from Scribunto
- - frame; functions for interacting with Mediawiki
+- mw; basic functions from Scribunto
+- frame; functions for interacting with Mediawiki
  
 ## Installation
 
