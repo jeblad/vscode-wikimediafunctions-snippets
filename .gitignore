@@ -1,0 +1,6 @@
+*~
+*.tmp
+*.vsix
+.vscode
+.vscodeignore
+

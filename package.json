@@ -1,6 +1,6 @@
 {
 	"name": "WMFsnippets",
-	"publisher": "jeblad",
+	"publisher": "jeblad-1",
 	"displayName": "Wikimedia function snippets",
 	"description": "Snippets for the functions in use at Wikimedia sites, including, but not limted to Lua as used by Scribunto",
 	"license": "GPL v2",
