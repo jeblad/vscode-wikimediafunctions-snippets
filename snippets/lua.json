@@ -69,6 +69,7 @@
 		],
 		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
 	},
+	// @todo frame is incomplete
 	"frame 001": {
 		"prefix": "args",
 		"body": [
@@ -118,4 +119,5 @@
 		],
 		"description": "frame:extensionTag{ name = string, content = string, args = table }\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
 	}
+
 }
