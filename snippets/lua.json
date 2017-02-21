@@ -1,5 +1,5 @@
 {
-	// basic functions
+	// Scribunto libraries, basic functions
 	"mw 001": {
 		"prefix": "addWarning( text )",
 		"body": [
@@ -71,7 +71,7 @@
 		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
 	},
 
-	// frame functions
+	// Scribunto libraries, frame functions
 	"frame 001": {
 		"prefix": "args",
 		"body": [
