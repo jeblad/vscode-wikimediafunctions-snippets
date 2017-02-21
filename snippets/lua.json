@@ -1,74 +1,76 @@
 {
-	"mw 001 ( text )": {
-		"prefix": "addWarning",
+	// basic functions
+	"mw 001": {
+		"prefix": "addWarning( text )",
 		"body": [
 			"addWarning( ${1:text} )"
 		],
 		"description": "mw.addWarning( text )\n text - string with wikitext"
 	},
-	"mw 002 ( ... )": {
-		"prefix": "allToString",
+	"mw 002": {
+		"prefix": "allToString( ... )",
 		"body": [
 			"allToString( ${1:...} )"
 		],
 		"description": "mw.allToString( ... )\n calls tostring() on all args"
 	},
-	"mw 003 ( value )": {
-		"prefix": "clone",
+	"mw 003": {
+		"prefix": "clone( value )",
 		"body": [
 			"clone( ${1:value} )"
 		],
 		"description": "mw.clone( value )\n value - any to be converted"
 	},
-	"mw 004 ()": {
-		"prefix": "getCurrentFrame",
+	"mw 004": {
+		"prefix": "getCurrentFrame()",
 		"body": [
 			"getCurrentFrame()"
 		],
 		"description": "mw.getCurrentFrame()"
 	},
-	"mw 005 ()": {
-		"prefix": "incrementExpensiveFunctionCount",
+	"mw 005": {
+		"prefix": "incrementExpensiveFunctionCount()",
 		"body": [
 			"incrementExpensiveFunctionCount()"
 		],
 		"description": "mw.incrementExpensiveFunctionCount()"
 	},
-	"mw 006 ()": {
-		"prefix": "isSubsting",
+	"mw 006": {
+		"prefix": "isSubsting()",
 		"body": [
 			"isSubsting()"
 		],
 		"description": "mw.isSubsting()"
 	},
-	"mw 007 ( module )": {
-		"prefix": "loadData",
+	"mw 007": {
+		"prefix": "loadData( module )",
 		"body": [
 			"loadData( ${1:module} )"
 		],
 		"description": "mw.loadData( module )\n module - string identifying a page"
 	},
-	"mw 008 ( object )": {
-		"prefix": "dumpObject",
+	"mw 008": {
+		"prefix": "dumpObject( object )",
 		"body": [
 			"dumpObject( ${1:object} )"
 		],
 		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
 	},
-	"mw 009 ( ... )": {
-		"prefix": "log",
+	"mw 009": {
+		"prefix": "log( ... )",
 		"body": [
 			"log( ${1:...} )"
 		],
 		"description": "mw.log( ... )\n calls tostring() on all args"
 	},
-	"mw 010 ( object [, prefix] )": {
-		"prefix": "logObject",
+	"mw 010": {
+		"prefix": "logObject ( object, prefix )",
 		"body": [
 			"logObject( ${1:object}${2:[, prefix]} )"
 		],
 		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
 	},
+
 	// @todo frame is incomplete
 	"frame 001": {
 		"prefix": "args",
