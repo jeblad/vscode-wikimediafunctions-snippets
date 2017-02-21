@@ -1,77 +1,87 @@
 {
-	// Scribunto libraries, basic functions
+	// Standard libraries, basic functions
+	// Standard libraries, debug library
+	// Standard libraries, math library
+	// Standard libraries, os library
+	// Standard libraries, package library
+	// Standard libraries, string library
+	// Standard libraries, table library
+	
+	// Scribunto libraries, basic library
+	// This is a proper library imported as default and can be identified by prefix alone
 	"mw 001": {
-		"prefix": "addWarning( text )",
+		"prefix": "mw.addWarning( text )",
 		"body": [
-			"addWarning( ${1:text} )"
+			"mw.addWarning( ${1:text} )"
 		],
 		"description": "mw.addWarning( text )\n text - string with wikitext"
 	},
 	"mw 002": {
-		"prefix": "allToString( ... )",
+		"prefix": "mw.allToString( ... )",
 		"body": [
-			"allToString( ${1:...} )"
+			"mw.allToString( ${1:...} )"
 		],
 		"description": "mw.allToString( ... )\n calls tostring() on all args"
 	},
 	"mw 003": {
-		"prefix": "clone( value )",
+		"prefix": "mw.clone( value )",
 		"body": [
-			"clone( ${1:value} )"
+			"mw.clone( ${1:value} )"
 		],
 		"description": "mw.clone( value )\n value - any to be converted"
 	},
 	"mw 004": {
-		"prefix": "getCurrentFrame()",
+		"prefix": "mw.getCurrentFrame()",
 		"body": [
-			"getCurrentFrame()"
+			"mw.getCurrentFrame()"
 		],
 		"description": "mw.getCurrentFrame()"
 	},
 	"mw 005": {
-		"prefix": "incrementExpensiveFunctionCount()",
+		"prefix": "mw.incrementExpensiveFunctionCount()",
 		"body": [
-			"incrementExpensiveFunctionCount()"
+			"mw.incrementExpensiveFunctionCount()"
 		],
 		"description": "mw.incrementExpensiveFunctionCount()"
 	},
 	"mw 006": {
-		"prefix": "isSubsting()",
+		"prefix": "mw.isSubsting()",
 		"body": [
-			"isSubsting()"
+			"mw.isSubsting()"
 		],
 		"description": "mw.isSubsting()"
 	},
 	"mw 007": {
-		"prefix": "loadData( module )",
+		"prefix": "mw.loadData( module )",
 		"body": [
-			"loadData( ${1:module} )"
+			"mw.loadData( ${1:module} )"
 		],
 		"description": "mw.loadData( module )\n module - string identifying a page"
 	},
 	"mw 008": {
-		"prefix": "dumpObject( object )",
+		"prefix": "mw.dumpObject( object )",
 		"body": [
-			"dumpObject( ${1:object} )"
+			"mw.dumpObject( ${1:object} )"
 		],
 		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
 	},
 	"mw 009": {
-		"prefix": "log( ... )",
+		"prefix": "mw.log( ... )",
 		"body": [
-			"log( ${1:...} )"
+			"mw.log( ${1:...} )"
 		],
 		"description": "mw.log( ... )\n calls tostring() on all args"
 	},
 	"mw 010": {
-		"prefix": "logObject ( object, prefix )",
+		"prefix": "mw.logObject ( object, prefix )",
 		"body": [
-			"logObject( ${1:object}${2:[, prefix]} )"
+			"mw.logObject( ${1:object}${2:[, prefix]} )"
 		],
 		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
 	},
 
-	// Scribunto libraries, frame functions
+	// Scribunto libraries, frame library
+	// This is an object, and as such can't be properly identified unless intellisense is fixed
 	"frame 001": {
 		"prefix": "args",
 		"body": [
@@ -187,7 +197,7 @@
 	"frame 017": {
 		"prefix": "newTemplateParserValue{ title = title, args = table }",
 		"body": [
-			"newTemplateParserValue{ title =  ${1:title}, args =  ${2:table} }"
+			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }"
 		],
 		"description": "frame:newTemplateParserValue{ title = title, args = table }\n title - name of template to be expanded\n args - arguments to the template"
 	},
@@ -197,5 +207,134 @@
 			"argumentPairs()"
 		],
 		"description": "frame:argumentPairs()\nSame as pairs( frame.args )"
-	}
+	},
+
+	// Scribunto libraries, hash library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"mw.hash 001": {
+		"prefix": "mw.hash.hashValue( algo, value )",
+		"body": [
+			"mw.hash.hashValue( ${1:algo}, ${2:value} )"
+		],
+		"description": "mw.hash.hashValue( algo, value )\n algo - algorithm to use for hashing\n value - string to be hashed"
+	},
+	"mw.hash 002": {
+		"prefix": "mw.hash.listAlgorithms()",
+		"body": [
+			"mw.hash.listAlgorithms()"
+		],
+		"description": "mw.hash.listAlgorithms()"
+	},
+
+	// Scribunto libraries, html library
+	// This is an object, and as such can't be properly identified unless intellisense is fixed
+	"mw.html 001": {
+		"prefix": "mw.html.create( tagName, args )",
+		"body": [
+			"mw.html.create( ${1:tagName}${2:[, args]} )"
+		],
+		"description": "mw.html.create( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 002": {
+		"prefix": "node( builder )",
+		"body": [
+			"node( ${1:builder} )"
+		],
+		"description": "mw.html:node( builder )\n builder - string holding a representation of the html code"
+	},
+	"mw.html 003": {
+		"prefix": "wikitext( ... )",
+		"body": [
+			"wikitext( ${1:...} )"
+		],
+		"description": "mw.html:wikitext( ... )\n a number of wikitext fragments"
+	},
+	"mw.html 004": {
+		"prefix": "newline()",
+		"body": [
+			"newline()"
+		],
+		"description": "mw.html:newline()"
+	},
+	"mw.html 005": {
+		"prefix": "tag( tagName, args )",
+		"body": [
+			"tag( ${1:tagName}, ${2:args} )"
+		],
+		"description": "mw.html:tag( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 006": {
+		"prefix": "attr( name, value )",
+		"body": [
+			"attr( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:attr( name, value )"
+	},
+	"mw.html 007": {
+		"prefix": "attr( table )",
+		"body": [
+			"attr( ${1:table} )"
+		],
+		"description": "mw.html:attr( table )"
+	},
+	"mw.html 008": {
+		"prefix": "getAttr( name )",
+		"body": [
+			"getAttr( ${1:name} )"
+		],
+		"description": "mw.html:getAttr( name )"
+	},
+	"mw.html 009": {
+		"prefix": "addClass( class )",
+		"body": [
+			"addClass( ${1:class} )"
+		],
+		"description": "mw.html:addClass( class )"
+	},
+	"mw.html 010": {
+		"prefix": "css( name, value )",
+		"body": [
+			"css( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:css( name, value )"
+	},
+	"mw.html 011": {
+		"prefix": "css( table )",
+		"body": [
+			"css( ${1:table} )"
+		],
+		"description": "mw.html:css( table )"
+	},
+	"mw.html 012": {
+		"prefix": "cssText( css )",
+		"body": [
+			"cssText( ${1:css} )"
+		],
+		"description": "mw.html:cssText( css )"
+	},
+	"mw.html 013": {
+		"prefix": "done()",
+		"body": [
+			"done()"
+		],
+		"description": "mw.html:done()"
+	},
+	"mw.html 014": {
+		"prefix": "allDone()",
+		"body": [
+			"allDone()"
+		],
+		"description": "mw.html:allDone()"
+	},
+
+	// Scribunto libraries, language library
+	// Scribunto libraries, message library
+	// Scribunto libraries, site library
+	// Scribunto libraries, text library
+	// Scribunto libraries, title library
+	// Scribunto libraries, uri library
+	// Scribunto libraries, ustring library
+	// Loadable libraries, bit32 library
+	// Loadable libraries, libraryUtil library
+
 }
