@@ -268,49 +268,49 @@
 		"body": [
 			"attr( ${1:name}, ${2:value} )"
 		],
-		"description": "mw.html:attr( name, value )"
+		"description": "mw.html:attr( name, value )\n name - string identifying attribute\n value - content of attribute"
 	},
 	"mw.html 007": {
 		"prefix": "attr( table )",
 		"body": [
 			"attr( ${1:table} )"
 		],
-		"description": "mw.html:attr( table )"
+		"description": "mw.html:attr( table )\n table - key-value pairs of attributes"
 	},
 	"mw.html 008": {
 		"prefix": "getAttr( name )",
 		"body": [
 			"getAttr( ${1:name} )"
 		],
-		"description": "mw.html:getAttr( name )"
+		"description": "mw.html:getAttr( name )\n name - string identifying attribute"
 	},
 	"mw.html 009": {
 		"prefix": "addClass( class )",
 		"body": [
 			"addClass( ${1:class} )"
 		],
-		"description": "mw.html:addClass( class )"
+		"description": "mw.html:addClass( class )\n class - string identifying class"
 	},
 	"mw.html 010": {
 		"prefix": "css( name, value )",
 		"body": [
 			"css( ${1:name}, ${2:value} )"
 		],
-		"description": "mw.html:css( name, value )"
+		"description": "mw.html:css( name, value )\n name - string identifying style\n value - content of style"
 	},
 	"mw.html 011": {
 		"prefix": "css( table )",
 		"body": [
 			"css( ${1:table} )"
 		],
-		"description": "mw.html:css( table )"
+		"description": "mw.html:css( table )\n table - key-value pairs of styles"
 	},
 	"mw.html 012": {
 		"prefix": "cssText( css )",
 		"body": [
 			"cssText( ${1:css} )"
 		],
-		"description": "mw.html:cssText( css )"
+		"description": "mw.html:cssText( css )\n css - raw styles"
 	},
 	"mw.html 013": {
 		"prefix": "done()",
