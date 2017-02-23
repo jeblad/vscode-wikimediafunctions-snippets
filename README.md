@@ -14,13 +14,21 @@ As this is snippets, there is no Intellisense available. This is a bit unfortuna
 
 Please don't expect this list to be complete! ;)
 
+### Javascript
+
+None
+
 ### Lua
 
 Note that this set of snippets will not provide the standard functions for Lua.
 
 - mw; basic functions from Scribunto
 - frame; functions for interacting with Mediawiki
- 
+
+### PHP
+
+None
+
 ## Installation
 
 1. Install Visual Studio Code 0.10.1 or higher
