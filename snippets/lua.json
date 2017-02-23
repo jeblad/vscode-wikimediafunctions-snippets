@@ -609,6 +609,90 @@
 
 	// Loadable libraries, bit32 library
 	// This is a proper library imported as default and can be identified by prefix alone
+	"bit32 001": {
+		"prefix": "bit32.band( ... )",
+		"body": [
+			"bit32.band( ${1:...} )"
+		],
+		"description": "bit32.band( ... )\n bitwise 'and' of all arguments"
+	},
+	"bit32 002": {
+		"prefix": "bit32.bnot( x )",
+		"body": [
+			"bit32.bnot( ${1:x} )"
+		],
+		"description": "bit32.bnot( x )\n x - bitwise complement"
+	},
+	"bit32 003": {
+		"prefix": "bit32.bor( ... )",
+		"body": [
+			"bit32.bor( ${1:...} )"
+		],
+		"description": "bit32.bor( ... )\n bitwise 'or' of all arguments"
+	},
+	"bit32 004": {
+		"prefix": "bit32.btest( ... )",
+		"body": [
+			"bit32.btest( ${1:...} )"
+		],
+		"description": "bit32.btest( ... )\n bitwise 'and' of all arguments followed by logical complement"
+	},
+	"bit32 005": {
+		"prefix": "bit32.bxor( ... )",
+		"body": [
+			"bit32.bxor( ${1:...} )"
+		],
+		"description": "bit32.bxor( ... )\n bitwise 'xor' of all arguments"
+	},
+	"bit32 006": {
+		"prefix": "bit32.extract( n, field, width )",
+		"body": [
+			"bit32.extract( ${1:n}, ${2:field}${3:[, width} )"
+		],
+		"description": "bit32.extract( n, field[, width] )\n n - number to use as source\n field - index to start\n width - number of bits to process"
+	},
+	"bit32 007": {
+		"prefix": "bit32.replace( n, v, field, width )",
+		"body": [
+			"bit32.replace( ${1:n}, ${2:v}, ${3:field}${4:[, width]} )"
+		],
+		"description": "bit32.replace( n, v, field[, width] )\n n - number to use as source\n v - number to use as replacement\n field - index to start\n width - number of bits to process"
+	},
+	"bit32 008": {
+		"prefix": "bit32.lshift( n, disp )",
+		"body": [
+			"bit32.lshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.lshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 009": {
+		"prefix": "bit32.rshift( n, disp )",
+		"body": [
+			"bit32.rshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.rshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 010": {
+		"prefix": "bit32.arshift( n, disp )",
+		"body": [
+			"bit32.arshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.arshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 011": {
+		"prefix": "bit32.lrotate( n, disp )",
+		"body": [
+			"bit32.lrotate( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.lrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 012": {
+		"prefix": "bit32.rrotate( n, disp )",
+		"body": [
+			"bit32.rrotate( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.rrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
 
 	// Loadable libraries, libraryUtil library
 	// This is a proper library imported as default and can be identified by prefix alone
