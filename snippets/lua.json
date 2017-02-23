@@ -554,39 +554,39 @@
 		"description": "mw.language:getArrow( direction )\n direction - one of 'forwards', 'backwards', 'left', 'right', 'up', or 'down'"
 	},
 	"mw.language 033": {
-		"prefix": "getDir",
+		"prefix": "getDir()",
 		"body": [
 			"getDir()"
 		],
 		"description": "mw.language:getDir()"
 	},
 	"mw.language 034": {
-		"prefix": "getDirMark",
+		"prefix": "getDirMark( opposite )",
 		"body": [
 			"getDirMark( ${1:opposite} )"
 		],
 		"description": "mw.language:getDirMark( opposite )\n opposite - boolean for inverting direction"
 	},
 	"mw.language 035": {
-		"prefix": "getDirMarkEntity",
+		"prefix": "getDirMarkEntity( opposite )",
 		"body": [
 			"getDirMarkEntity( ${1:opposite} )"
 		],
 		"description": "mw.language:getDirMarkEntity( opposite )\n opposite - boolean for inverting direction"
 	},
 	"mw.language 036": {
-		"prefix": "getDurationIntervals",
+		"prefix": "getDurationIntervals( seconds )",
 		"body": [
 			"getDurationIntervals( ${1:seconds} )"
 		],
 		"description": "mw.language:getDurationIntervals( seconds )\n seconds - length of interval"
 	},
 	"mw.language 037": {
-		"prefix": "getDurationIntervals",
+		"prefix": "getDurationIntervals( seconds, allowedIntervals )",
 		"body": [
 			"getDurationIntervals( ${1:seconds}${2:[, allowedIntervals]} )"
 		],
-		"description": "mw.language:getDurationIntervals( seconds, allowedIntervals )\n seconds - length of interval\n allowedIntervals - table of named intervals"
+		"description": "mw.language:getDurationIntervals( seconds[, allowedIntervals} )\n seconds - length of interval\n allowedIntervals - table of named intervals"
 	},
 
 	// Scribunto libraries, message librarylibrary
