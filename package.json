@@ -3,6 +3,9 @@
 	"publisher": "jeblad-1",
 	"displayName": "Lua snippets for Wikimedia",
 	"description": "Snippets for the Lua functions in use at Wikimedia sites, including, but not limted to Lua functions used by Scribunto",
+	"author": {
+		"name": "John Erling Blad"
+	},
 	"license": "GPL v2",
 	"galleryBanner": {
 		"color": "#0273D4",
