@@ -1,9 +1,6 @@
 # VS Code function snippets for Wikimedia
 
-This extension for Visual Studio Code adds snippets for various languages in
- use by Wikimedia at its sites running [MediaWiki](http://www.mediawiki.org)
- software. Among those languages are Lua, which is used as a templating language
- by the [Scribunto extension](https://www.mediawiki.org/wiki/Extension:Scribunto).
+This extension for Visual Studio Code adds snippets for various languages in use by Wikimedia at its sites running [MediaWiki](http://www.mediawiki.org) software. Among those languages are Lua, which is used as a templating language by the [Scribunto extension](https://www.mediawiki.org/wiki/Extension:Scribunto).
 
 ## Usage
 
