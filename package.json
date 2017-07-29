@@ -8,7 +8,7 @@
   "license": "GPL-2.0",
   "galleryBanner": {
     "color": "#EFF1F3",
-    "theme": "dark"
+    "theme": "light"
   },
   "bugs": {
     "url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/issues",
