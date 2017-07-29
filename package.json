@@ -1,5 +1,5 @@
 {
-  "name": "wmf-lua-snippets",
+  "name": "WMFsnippets",
   "publisher": "jeblad-1",
   "displayName": "Lua snippets for Wikimedia",
   "description": "Snippets for the Lua functions in use at Wikimedia sites, including, but not limted to Lua functions used by Scribunto",
