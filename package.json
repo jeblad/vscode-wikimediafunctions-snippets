@@ -10,7 +10,8 @@
     "theme": "dark"
   },
   "bugs": {
-    "url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/issues"
+    "url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/issues",
+    "email": "jeblad@gmail.com"
   },
   "homepage": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/blob/master/README.md",
   "repository": {
