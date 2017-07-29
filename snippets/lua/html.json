@@ -1,0 +1,102 @@
+{
+	// Scribunto libraries, html library
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"mw.html 001": {
+		"prefix": "mw.html.create( tagName, args )",
+		"body": [
+			"mw.html.create( ${1:tagName}${2:[, args]} )"
+		],
+		"description": "mw.html.create( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 002": {
+		"prefix": "node( builder )",
+		"body": [
+			"node( ${1:builder} )"
+		],
+		"description": "mw.html:node( builder )\n builder - string holding a representation of the html code"
+	},
+	"mw.html 003": {
+		"prefix": "wikitext( ... )",
+		"body": [
+			"wikitext( ${1:...} )"
+		],
+		"description": "mw.html:wikitext( ... )\n a number of wikitext fragments"
+	},
+	"mw.html 004": {
+		"prefix": "newline()",
+		"body": [
+			"newline()"
+		],
+		"description": "mw.html:newline()"
+	},
+	"mw.html 005": {
+		"prefix": "tag( tagName, args )",
+		"body": [
+			"tag( ${1:tagName}, ${2:args} )"
+		],
+		"description": "mw.html:tag( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 006": {
+		"prefix": "attr( name, value )",
+		"body": [
+			"attr( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:attr( name, value )\n name - string identifying attribute\n value - content of attribute"
+	},
+	"mw.html 007": {
+		"prefix": "attr( table )",
+		"body": [
+			"attr( ${1:table} )"
+		],
+		"description": "mw.html:attr( table )\n table - key-value pairs of attributes"
+	},
+	"mw.html 008": {
+		"prefix": "getAttr( name )",
+		"body": [
+			"getAttr( ${1:name} )"
+		],
+		"description": "mw.html:getAttr( name )\n name - string identifying attribute"
+	},
+	"mw.html 009": {
+		"prefix": "addClass( class )",
+		"body": [
+			"addClass( ${1:class} )"
+		],
+		"description": "mw.html:addClass( class )\n class - string identifying class"
+	},
+	"mw.html 010": {
+		"prefix": "css( name, value )",
+		"body": [
+			"css( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:css( name, value )\n name - string identifying style\n value - content of style"
+	},
+	"mw.html 011": {
+		"prefix": "css( table )",
+		"body": [
+			"css( ${1:table} )"
+		],
+		"description": "mw.html:css( table )\n table - key-value pairs of styles"
+	},
+	"mw.html 012": {
+		"prefix": "cssText( css )",
+		"body": [
+			"cssText( ${1:css} )"
+		],
+		"description": "mw.html:cssText( css )\n css - raw styles"
+	},
+	"mw.html 013": {
+		"prefix": "done()",
+		"body": [
+			"done()"
+		],
+		"description": "mw.html:done()"
+	},
+	"mw.html 014": {
+		"prefix": "allDone()",
+		"body": [
+			"allDone()"
+		],
+		"description": "mw.html:allDone()"
+	}
+}

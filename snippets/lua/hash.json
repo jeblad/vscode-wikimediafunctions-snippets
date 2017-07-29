@@ -1,0 +1,18 @@
+{
+	// Scribunto libraries, hash library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"mw.hash 001": {
+		"prefix": "mw.hash.hashValue( algo, value )",
+		"body": [
+			"mw.hash.hashValue( ${1:algo}, ${2:value} )"
+		],
+		"description": "mw.hash.hashValue( algo, value )\n algo - algorithm to use for hashing\n value - string to be hashed"
+	},
+	"mw.hash 002": {
+		"prefix": "mw.hash.listAlgorithms()",
+		"body": [
+			"mw.hash.listAlgorithms()"
+		],
+		"description": "mw.hash.listAlgorithms()"
+	}
+}
