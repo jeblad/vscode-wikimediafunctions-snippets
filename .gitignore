@@ -2,5 +2,4 @@
 *.tmp
 *.vsix
 .vscode
-.vscodeignore
 /node_modules

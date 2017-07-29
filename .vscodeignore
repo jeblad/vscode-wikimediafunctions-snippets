@@ -1,0 +1,7 @@
+*~
+*.tmp
+.gitignore
+.gitattributes
+Gruntfile.js
+/node_modules
+/src
