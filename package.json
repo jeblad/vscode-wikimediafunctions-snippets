@@ -30,7 +30,7 @@
 		"snippets": [
 			{
 				"language": "lua",
-				"path": "./snippets/lua.json"
+				"path": "./snippets/lua/"
 			}
 		]
 	}
