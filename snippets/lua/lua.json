@@ -1,0 +1,966 @@
+{
+	// Standard libraries, basic functions
+	// Standard libraries, debug library
+	// Standard libraries, math library
+	// Standard libraries, os library
+	// Standard libraries, package library
+	// Standard libraries, string library
+	// Standard libraries, table library
+	
+	// Scribunto libraries, basic library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"mw 001": {
+		"prefix": "mw.addWarning( text )",
+		"body": [
+			"mw.addWarning( ${1:text} )"
+		],
+		"description": "mw.addWarning( text )\n text - string with wikitext"
+	},
+	"mw 002": {
+		"prefix": "mw.allToString( ... )",
+		"body": [
+			"mw.allToString( ${1:...} )"
+		],
+		"description": "mw.allToString( ... )\n calls tostring() on all args"
+	},
+	"mw 003": {
+		"prefix": "mw.clone( value )",
+		"body": [
+			"mw.clone( ${1:value} )"
+		],
+		"description": "mw.clone( value )\n value - any to be converted"
+	},
+	"mw 004": {
+		"prefix": "mw.getCurrentFrame()",
+		"body": [
+			"mw.getCurrentFrame()"
+		],
+		"description": "mw.getCurrentFrame()"
+	},
+	"mw 005": {
+		"prefix": "mw.incrementExpensiveFunctionCount()",
+		"body": [
+			"mw.incrementExpensiveFunctionCount()"
+		],
+		"description": "mw.incrementExpensiveFunctionCount()"
+	},
+	"mw 006": {
+		"prefix": "mw.isSubsting()",
+		"body": [
+			"mw.isSubsting()"
+		],
+		"description": "mw.isSubsting()"
+	},
+	"mw 007": {
+		"prefix": "mw.loadData( module )",
+		"body": [
+			"mw.loadData( ${1:module} )"
+		],
+		"description": "mw.loadData( module )\n module - string identifying a page"
+	},
+	"mw 008": {
+		"prefix": "mw.dumpObject( object )",
+		"body": [
+			"mw.dumpObject( ${1:object} )"
+		],
+		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
+	},
+	"mw 009": {
+		"prefix": "mw.log( ... )",
+		"body": [
+			"mw.log( ${1:...} )"
+		],
+		"description": "mw.log( ... )\n calls tostring() on all args"
+	},
+	"mw 010": {
+		"prefix": "mw.logObject ( object, prefix )",
+		"body": [
+			"mw.logObject( ${1:object}${2:[, prefix]} )"
+		],
+		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
+	},
+
+	// Scribunto libraries, frame library
+	// This is an object, and as such can't be properly identified unless intellisense is fixed
+	"frame 001": {
+		"prefix": "args",
+		"body": [
+			"args"
+		],
+		"description": "Table for arguments passed to the frame."
+	},
+	"frame 002": {
+		"prefix": "callParserFunction( name, args )",
+		"body": [
+			"callParserFunction( ${1:name}${2:[, args]} )"
+		],
+		"description": "frame:callParserFunction( name, args )\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 003": {
+		"prefix": "callParserFunction( name, ... )",
+		"body": [
+			"callParserFunction( ${1:name}${2:[, ...]} )"
+		],
+		"description": "frame:callParserFunction( name, ... )\n name - string identifying the parser function\n collected arguments"
+	},
+	"frame 004": {
+		"prefix": "callParserFunction{ name = string, args = table }",
+		"body": [
+			"callParserFunction{ name = ${1:string}, args = ${2:table} }"
+		],
+		"description": "frame:callParserFunction{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 005": {
+		"prefix": "expandTemplate{ name = string, args = table }",
+		"body": [
+			"expandTemplate{ name = ${1:string}, args = ${2:table} }"
+		],
+		"description": "frame:expandTemplate{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+	},
+	"frame 006": {
+		"prefix": "extensionTag( name, content, args )",
+		"body": [
+			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )"
+		],
+		"description": "frame:extensionTag( name, content, args )\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
+	},
+	"frame 007": {
+		"prefix": "extensionTag{ name = string, content = string, args =table_or_string }",
+		"body": [
+			"extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }"
+		],
+		"description": "frame:extensionTag{ name = string, content = string, args = table_or_string }\n name - string identifying the parser function\n content - string containing wikitext\n args - table or string with arguments"
+	},
+	"frame 008": {
+		"prefix": "getParent()",
+		"body": [
+			"getParent()"
+		],
+		"description": "frame:getParent()"
+	},
+	"frame 009": {
+		"prefix": "getTitle()",
+		"body": [
+			"getTitle()"
+		],
+		"description": "frame:getTitle()"
+	},
+	"frame 010": {
+		"prefix": "newChild{ title = title, args = table }",
+		"body": [
+			"newChild{ title = ${1:title}, args = ${2:table} }"
+		],
+		"description": "frame:newChild{ title = title, args = table }\n title - title as object\n args - table with arguments"
+	},
+	"frame 011": {
+		"prefix": "preprocess( string )",
+		"body": [
+			"preprocess( ${1:string} )"
+		],
+		"description": "frame:preprocess( string )\n string - wikitext to be formatted"
+	},
+	"frame 012": {
+		"prefix": "preprocess{ text = string }",
+		"body": [
+			"preprocess{ text = ${1:string} }"
+		],
+		"description": "frame:preprocess{ text = string }\n text - wikitext to be formatted"
+	},
+	"frame 013": {
+		"prefix": "getArgument( arg )",
+		"body": [
+			"getArgument( ${1:arg} )"
+		],
+		"description": "frame:getArgument( arg )\n arg - gets the specified argument"
+	},
+	"frame 014": {
+		"prefix": "getArgument{ name = arg }",
+		"body": [
+			"getArgument{ name = ${1:arg} }"
+		],
+		"description": "frame:getArgument{ name = arg }\n name - gets the specified argument"
+	},
+	"frame 015": {
+		"prefix": "newParserValue( text )",
+		"body": [
+			"newParserValue( ${1:text} )"
+		],
+		"description": "frame:newParserValue( text )\n text - wikitext to be expanded"
+	},
+	"frame 016": {
+		"prefix": "newParserValue( text = text )",
+		"body": [
+			"newParserValue{ text = ${1:text} }"
+		],
+		"description": "frame:newParserValue{ text = text }\n text - wikitext to be expanded"
+	},
+	"frame 017": {
+		"prefix": "newTemplateParserValue{ title = title, args = table }",
+		"body": [
+			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }"
+		],
+		"description": "frame:newTemplateParserValue{ title = title, args = table }\n title - name of template to be expanded\n args - arguments to the template"
+	},
+	"frame 018": {
+		"prefix": "argumentPairs()",
+		"body": [
+			"argumentPairs()"
+		],
+		"description": "frame:argumentPairs()\nSame as pairs( frame.args )"
+	},
+
+	// Scribunto libraries, hash library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"mw.hash 001": {
+		"prefix": "mw.hash.hashValue( algo, value )",
+		"body": [
+			"mw.hash.hashValue( ${1:algo}, ${2:value} )"
+		],
+		"description": "mw.hash.hashValue( algo, value )\n algo - algorithm to use for hashing\n value - string to be hashed"
+	},
+	"mw.hash 002": {
+		"prefix": "mw.hash.listAlgorithms()",
+		"body": [
+			"mw.hash.listAlgorithms()"
+		],
+		"description": "mw.hash.listAlgorithms()"
+	},
+
+	// Scribunto libraries, html library
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"mw.html 001": {
+		"prefix": "mw.html.create( tagName, args )",
+		"body": [
+			"mw.html.create( ${1:tagName}${2:[, args]} )"
+		],
+		"description": "mw.html.create( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 002": {
+		"prefix": "node( builder )",
+		"body": [
+			"node( ${1:builder} )"
+		],
+		"description": "mw.html:node( builder )\n builder - string holding a representation of the html code"
+	},
+	"mw.html 003": {
+		"prefix": "wikitext( ... )",
+		"body": [
+			"wikitext( ${1:...} )"
+		],
+		"description": "mw.html:wikitext( ... )\n a number of wikitext fragments"
+	},
+	"mw.html 004": {
+		"prefix": "newline()",
+		"body": [
+			"newline()"
+		],
+		"description": "mw.html:newline()"
+	},
+	"mw.html 005": {
+		"prefix": "tag( tagName, args )",
+		"body": [
+			"tag( ${1:tagName}, ${2:args} )"
+		],
+		"description": "mw.html:tag( tagName, args )\n tagName - string holding tag\n args - table holding options"
+	},
+	"mw.html 006": {
+		"prefix": "attr( name, value )",
+		"body": [
+			"attr( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:attr( name, value )\n name - string identifying attribute\n value - content of attribute"
+	},
+	"mw.html 007": {
+		"prefix": "attr( table )",
+		"body": [
+			"attr( ${1:table} )"
+		],
+		"description": "mw.html:attr( table )\n table - key-value pairs of attributes"
+	},
+	"mw.html 008": {
+		"prefix": "getAttr( name )",
+		"body": [
+			"getAttr( ${1:name} )"
+		],
+		"description": "mw.html:getAttr( name )\n name - string identifying attribute"
+	},
+	"mw.html 009": {
+		"prefix": "addClass( class )",
+		"body": [
+			"addClass( ${1:class} )"
+		],
+		"description": "mw.html:addClass( class )\n class - string identifying class"
+	},
+	"mw.html 010": {
+		"prefix": "css( name, value )",
+		"body": [
+			"css( ${1:name}, ${2:value} )"
+		],
+		"description": "mw.html:css( name, value )\n name - string identifying style\n value - content of style"
+	},
+	"mw.html 011": {
+		"prefix": "css( table )",
+		"body": [
+			"css( ${1:table} )"
+		],
+		"description": "mw.html:css( table )\n table - key-value pairs of styles"
+	},
+	"mw.html 012": {
+		"prefix": "cssText( css )",
+		"body": [
+			"cssText( ${1:css} )"
+		],
+		"description": "mw.html:cssText( css )\n css - raw styles"
+	},
+	"mw.html 013": {
+		"prefix": "done()",
+		"body": [
+			"done()"
+		],
+		"description": "mw.html:done()"
+	},
+	"mw.html 014": {
+		"prefix": "allDone()",
+		"body": [
+			"allDone()"
+		],
+		"description": "mw.html:allDone()"
+	},
+
+	// Scribunto libraries, language library
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"mw.language 001": {
+		"prefix": "mw.language.fetchLanguageName( code, inLanguage )",
+		"body": [
+			"mw.language.fetchLanguageName( ${1:code}, ${2:inLanguage} )"
+		],
+		"description": "mw.language.fetchLanguageName( code, inLanguage )\n code - string with source code\n inLanguage - string the destination code"
+	},
+	"mw.language 002": {
+		"prefix": "mw.language.fetchLanguageNames( inLanguage, include )",
+		"body": [
+			"mw.language.fetchLanguageNames( ${1:inLanguage}, ${2:include} )"
+		],
+		"description": "mw.language.fetchLanguageNames( [inLanguage[, include]] )\n inLanguage - string with destination code\n include - nil, 'all' or 'mwfile'"
+	},
+	"mw.language 003": {
+		"prefix": "mw.language.getContentLanguage()",
+		"body": [
+			"mw.language.getContentLanguage()"
+		],
+		"description": "mw.language.getContentLanguage()"
+	},
+	"mw.language 004": {
+		"prefix": "mw.language.getContentLanguage()",
+		"body": [
+			"mw.getContentLanguage()"
+		],
+		"description": "mw.getContentLanguage()"
+	},
+	"mw.language 005": {
+		"prefix": "mw.language.getFallbacksFor( code )",
+		"body": [
+			"mw.language.getFallbacksFor( ${1:code} )"
+		],
+		"description": "mw.language.getFallbacksFor( code )\n code - string with queried language"
+	},
+	"mw.language 006": {
+		"prefix": "mw.language.isKnownLanguageTag( code )",
+		"body": [
+			"mw.language.isKnownLanguageTag( ${1:code} )"
+		],
+		"description": "mw.language.isKnownLanguageTag( code )\n code - string with queried language"
+	},
+	"mw.language 007": {
+		"prefix": "mw.language.isSupportedLanguage( code )",
+		"body": [
+			"mw.language.isSupportedLanguage(${1:code} )"
+		],
+		"description": "mw.language.isSupportedLanguage( code )\n code - string with queried language"
+	},
+	"mw.language 008": {
+		"prefix": "mw.language.isValidBuiltInCode( code )",
+		"body": [
+			"mw.language.isValidBuiltInCode( ${1:code} )"
+		],
+		"description": "mw.language.isValidBuiltInCode( code )\n code - string with queried language"
+	},
+	"mw.language 009": {
+		"prefix": "mw.language.isValidCode( code )",
+		"body": [
+			"mw.language.isValidCode( ${1:code} )"
+		],
+		"description": "mw.language.isValidCode( code )\n code - string with queried language"
+	},
+	"mw.language 010": {
+		"prefix": "mw.language.new( code )",
+		"body": [
+			"mw.language.new( ${1:code} )"
+		],
+		"description": "mw.language.new( code )\n code - string with wanted language"
+	},
+	"mw.language 011": {
+		"prefix": "mw.language.new( code )",
+		"body": [
+			"mw.getLanguage(${1:code} )"
+		],
+		"description": "mw.getLanguage( code )\n code - string with queried language"
+	},
+	"mw.language 012": {
+		"prefix": "getCode()",
+		"body": [
+			"getCode()"
+		],
+		"description": "mw.language:getCode()"
+	},
+	"mw.language 013": {
+		"prefix": "getFallbackLanguages()",
+		"body": [
+			"getFallbackLanguages()"
+		],
+		"description": "mw.language:getFallbackLanguages()"
+	},
+	"mw.language 014": {
+		"prefix": "isRTL()",
+		"body": [
+			"isRTL()"
+		],
+		"description": "mw.language:isRTL()"
+	},
+	"mw.language 015": {
+		"prefix": "lc( s )",
+		"body": [
+			"lc( ${1:s} )"
+		],
+		"description": "mw.language:lc( s )\n s - string to be formatted"
+	},
+	"mw.language 016": {
+		"prefix": "lcfirst( s )",
+		"body": [
+			"lcfirst( ${1:s} )"
+		],
+		"description": "mw.language:lcfirst( s )\n s - string to be formatted"
+	},
+	"mw.language 017": {
+		"prefix": "uc( s )",
+		"body": [
+			"uc( ${1:s} )"
+		],
+		"description": "mw.language:uc( s )\n s - string to be formatted"
+	},
+	"mw.language 018": {
+		"prefix": "ucfirst( s )",
+		"body": [
+			"ucfirst( ${1:s} )"
+		],
+		"description": "mw.language:ucfirst( s )\n s - string to be formatted"
+	},
+	"mw.language 019": {
+		"prefix": "caseFold( s )",
+		"body": [
+			"caseFold( ${1:s} )"
+		],
+		"description": "mw.language:caseFold( s )\n s - string to be formatted"
+	},
+	"mw.language 020": {
+		"prefix": "formatNum( n, options )",
+		"body": [
+			"formatNum( ${1:n}${2:[, options]} )"
+		],
+		"description": "mw.language:formatNum( n[, options] )\n s - string to be formatted\n options - table describing formatting"
+	},
+	"mw.language 021": {
+		"prefix": "formatDate( format, timestamp, local )",
+		"body": [
+			"formatDate( ${1:format}, ${2:timestamp}, ${3:local} )"
+		],
+		"description": "mw.language:formatDate( format, timestamp, local )"
+	},
+	"mw.language 022": {
+		"prefix": "formatDuration( seconds, allowedIntervals )",
+		"body": [
+			"formatDuration( ${1:seconds}${2:[, allowedIntervals]} )"
+		],
+		"description": "mw.language:formatDuration( seconds[, allowedIntervals] )\n seconds - length of interval\n allowedIntervals - table of named intervals"
+	},
+	"mw.language 023": {
+		"prefix": "parseFormattedNumber( s )",
+		"body": [
+			"parseFormattedNumber( ${1:s} )"
+		],
+		"description": "mw.language:parseFormattedNumber( s )\n s - string holding a formatted number"
+	},
+	"mw.language 024": {
+		"prefix": "convertPlural( n, ... )",
+		"body": [
+			"convertPlural( ${1:n}, ${2:...} )"
+		],
+		"description": "mw.language:convertPlural( n, ... )\n n - the case count\n variant number of inflections"
+	},
+	"mw.language 025": {
+		"prefix": "convertPlural( n, forms )",
+		"body": [
+			"convertPlural( ${1:n}, ${2:forms} )"
+		],
+		"description": "mw.language:convertPlural( n, forms )\n n - the case count\n forms - table with inflections"
+	},
+	"mw.language 026": {
+		"prefix": "plural( n, ... )",
+		"body": [
+			"plural( ${1:n}, ${2:...} )"
+		],
+		"description": "mw.language:plural( n, ... )\n n - the case count\n variant number of inflections"
+	},
+	"mw.language 027": {
+		"prefix": "plural( n, forms )",
+		"body": [
+			"plural( ${1:n}, ${2:forms} )"
+		],
+		"description": "mw.language:plural( n, forms )\n n - the case count\n forms - table with inflections"
+	},
+	"mw.language 028": {
+		"prefix": "convertGrammar( word, case )",
+		"body": [
+			"convertGrammar( ${1:word}, ${2:case} )"
+		],
+		"description": "mw.language:convertGrammar( word, case )\n word - string to be inflected\n case - how to inflect the string"
+	},
+	"mw.language 029": {
+		"prefix": "grammar( case, word )",
+		"body": [
+			"grammar( ${1:word}, ${2:case} )"
+		],
+		"description": "mw.language:grammar( case, word )\n case - how to inflect the string\n word - string to be inflected"
+	},
+	"mw.language 030": {
+		"prefix": "gender( what, masculine, feminine, neutral )",
+		"body": [
+			"gender( ${1:what}, ${2:masculine}, ${3:feminine}, ${4:neutral} )"
+		],
+		"description": "mw.language:gender( what, masculine, feminine, neutral )\n what - string to be gendrified\n masculine - string\n feminine - string\n neutral - string"
+	},
+	"mw.language 031": {
+		"prefix": "gender( what, { masculine, feminine, neutral } )",
+		"body": [
+			"gender( ${1:what}, { ${2:masculine}, ${3:feminine}, ${4:neutral} } )"
+		],
+		"description": "mw.language:gender( what, { masculine, feminine, neutral } )\n what - string to be gendrified\n masculine - string\n feminine - string\n neutral - string"
+	},
+	"mw.language 032": {
+		"prefix": "getArrow( direction )",
+		"body": [
+			"getArrow( ${1:direction} )"
+		],
+		"description": "mw.language:getArrow( direction )\n direction - one of 'forwards', 'backwards', 'left', 'right', 'up', or 'down'"
+	},
+	"mw.language 033": {
+		"prefix": "getDir()",
+		"body": [
+			"getDir()"
+		],
+		"description": "mw.language:getDir()"
+	},
+	"mw.language 034": {
+		"prefix": "getDirMark( opposite )",
+		"body": [
+			"getDirMark( ${1:opposite} )"
+		],
+		"description": "mw.language:getDirMark( opposite )\n opposite - boolean for inverting direction"
+	},
+	"mw.language 035": {
+		"prefix": "getDirMarkEntity( opposite )",
+		"body": [
+			"getDirMarkEntity( ${1:opposite} )"
+		],
+		"description": "mw.language:getDirMarkEntity( opposite )\n opposite - boolean for inverting direction"
+	},
+	"mw.language 036": {
+		"prefix": "getDurationIntervals( seconds )",
+		"body": [
+			"getDurationIntervals( ${1:seconds} )"
+		],
+		"description": "mw.language:getDurationIntervals( seconds )\n seconds - length of interval"
+	},
+	"mw.language 037": {
+		"prefix": "getDurationIntervals( seconds, allowedIntervals )",
+		"body": [
+			"getDurationIntervals( ${1:seconds}${2:[, allowedIntervals]} )"
+		],
+		"description": "mw.language:getDurationIntervals( seconds[, allowedIntervals} )\n seconds - length of interval\n allowedIntervals - table of named intervals"
+	},
+
+	// Scribunto libraries, message librarylibrary
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+
+	// Scribunto libraries, site library
+	// This is a proper library imported as default and can be identified by prefix alone
+
+	// Scribunto libraries, text library
+	// This is a proper library imported as default and can be identified by prefix alone
+
+	// Scribunto libraries, title library
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+
+	// Scribunto libraries, uri library
+	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"mw.uri 001 ": {
+		"prefix": "mw.uri.encode( s, enctype )",
+		"body": [
+			"mw.uri.encode( ${1:s}${2:[, enctype]} )"
+		],
+		"description": "mw.uri.encode( s, enctype )\n s - string used as source\n enctype - encoding to use"
+	},
+	"mw.uri 002 ": {
+		"prefix": "mw.uri.decode( s, enctype )",
+		"body": [
+			"mw.uri.decode( ${1:s}${2:[, enctype]} )"
+		],
+		"description": "mw.uri.decode( s, enctype )\n s - string used as source"
+	},
+	"mw.uri 003 ": {
+		"prefix": "mw.uri.anchorEncode( s )",
+		"body": [
+			"mw.uri.anchorEncode( ${1:s} )"
+		],
+		"description": "mw.uri.anchorEncode( s )\n s - string used as source"
+	},
+	"mw.uri 004 ": {
+		"prefix": "mw.uri.buildQueryString( table )",
+		"body": [
+			"mw.uri.buildQueryString( table )"
+		],
+		"description": "mw.uri.buildQueryString( table )"
+	},
+	"mw.uri 005 ": {
+		"prefix": "mw.uri.parseQueryString( s, i, j )",
+		"body": [
+			"mw.uri.parseQueryString( ${1:s}, i, j )"
+		],
+		"description": "mw.uri.parseQueryString( s, i, j )\n s - string used as source"
+	},
+	"mw.uri 006 ": {
+		"prefix": "mw.uri.canonicalUrl( page, query )",
+		"body": [
+			"mw.uri.canonicalUrl( page, query )"
+		],
+		"description": "mw.uri.canonicalUrl( page, query )"
+	},
+	"mw.uri 007 ": {
+		"prefix": "mw.uri.fullUrl( page, query )",
+		"body": [
+			"mw.uri.fullUrl( page, query )"
+		],
+		"description": "mw.uri.fullUrl( page, query )"
+	},
+	"mw.uri 008 ": {
+		"prefix": "mw.uri.localUrl( page, query )",
+		"body": [
+			"mw.uri.localUrl( page, query )"
+		],
+		"description": "mw.uri.localUrl( page, query )"
+	},
+	"mw.uri 009 ": {
+		"prefix": "mw.uri.new( s )",
+		"body": [
+			"mw.uri.new( ${1:s} )"
+		],
+		"description": "mw.uri.new( s )\n s - string used as source"
+	},
+	"mw.uri 010 ": {
+		"prefix": "mw.uri.validate( table )",
+		"body": [
+			"mw.uri.validate( table )"
+		],
+		"description": "mw.uri.validate( table )"
+	},
+	"mw.uri 011 ": {
+		"prefix": "parse( s )",
+		"body": [
+			"parse( ${1:s} )"
+		],
+		"description": "mw.uri:parse( s )\n s - string used as source"
+	},
+	"mw.uri 012 ": {
+		"prefix": "clone()",
+		"body": [
+			"clone()"
+		],
+		"description": "mw.uri:clone()"
+	},
+	"mw.uri 013 ": {
+		"prefix": "extend( parameters )",
+		"body": [
+			"extend( parameters )"
+		],
+		"description": "mw.uri:extend( parameters )"
+	},
+
+	// Scribunto libraries, ustring library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"mw.ustring 001": {
+		"prefix": "mw.ustring.maxPatternLength",
+		"body": [
+			"mw.ustring.maxPatternLength"
+		],
+		"description": "mw.ustring.maxPatternLength"
+	},
+	"mw.ustring 002": {
+		"prefix": "mw.ustring.maxStringLength",
+		"body": [
+			"mw.ustring.maxPatternLength"
+		],
+		"description": "mw.ustring.maxPatternLength"
+	},
+	"mw.ustring 003": {
+		"prefix": "mw.ustring.byte( s, i, j )",
+		"body": [
+			"mw.ustring.byte( ${1:s}, ${2:i}${3:[, j]} )"
+		],
+		"description": "mw.ustring.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+	},
+	"mw.ustring 004": {
+		"prefix": "mw.ustring.byteoffset( s, l, i )",
+		"body": [
+			"mw.ustring.byteoffset( ${1:s}${2:[, l]}${3:[, i]} )"
+		],
+		"description": "mw.ustring.byteoffset( s[, l][, i] )\n s - string\n l - offset\n i - index"
+	},
+	"mw.ustring 005": {
+		"prefix": "mw.ustring.char( ... )",
+		"body": [
+			"mw.ustring.char( ${1:...} )"
+		],
+		"description": "mw.ustring.char( ... )\n codepoints to be converted and concatenated"
+	},
+	"mw.ustring 006": {
+		"prefix": "mw.ustring.codepoint( s, i, j )",
+		"body": [
+			"mw.ustring.codepoint( ${1:s}, ${2:i}${3:[, j]} )"
+		],
+		"description": "mw.ustring.codepoint( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+	},
+	"mw.ustring 007": {
+		"prefix": "mw.ustring.find( s, pattern, init, plain )",
+		"body": [
+			"mw.ustring.find( ${1:s}, ${2:pattern}${3:[, init]}${4:[, plain]} )"
+		],
+		"description": "mw.ustring.find( s, pattern[, init][, plain] )\n s - string used as source\n pattern - string to use while searching\n init - where to start searching\n plain - boolean to chose search method"
+	},
+	"mw.ustring 008": {
+		"prefix": "mw.ustring.format( format, ... )",
+		"body": [
+			"mw.ustring.format( ${1:format}, ${2:...} )"
+		],
+		"description": "mw.ustring.format( format, ... )\n format - string for the layout\n arguments for the format string"
+	},
+	"mw.ustring 009": {
+		"prefix": "mw.ustring.gcodepoint( s, i, j )",
+		"body": [
+			"mw.ustring.gcodepoint( ${1:s}, ${2:i}${3:[, j]} )"
+		],
+		"description": "mw.ustring.gcodepoint( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+	},
+	"mw.ustring 010": {
+		"prefix": "mw.ustring.gmatch( s, pattern )",
+		"body": [
+			"mw.ustring.gmatch( ${1:s}, ${2:pattern} )"
+		],
+		"description": "mw.ustring.gmatch( s, pattern )\n s - string used as source\n pattern - string to use while searching"
+	},
+	"mw.ustring 011": {
+		"prefix": "mw.ustring.gsub( s, pattern, repl, n )",
+		"body": [
+			"mw.ustring.gsub( ${1:s}, ${2:pattern}, ${3:repl}${4:[, n]} )"
+		],
+		"description": "mw.ustring.gsub( s, pattern, repl[, n] )\n s - string used as source\n pattern - string to use while searching\n repl - string used as replacement\n n - number of copies"
+	},
+	"mw.ustring 012": {
+		"prefix": "mw.ustring.isutf8( s )",
+		"body": [
+			"mw.ustring.isutf8( ${1:s} )"
+		],
+		"description": "mw.ustring.isutf8( s )\n s - string used as source"
+	},
+	"mw.ustring 013": {
+		"prefix": "mw.ustring.len( s )",
+		"body": [
+			"mw.ustring.len( ${1:s} )"
+		],
+		"description": "mw.ustring.len( s )\n s - string used as source"
+	},
+	"mw.ustring 014": {
+		"prefix": "mw.ustring.lower( s )",
+		"body": [
+			"mw.ustring.lower( ${1:s} )"
+		],
+		"description": "mw.ustring.lower( s )\n s - string used as source"
+	},
+	"mw.ustring 015": {
+		"prefix": "mw.ustring.match( s, pattern, init )",
+		"body": [
+			"mw.ustring.match( ${1:s}, ${2:pattern}${3:[, init]} )"
+		],
+		"description": "mw.ustring.match( s, pattern, init )\n s - string used as source\n pattern - string to use while searching\n init - where to start searching"
+	},
+	"mw.ustring 016": {
+		"prefix": "mw.ustring.rep( s, n )",
+		"body": [
+			"mw.ustring.rep( ${1:s}, ${2:n} )"
+		],
+		"description": "mw.ustring.rep( s, n )\n s - string used as source\n n - number of copies"
+	},
+	"mw.ustring 017": {
+		"prefix": "mw.ustring.sub( s, i, j )",
+		"body": [
+			"mw.ustring.sub( ${1:s}, ${2:i}${3:[, j]} )"
+		],
+		"description": "mw.ustring.sub( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+	},
+	"mw.ustring 018": {
+		"prefix": "mw.ustring.toNFC( s )",
+		"body": [
+			"mw.ustring.toNFC( ${1:s} )"
+		],
+		"description": "mw.ustring.toNFC( s )\n s - string used as source"
+	},
+	"mw.ustring 019": {
+		"prefix": "mw.ustring.toNFD( s )",
+		"body": [
+			"mw.ustring.toNFD( ${1:s} )"
+		],
+		"description": "mw.ustring.toNFD( s )\n s - string used as source"
+	},
+	"mw.ustring 020": {
+		"prefix": "mw.ustring.upper( s )",
+		"body": [
+			"mw.ustring.upper( ${1:s} )"
+		],
+		"description": "mw.ustring.upper( s )\n s - string used as source"
+	},
+
+	// Loadable libraries, bit32 library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"bit32 001": {
+		"prefix": "bit32.band( ... )",
+		"body": [
+			"bit32.band( ${1:...} )"
+		],
+		"description": "bit32.band( ... )\n bitwise 'and' of all arguments"
+	},
+	"bit32 002": {
+		"prefix": "bit32.bnot( x )",
+		"body": [
+			"bit32.bnot( ${1:x} )"
+		],
+		"description": "bit32.bnot( x )\n x - bitwise complement"
+	},
+	"bit32 003": {
+		"prefix": "bit32.bor( ... )",
+		"body": [
+			"bit32.bor( ${1:...} )"
+		],
+		"description": "bit32.bor( ... )\n bitwise 'or' of all arguments"
+	},
+	"bit32 004": {
+		"prefix": "bit32.btest( ... )",
+		"body": [
+			"bit32.btest( ${1:...} )"
+		],
+		"description": "bit32.btest( ... )\n bitwise 'and' of all arguments followed by logical complement"
+	},
+	"bit32 005": {
+		"prefix": "bit32.bxor( ... )",
+		"body": [
+			"bit32.bxor( ${1:...} )"
+		],
+		"description": "bit32.bxor( ... )\n bitwise 'xor' of all arguments"
+	},
+	"bit32 006": {
+		"prefix": "bit32.extract( n, field, width )",
+		"body": [
+			"bit32.extract( ${1:n}, ${2:field}${3:[, width} )"
+		],
+		"description": "bit32.extract( n, field[, width] )\n n - number to use as source\n field - index to start\n width - number of bits to process"
+	},
+	"bit32 007": {
+		"prefix": "bit32.replace( n, v, field, width )",
+		"body": [
+			"bit32.replace( ${1:n}, ${2:v}, ${3:field}${4:[, width]} )"
+		],
+		"description": "bit32.replace( n, v, field[, width] )\n n - number to use as source\n v - number to use as replacement\n field - index to start\n width - number of bits to process"
+	},
+	"bit32 008": {
+		"prefix": "bit32.lshift( n, disp )",
+		"body": [
+			"bit32.lshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.lshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 009": {
+		"prefix": "bit32.rshift( n, disp )",
+		"body": [
+			"bit32.rshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.rshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 010": {
+		"prefix": "bit32.arshift( n, disp )",
+		"body": [
+			"bit32.arshift( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.arshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 011": {
+		"prefix": "bit32.lrotate( n, disp )",
+		"body": [
+			"bit32.lrotate( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.lrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+	"bit32 012": {
+		"prefix": "bit32.rrotate( n, disp )",
+		"body": [
+			"bit32.rrotate( ${1:n}, ${2:disp} )"
+		],
+		"description": "bit32.rrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+	},
+
+	// Loadable libraries, libraryUtil library
+	// This is a proper library imported as default and can be identified by prefix alone
+	"libraryUtil 001": {
+		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
+		"body": [
+			"libraryUtil.checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
+		],
+		"description": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )\n name - string identifying the calling function\n argIdx - position of the argument\n arg - value to be type checked\n expectType - string type to be accepted\n nilOk - accept nil as type"
+	},
+	"libraryUtil 002": {
+		"prefix": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )",
+		"body": [
+			"libraryUtil.checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )"
+		],
+		"description": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )\n name - string identifying the calling function\n argIdx - position of the argument\n arg - value to be type checked\n expectType - table of types to be accepted"
+	},
+	"libraryUtil 003": {
+		"prefix": "libraryUtil.checkTypeForIndex( index, value, expectType )",
+		"body": [
+			"libraryUtil.checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )"
+		],
+		"description": "libraryUtil.checkTypeForIndex( index, value, expectType )\n index - position in a table\n value - any to be type checked\n expectType - string type to be accepted"
+	},
+	"libraryUtil 004": {
+		"prefix": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
+		"body": [
+			"libraryUtil.checkTypeForNamedArg( ${1: name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
+		],
+		"description": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )\n name - string identifying the calling function\n argName - position of the argument\n arg - value to be type checked\n expectType - string type to be accepted\n nilOk - accept nil as type"
+	},
+	"libraryUtil 005": {
+		"prefix": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
+		"body": [
+			"libraryUtil.makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )"
+		],
+		"description": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )\n libraryName - string name\n varName - string name\n selfObj - \n selfObjDesc -"
+	}
+
+}
