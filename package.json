@@ -1,37 +1,44 @@
 {
-	"name": "WMFsnippets",
-	"publisher": "jeblad-1",
-	"displayName": "Lua snippets for Wikimedia",
-	"description": "Snippets for the Lua functions in use at Wikimedia sites, including, but not limted to Lua functions used by Scribunto",
-	"author": {
-		"name": "John Erling Blad"
-	},
-	"license": "GPL v2",
-	"galleryBanner": {
-		"color": "#0273D4",
-		"theme": "dark"
-	},
-	"bugs": {
-		"url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/issues"
-	},
-	"homepage": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/blob/master/README.md",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets"
-	},
-	"version": "0.2.0",
-	"engines": {
-		"vscode": "0.10.x"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "lua",
-				"path": "./snippets/lua/"
-			}
-		]
-	}
+  "name": "wmf-lua-snippets",
+  "publisher": "jeblad-1",
+  "displayName": "Lua snippets for Wikimedia",
+  "description": "Snippets for the Lua functions in use at Wikimedia sites, including, but not limted to Lua functions used by Scribunto",
+  "author": "John Erling Blad",
+  "license": "GPL-2.0",
+  "galleryBanner": {
+    "color": "#0273D4",
+    "theme": "dark"
+  },
+  "bugs": {
+    "url": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/issues"
+  },
+  "homepage": "https://github.com/jeblad/vscode-wikimediafunctions-snippets/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeblad/vscode-wikimediafunctions-snippets.git"
+  },
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "lua",
+        "path": "./snippets/lua.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-jsonlint": "1.1.0",
+    "grunt-markdownlint": "^1.0.41",
+    "grunt-merge-json": "^0.9.5",
+    "markdownlint": "^0.3.1"
+  },
+  "dependencies": {}
 }
