@@ -22,8 +22,31 @@ None
 
 Note that this set of snippets will not provide the standard functions for Lua.
 
-- mw; basic functions from Scribunto
-- frame; functions for interacting with Mediawiki
+- [mw](snippets/mw.json) library; basic functions from Scribunto
+- [bit32](snippets/but32.json) library; functions to do bit operations
+- [frame](snippets/frame.json) library; functions for interacting with Mediawiki
+- [hash](snippets/hash.json) library; functions to do basic hashing
+- [html](snippets/html.json) library; functions to create html tags
+- [language](snippets/language.json) library; functions to interact with language objects
+- [uri](snippets/uri.json) library; functions to create encoded uri strings
+- [ustring](snippets/ustring.json) library; functions to manipulate unicode strings
+- [util](snippets/util.json) library; functions for various misc things
+
+Unfinished standard libraries
+
+- debug library
+- math library
+- os library
+- package library
+- string library
+- table library
+
+Unfinished Scribunto libraries
+
+- message library (mixed library and object); as an object it can't be properly identified unless intellisense works for Lua
+- site library; this is a proper library imported as default and can be identified by prefix alone
+- text library; this is a proper library imported as default and can be identified by prefix alone
+- title library (mixed library and object); as an object it can't be properly identified unless intellisense works for Lua
 
 ### PHP
 
