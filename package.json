@@ -1,8 +1,8 @@
 {
 	"name": "WMFsnippets",
 	"publisher": "jeblad-1",
-	"displayName": "Function snippets for Wikimedia",
-	"description": "Snippets for the functions in use at Wikimedia sites, including, but not limted to Lua as used by Scribunto",
+	"displayName": "Lua snippets for Wikimedia",
+	"description": "Snippets for the Lua functions in use at Wikimedia sites, including, but not limted to Lua functions used by Scribunto",
 	"license": "GPL v2",
 	"galleryBanner": {
 		"color": "#0273D4",
