@@ -25,23 +25,19 @@ and especially well as an aid to get the arguments right.
 
 Please don't expect this list to be complete! ;)
 
-### Javascript
-
-None
-
 ### Lua
 
 Note that this set of snippets will not provide the standard functions for Lua.
 
-- [mw](snippets/mw.json) library; basic functions from Scribunto
-- [bit32](snippets/but32.json) library; bit operations
-- [frame](snippets/frame.json) library; interacting with Mediawiki
-- [hash](snippets/hash.json) library; basic hashing
-- [html](snippets/html.json) library; create html tags
-- [language](snippets/language.json) library; interact with language objects
-- [uri](snippets/uri.json) library; create encoded uri strings
-- [ustring](snippets/ustring.json) library; manipulate unicode strings
-- [util](snippets/util.json) library; various misc functions
+- [mw](src/lua/mw.json) library; basic functions from Scribunto
+- [bit32](src/lua/but32.json) library; bit operations
+- [frame](src/lua/frame.json) library; interacting with Mediawiki
+- [hash](src/lua/hash.json) library; basic hashing
+- [html](src/lua/html.json) library; create html tags
+- [language](src/lua/language.json) library; interact with language objects
+- [uri](src/lua/uri.json) library; create encoded uri strings
+- [ustring](src/lua/ustring.json) library; manipulate unicode strings
+- [util](src/lua/util.json) library; various misc functions
 
 Unfinished standard libraries
 
@@ -62,10 +58,6 @@ Unfinished Scribunto libraries
  identified by prefix alone
 - title library (mixed library and object); as an object it can't be properly
  identified unless intellisense works for Lua
-
-### PHP
-
-None
 
 ## Installation
 
