@@ -1,6 +1,11 @@
 {
-	// Scribunto libraries, uri library
-	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"@metadata": {
+		"name": "uri",
+		"comment": "Mixed library and object, and as such can't be properly identified unless intellisense is fixed.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"mw.uri 001 ": {
 		"prefix": "mw.uri.encode( s, enctype )",
 		"body": [

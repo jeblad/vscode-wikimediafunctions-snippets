@@ -1,6 +1,11 @@
 {
-	// Scribunto libraries, html library
-	// Mixed library and object. As an object it can't be properly identified unless intellisense is fixed
+	"@metadata": {
+		"name": "html",
+		"comment": "Mixed library and object, and as such can't be properly identified unless intellisense is fixed.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"mw.html 001": {
 		"prefix": "mw.html.create( tagName, args )",
 		"body": [

@@ -1,6 +1,11 @@
 {
-	// Loadable libraries, bit32 library
-	// This is a proper library imported as default and can be identified by prefix alone
+	"@metadata": {
+		"name": "bit32",
+		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"bit32 001": {
 		"prefix": "bit32.band( ... )",
 		"body": [

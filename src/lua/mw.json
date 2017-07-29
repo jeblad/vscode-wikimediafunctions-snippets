@@ -1,6 +1,11 @@
 {
-	// Scribunto libraries, basic library
-	// This is a proper library imported as default and can be identified by prefix alone
+	"@metadata": {
+		"name": "mw",
+		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"mw 001": {
 		"prefix": "mw.addWarning( text )",
 		"body": [

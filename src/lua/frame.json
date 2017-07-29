@@ -1,6 +1,11 @@
 {
-	// Scribunto libraries, frame library
-	// This is an object, and as such can't be properly identified unless intellisense is fixed
+	"@metadata": {
+		"name": "frame",
+		"comment": "The library is an object, and as such can't be properly identified unless intellisense is fixed.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"frame 001": {
 		"prefix": "args",
 		"body": [

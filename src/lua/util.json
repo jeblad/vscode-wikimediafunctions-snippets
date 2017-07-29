@@ -1,6 +1,11 @@
 {
-	// Loadable libraries, libraryUtil library
-	// This is a proper library imported as default and can be identified by prefix alone
+	"@metadata": {
+		"name": "util",
+		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"libraryUtil 001": {
 		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
 		"body": [

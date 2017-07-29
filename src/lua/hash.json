@@ -1,6 +1,11 @@
 {
-	// Scribunto libraries, hash library
-	// This is a proper library imported as default and can be identified by prefix alone
+	"@metadata": {
+		"name": "hash",
+		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"authors": [
+			"Jeblad"
+		]
+	},
 	"mw.hash 001": {
 		"prefix": "mw.hash.hashValue( algo, value )",
 		"body": [
