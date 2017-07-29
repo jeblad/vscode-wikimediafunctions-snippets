@@ -12,6 +12,8 @@ press `tab` or `enter`, and the snippet unfolds. Inside the snippet there are
 one or more highlighted areas, those can be replaced, and it is then possible
 to tab to next item that can be replaced.
 
+![GitHub Logo](hits.png)
+
 The snippets has a prefix that is the method name, and inside Visual Studio Code
 you might type additionel specifiers. Those are typically the class name or the
 name of an argument. If nothing else work it is possible to write the snippets
