@@ -14,21 +14,21 @@ As this is snippets, there is no Intellisense available. This is a bit unfortuna
 
 ## Libraries
 
-Please don't expect this list to be complete!
+The set of snippets are mostly motivated by what I (the author) have found usefull, so please don't expect the list to be complete!
 
 ### Lua
 
 Note that this set of snippets will not provide the standard functions for Lua.
 
-- [mw](src/lua/mw.json) library; basic functions from Scribunto
-- [bit32](src/lua/but32.json) library; bit operations
-- [frame](src/lua/frame.json) library; interacting with Mediawiki
-- [hash](src/lua/hash.json) library; basic hashing
-- [html](src/lua/html.json) library; create html tags
-- [language](src/lua/language.json) library; interact with language objects
-- [uri](src/lua/uri.json) library; create encoded uri strings
-- [ustring](src/lua/ustring.json) library; manipulate unicode strings
-- [util](src/lua/util.json) library; various misc functions
+- [mw](src/lua/mw.json) static library; basic functions from Scribunto to interface with Mediawiki
+- [bit32](src/lua/but32.json) loadable library; bit operations
+- [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
+- [hash](src/lua/hash.json) static library; basic hashing
+- [html](src/lua/html.json) static library; create html tags
+- [language](src/lua/language.json) static library; interact with Mediawiki language objects
+- [uri](src/lua/uri.json) static library; create encoded uri strings
+- [ustring](src/lua/ustring.json) static library; manipulate unicode strings
+- [util](src/lua/util.json) loadable library; various misc functions for argument parsing
 
 Unfinished standard libraries
 
