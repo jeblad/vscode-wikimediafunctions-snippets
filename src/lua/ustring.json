@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"name": "hash",
-		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"name": "ustring",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix.",
 		"authors": [
 			"Jeblad"
 		]

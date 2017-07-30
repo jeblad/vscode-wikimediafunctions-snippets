@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"name": "html",
-		"comment": "Mixed library and object, and as such can't be properly identified unless intellisense is fixed.",
+		"name": "language",
+		"comment": "This is a mixed library and object. The creator act as a library and can be fully identified by its library prefix, but the created object can not be identified unless intellisense is active.",
 		"authors": [
 			"Jeblad"
 		]

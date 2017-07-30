@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "mw",
-		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by its library prefix.",
 		"authors": [
 			"Jeblad"
 		]

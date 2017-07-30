@@ -1,43 +1,43 @@
 {
 	"@metadata": {
 		"name": "util",
-		"comment": "The library is imported as default, and can be identified by prefix alone.",
+		"comment": "The library is not imported as default, it is \"required\", and can not be identified unless intellisense is active.",
 		"authors": [
 			"Jeblad"
 		]
 	},
-	"libraryUtil 001": {
-		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
+	"util 001": {
+		"prefix": "checkType( name, argIdx, arg, expectType, nilOk )",
 		"body": [
-			"libraryUtil.checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
+			"checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
 		],
 		"description": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )\n name - string identifying the calling function\n argIdx - position of the argument\n arg - value to be type checked\n expectType - string type to be accepted\n nilOk - accept nil as type"
 	},
-	"libraryUtil 002": {
-		"prefix": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )",
+	"util 002": {
+		"prefix": "checkTypeMulti( name, argIdx, arg, expectTypes )",
 		"body": [
-			"libraryUtil.checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )"
+			"checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )"
 		],
 		"description": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )\n name - string identifying the calling function\n argIdx - position of the argument\n arg - value to be type checked\n expectType - table of types to be accepted"
 	},
-	"libraryUtil 003": {
-		"prefix": "libraryUtil.checkTypeForIndex( index, value, expectType )",
+	"util 003": {
+		"prefix": "checkTypeForIndex( index, value, expectType )",
 		"body": [
-			"libraryUtil.checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )"
+			"checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )"
 		],
 		"description": "libraryUtil.checkTypeForIndex( index, value, expectType )\n index - position in a table\n value - any to be type checked\n expectType - string type to be accepted"
 	},
-	"libraryUtil 004": {
-		"prefix": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
+	"util 004": {
+		"prefix": "checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
 		"body": [
-			"libraryUtil.checkTypeForNamedArg( ${1: name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
+			"checkTypeForNamedArg( ${1:name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )"
 		],
 		"description": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )\n name - string identifying the calling function\n argName - position of the argument\n arg - value to be type checked\n expectType - string type to be accepted\n nilOk - accept nil as type"
 	},
-	"libraryUtil 005": {
-		"prefix": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
+	"util 005": {
+		"prefix": "makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
 		"body": [
-			"libraryUtil.makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )"
+			"makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )"
 		],
 		"description": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )\n libraryName - string name\n varName - string name\n selfObj - \n selfObjDesc -"
 	}

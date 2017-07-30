@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "frame",
-		"comment": "The library is an object, and as such can't be properly identified unless intellisense is fixed.",
+		"comment": "The library is an object, and as such can not be identified unless intellisense is active.",
 		"authors": [
 			"Jeblad"
 		]
