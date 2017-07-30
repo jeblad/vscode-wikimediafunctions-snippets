@@ -6,18 +6,18 @@
 			"Jeblad"
 		]
 	},
-	"mw.ustring 001": {
-		"prefix": "mw.ustring.byte( s, i, j )",
+	"string 001": {
+		"prefix": "string.byte( s, i, j )",
 		"body": [
-			"mw.ustring.byte( ${1:s}, ${2:i}${3:[, j]} )"
+			"string.byte( ${1:s}, ${2:i}${3:[, j]} )"
 		],
-		"description": "mw.ustring.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+		"description": "string.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
 	},
-	"mw.ustring 002": {
-		"prefix": "mw.ustring.char( ... )",
+	"string 002": {
+		"prefix": "string.char( ... )",
 		"body": [
-			"mw.ustring.char( ${1:...} )"
+			"string.char( ${1:...} )"
 		],
-		"description": "mw.ustring.char( ... )\n s - chars to be converted and concatenated"
+		"description": "string.char( ... )\n s - chars to be converted and concatenated"
 	}
 }
