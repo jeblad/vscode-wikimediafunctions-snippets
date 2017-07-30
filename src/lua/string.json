@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"name": "string",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"mw.ustring 001": {
+		"prefix": "mw.ustring.byte( s, i, j )",
+		"body": [
+			"mw.ustring.byte( ${1:s}, ${2:i}${3:[, j]} )"
+		],
+		"description": "mw.ustring.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+	},
+	"mw.ustring 002": {
+		"prefix": "mw.ustring.char( ... )",
+		"body": [
+			"mw.ustring.char( ${1:...} )"
+		],
+		"description": "mw.ustring.char( ... )\n s - chars to be converted and concatenated"
+	}
+}
