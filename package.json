@@ -42,5 +42,8 @@
         "grunt-merge-json": "^0.9.5",
         "markdownlint": "^0.3.1"
     },
-    "dependencies": {}
+    "dependencies": {
+        "eslint": "^4.8.0",
+        "jscs": "^3.0.7"
+    }
 }
