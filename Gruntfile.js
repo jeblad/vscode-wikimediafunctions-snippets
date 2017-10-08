@@ -1,14 +1,14 @@
 /* jshint node:true */
 module.exports = function ( grunt ) {
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
-	grunt.loadNpmTasks( 'grunt-markdownlint' );
-	grunt.loadNpmTasks('grunt-merge-json');
+	grunt.loadNpmTasks( "grunt-jsonlint" );
+	grunt.loadNpmTasks( "grunt-markdownlint" );
+	grunt.loadNpmTasks("grunt-merge-json");
 
 	grunt.initConfig( {
 		jsonlint: {
 			all: [
-				'**/*.json',
-				'!node_modules/**'
+				"**/*.json",
+				"!node_modules/**"
 			]
 		},
 		markdownlint: {
@@ -19,14 +19,14 @@ module.exports = function ( grunt ) {
 				}
 			},
 			all: [
-				'**/*.md',
-				'!node_modules/**'
+				"**/*.md",
+				"!node_modules/**"
 			]
 		},
 		"merge-json": {
 			options: {
 				replacer: function( key, value ) {
-					if ( key === '@metadata' ) {
+					if ( key === "@metadata" ) {
 						return undefined;
 					}
 					return value;
@@ -38,24 +38,24 @@ module.exports = function ( grunt ) {
 				}
 			}
 		}
-	 } );
+	} );
 
-	grunt.registerTask( 'lint',
+	grunt.registerTask( "lint",
 		[
-			'jsonlint',
-			'markdownlint'
+			"jsonlint",
+			"markdownlint"
 		] );
-	grunt.registerTask( 'test',
+	grunt.registerTask( "test",
 		[
-			'lint'
+			"lint"
 		] );
-	grunt.registerTask( 'merge',
+	grunt.registerTask( "merge",
 		[
-			'merge-json'
+			"merge-json"
 		] );
-	grunt.registerTask( 'default',
+	grunt.registerTask( "default",
 		[
-			'merge',
-			'test'
+			"merge",
+			"test"
 		] );
 };
