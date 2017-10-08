@@ -9,70 +9,70 @@
 	"mw 001": {
 		"prefix": "mw.addWarning( text )",
 		"body": [
-			"mw.addWarning( ${1:text} )"
+			"mw.addWarning( ${1:text} )$0"
 		],
 		"description": "mw.addWarning( text )\n text - string with wikitext"
 	},
 	"mw 002": {
 		"prefix": "mw.allToString( ... )",
 		"body": [
-			"mw.allToString( ${1:...} )"
+			"mw.allToString( ${1:...} )$0"
 		],
 		"description": "mw.allToString( ... )\n calls tostring() on all args"
 	},
 	"mw 003": {
 		"prefix": "mw.clone( value )",
 		"body": [
-			"mw.clone( ${1:value} )"
+			"mw.clone( ${1:value} )$0"
 		],
 		"description": "mw.clone( value )\n value - any to be converted"
 	},
 	"mw 004": {
 		"prefix": "mw.getCurrentFrame()",
 		"body": [
-			"mw.getCurrentFrame()"
+			"mw.getCurrentFrame()$0"
 		],
 		"description": "mw.getCurrentFrame()"
 	},
 	"mw 005": {
 		"prefix": "mw.incrementExpensiveFunctionCount()",
 		"body": [
-			"mw.incrementExpensiveFunctionCount()"
+			"mw.incrementExpensiveFunctionCount()$0"
 		],
 		"description": "mw.incrementExpensiveFunctionCount()"
 	},
 	"mw 006": {
 		"prefix": "mw.isSubsting()",
 		"body": [
-			"mw.isSubsting()"
+			"mw.isSubsting()$0"
 		],
 		"description": "mw.isSubsting()"
 	},
 	"mw 007": {
 		"prefix": "mw.loadData( module )",
 		"body": [
-			"mw.loadData( ${1:module} )"
+			"mw.loadData( ${1:module} )$0"
 		],
 		"description": "mw.loadData( module )\n module - string identifying a page"
 	},
 	"mw 008": {
 		"prefix": "mw.dumpObject( object )",
 		"body": [
-			"mw.dumpObject( ${1:object} )"
+			"mw.dumpObject( ${1:object} )$0"
 		],
 		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
 	},
 	"mw 009": {
 		"prefix": "mw.log( ... )",
 		"body": [
-			"mw.log( ${1:...} )"
+			"mw.log( ${1:...} )$0"
 		],
 		"description": "mw.log( ... )\n calls tostring() on all args"
 	},
 	"mw 010": {
 		"prefix": "mw.logObject ( object, prefix )",
 		"body": [
-			"mw.logObject( ${1:object}${2:[, prefix]} )"
+			"mw.logObject( ${1:object}${2:, ${3:prefix}} )$0"
 		],
 		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
 	}

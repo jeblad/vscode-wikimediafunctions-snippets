@@ -9,14 +9,14 @@
 	"mw.hash 001": {
 		"prefix": "mw.hash.hashValue( algo, value )",
 		"body": [
-			"mw.hash.hashValue( ${1:algo}, ${2:value} )"
+			"mw.hash.hashValue( ${1:algo}, ${2:value} )$0"
 		],
 		"description": "mw.hash.hashValue( algo, value )\n algo - algorithm to use for hashing\n value - string to be hashed"
 	},
 	"mw.hash 002": {
 		"prefix": "mw.hash.listAlgorithms()",
 		"body": [
-			"mw.hash.listAlgorithms()"
+			"mw.hash.listAlgorithms()$0"
 		],
 		"description": "mw.hash.listAlgorithms()"
 	}

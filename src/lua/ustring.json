@@ -9,140 +9,140 @@
 	"mw.ustring 001": {
 		"prefix": "mw.ustring.maxPatternLength",
 		"body": [
-			"mw.ustring.maxPatternLength"
+			"mw.ustring.maxPatternLength$0"
 		],
 		"description": "mw.ustring.maxPatternLength"
 	},
 	"mw.ustring 002": {
 		"prefix": "mw.ustring.maxStringLength",
 		"body": [
-			"mw.ustring.maxPatternLength"
+			"mw.ustring.maxPatternLength$0"
 		],
 		"description": "mw.ustring.maxPatternLength"
 	},
 	"mw.ustring 003": {
 		"prefix": "mw.ustring.byte( s, i, j )",
 		"body": [
-			"mw.ustring.byte( ${1:s}, ${2:i}${3:[, j]} )"
+			"mw.ustring.byte( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
 		],
 		"description": "mw.ustring.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
 	},
 	"mw.ustring 004": {
 		"prefix": "mw.ustring.byteoffset( s, l, i )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s}${2:[, l]}${3:[, i]} )"
+			"mw.ustring.byteoffset( ${1:s}${2:, ${3:l${3:, ${4:i}}}} )$0"
 		],
-		"description": "mw.ustring.byteoffset( s[, l][, i] )\n s - string\n l - offset\n i - index"
+		"description": "mw.ustring.byteoffset( s[, l[, i]] )\n s - string\n l - offset\n i - index"
 	},
 	"mw.ustring 005": {
 		"prefix": "mw.ustring.char( ... )",
 		"body": [
-			"mw.ustring.char( ${1:...} )"
+			"mw.ustring.char( ${1:...} )$0"
 		],
 		"description": "mw.ustring.char( ... )\n codepoints to be converted and concatenated"
 	},
 	"mw.ustring 006": {
 		"prefix": "mw.ustring.codepoint( s, i, j )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s}, ${2:i}${3:[, j]} )"
+			"mw.ustring.codepoint( ${1:s}, ${2:i}${3:,${4:j}} )$0"
 		],
 		"description": "mw.ustring.codepoint( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
 	},
 	"mw.ustring 007": {
 		"prefix": "mw.ustring.find( s, pattern, init, plain )",
 		"body": [
-			"mw.ustring.find( ${1:s}, ${2:pattern}${3:[, init]}${4:[, plain]} )"
+			"mw.ustring.find( ${1:s}, ${2:pattern}${3:, ${4:init${5:, ${6:plain}}}} )$0"
 		],
 		"description": "mw.ustring.find( s, pattern[, init][, plain] )\n s - string used as source\n pattern - string to use while searching\n init - where to start searching\n plain - boolean to chose search method"
 	},
 	"mw.ustring 008": {
 		"prefix": "mw.ustring.format( format, ... )",
 		"body": [
-			"mw.ustring.format( ${1:format}, ${2:...} )"
+			"mw.ustring.format( ${1:format}, ${2:...} )$0"
 		],
 		"description": "mw.ustring.format( format, ... )\n format - string for the layout\n arguments for the format string"
 	},
 	"mw.ustring 009": {
 		"prefix": "mw.ustring.gcodepoint( s, i, j )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s}, ${2:i}${3:[, j]} )"
+			"mw.ustring.gcodepoint( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
 		],
 		"description": "mw.ustring.gcodepoint( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
 	},
 	"mw.ustring 010": {
 		"prefix": "mw.ustring.gmatch( s, pattern )",
 		"body": [
-			"mw.ustring.gmatch( ${1:s}, ${2:pattern} )"
+			"mw.ustring.gmatch( ${1:s}, ${2:pattern} )$0"
 		],
 		"description": "mw.ustring.gmatch( s, pattern )\n s - string used as source\n pattern - string to use while searching"
 	},
 	"mw.ustring 011": {
 		"prefix": "mw.ustring.gsub( s, pattern, repl, n )",
 		"body": [
-			"mw.ustring.gsub( ${1:s}, ${2:pattern}, ${3:repl}${4:[, n]} )"
+			"mw.ustring.gsub( ${1:s}, ${2:pattern}, ${3:repl}${4:, ${5:n}} )$0"
 		],
 		"description": "mw.ustring.gsub( s, pattern, repl[, n] )\n s - string used as source\n pattern - string to use while searching\n repl - string used as replacement\n n - number of copies"
 	},
 	"mw.ustring 012": {
 		"prefix": "mw.ustring.isutf8( s )",
 		"body": [
-			"mw.ustring.isutf8( ${1:s} )"
+			"mw.ustring.isutf8( ${1:s} )$0"
 		],
 		"description": "mw.ustring.isutf8( s )\n s - string used as source"
 	},
 	"mw.ustring 013": {
 		"prefix": "mw.ustring.len( s )",
 		"body": [
-			"mw.ustring.len( ${1:s} )"
+			"mw.ustring.len( ${1:s} )$0"
 		],
 		"description": "mw.ustring.len( s )\n s - string used as source"
 	},
 	"mw.ustring 014": {
 		"prefix": "mw.ustring.lower( s )",
 		"body": [
-			"mw.ustring.lower( ${1:s} )"
+			"mw.ustring.lower( ${1:s} )$0"
 		],
 		"description": "mw.ustring.lower( s )\n s - string used as source"
 	},
 	"mw.ustring 015": {
 		"prefix": "mw.ustring.match( s, pattern, init )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern}${3:[, init]} )"
+			"mw.ustring.match( ${1:s}, ${2:pattern}${3:, ${4:init}} )$0"
 		],
 		"description": "mw.ustring.match( s, pattern, init )\n s - string used as source\n pattern - string to use while searching\n init - where to start searching"
 	},
 	"mw.ustring 016": {
 		"prefix": "mw.ustring.rep( s, n )",
 		"body": [
-			"mw.ustring.rep( ${1:s}, ${2:n} )"
+			"mw.ustring.rep( ${1:s}, ${2:n} )$0"
 		],
 		"description": "mw.ustring.rep( s, n )\n s - string used as source\n n - number of copies"
 	},
 	"mw.ustring 017": {
 		"prefix": "mw.ustring.sub( s, i, j )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i}${3:[, j]} )"
+			"mw.ustring.sub( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
 		],
 		"description": "mw.ustring.sub( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
 	},
 	"mw.ustring 018": {
 		"prefix": "mw.ustring.toNFC( s )",
 		"body": [
-			"mw.ustring.toNFC( ${1:s} )"
+			"mw.ustring.toNFC( ${1:s} )$0"
 		],
 		"description": "mw.ustring.toNFC( s )\n s - string used as source"
 	},
 	"mw.ustring 019": {
 		"prefix": "mw.ustring.toNFD( s )",
 		"body": [
-			"mw.ustring.toNFD( ${1:s} )"
+			"mw.ustring.toNFD( ${1:s} )$0"
 		],
 		"description": "mw.ustring.toNFD( s )\n s - string used as source"
 	},
 	"mw.ustring 020": {
 		"prefix": "mw.ustring.upper( s )",
 		"body": [
-			"mw.ustring.upper( ${1:s} )"
+			"mw.ustring.upper( ${1:s} )$0"
 		],
 		"description": "mw.ustring.upper( s )\n s - string used as source"
 	}

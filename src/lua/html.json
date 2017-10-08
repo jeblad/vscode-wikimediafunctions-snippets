@@ -9,98 +9,98 @@
 	"mw.html 001": {
 		"prefix": "mw.html.create( tagName, args )",
 		"body": [
-			"mw.html.create( ${1:tagName}${2:[, args]} )"
+			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
 		],
 		"description": "mw.html.create( tagName, args )\n tagName - string holding tag\n args - table holding options"
 	},
 	"mw.html 002": {
 		"prefix": "node( builder )",
 		"body": [
-			"node( ${1:builder} )"
+			"node( ${1:builder} )$0"
 		],
 		"description": "mw.html:node( builder )\n builder - string holding a representation of the html code"
 	},
 	"mw.html 003": {
 		"prefix": "wikitext( ... )",
 		"body": [
-			"wikitext( ${1:...} )"
+			"wikitext( ${1:...} )$0"
 		],
 		"description": "mw.html:wikitext( ... )\n a number of wikitext fragments"
 	},
 	"mw.html 004": {
 		"prefix": "newline()",
 		"body": [
-			"newline()"
+			"newline()$0"
 		],
 		"description": "mw.html:newline()"
 	},
 	"mw.html 005": {
 		"prefix": "tag( tagName, args )",
 		"body": [
-			"tag( ${1:tagName}, ${2:args} )"
+			"tag( ${1:tagName}, ${2:args} )$0"
 		],
 		"description": "mw.html:tag( tagName, args )\n tagName - string holding tag\n args - table holding options"
 	},
 	"mw.html 006": {
 		"prefix": "attr( name, value )",
 		"body": [
-			"attr( ${1:name}, ${2:value} )"
+			"attr( ${1:name}, ${2:value} )$0"
 		],
 		"description": "mw.html:attr( name, value )\n name - string identifying attribute\n value - content of attribute"
 	},
 	"mw.html 007": {
 		"prefix": "attr( table )",
 		"body": [
-			"attr( ${1:table} )"
+			"attr( ${1:table} )$0"
 		],
 		"description": "mw.html:attr( table )\n table - key-value pairs of attributes"
 	},
 	"mw.html 008": {
 		"prefix": "getAttr( name )",
 		"body": [
-			"getAttr( ${1:name} )"
+			"getAttr( ${1:name} )$0"
 		],
 		"description": "mw.html:getAttr( name )\n name - string identifying attribute"
 	},
 	"mw.html 009": {
 		"prefix": "addClass( class )",
 		"body": [
-			"addClass( ${1:class} )"
+			"addClass( ${1:class} )$0"
 		],
 		"description": "mw.html:addClass( class )\n class - string identifying class"
 	},
 	"mw.html 010": {
 		"prefix": "css( name, value )",
 		"body": [
-			"css( ${1:name}, ${2:value} )"
+			"css( ${1:name}, ${2:value} )$0"
 		],
 		"description": "mw.html:css( name, value )\n name - string identifying style\n value - content of style"
 	},
 	"mw.html 011": {
 		"prefix": "css( table )",
 		"body": [
-			"css( ${1:table} )"
+			"css( ${1:table} )$0"
 		],
 		"description": "mw.html:css( table )\n table - key-value pairs of styles"
 	},
 	"mw.html 012": {
 		"prefix": "cssText( css )",
 		"body": [
-			"cssText( ${1:css} )"
+			"cssText( ${1:css} )$0"
 		],
 		"description": "mw.html:cssText( css )\n css - raw styles"
 	},
 	"mw.html 013": {
 		"prefix": "done()",
 		"body": [
-			"done()"
+			"done()$0"
 		],
 		"description": "mw.html:done()"
 	},
 	"mw.html 014": {
 		"prefix": "allDone()",
 		"body": [
-			"allDone()"
+			"allDone()$0"
 		],
 		"description": "mw.html:allDone()"
 	}

@@ -16,119 +16,119 @@
 	"frame 002": {
 		"prefix": "callParserFunction( name, args )",
 		"body": [
-			"callParserFunction( ${1:name}${2:[, args]} )"
+			"callParserFunction( ${1:name}${2:, ${3:args}} )$0"
 		],
 		"description": "frame:callParserFunction( name, args )\n name - string identifying the parser function\n args - table with arguments"
 	},
 	"frame 003": {
 		"prefix": "callParserFunction( name, ... )",
 		"body": [
-			"callParserFunction( ${1:name}${2:[, ...]} )"
+			"callParserFunction( ${1:name}${2:, ${3:...}} )$0"
 		],
 		"description": "frame:callParserFunction( name, ... )\n name - string identifying the parser function\n collected arguments"
 	},
 	"frame 004": {
 		"prefix": "callParserFunction{ name = string, args = table }",
 		"body": [
-			"callParserFunction{ name = ${1:string}, args = ${2:table} }"
+			"callParserFunction{ name = ${1:string}, args = ${2:table} }$0"
 		],
 		"description": "frame:callParserFunction{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
 	},
 	"frame 005": {
 		"prefix": "expandTemplate{ name = string, args = table }",
 		"body": [
-			"expandTemplate{ name = ${1:string}, args = ${2:table} }"
+			"expandTemplate{ name = ${1:string}, args = ${2:table} }$0"
 		],
 		"description": "frame:expandTemplate{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
 	},
 	"frame 006": {
 		"prefix": "extensionTag( name, content, args )",
 		"body": [
-			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )"
+			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )$0"
 		],
 		"description": "frame:extensionTag( name, content, args )\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
 	},
 	"frame 007": {
 		"prefix": "extensionTag{ name = string, content = string, args =table_or_string }",
 		"body": [
-			"extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }"
+			"extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }$0"
 		],
 		"description": "frame:extensionTag{ name = string, content = string, args = table_or_string }\n name - string identifying the parser function\n content - string containing wikitext\n args - table or string with arguments"
 	},
 	"frame 008": {
 		"prefix": "getParent()",
 		"body": [
-			"getParent()"
+			"getParent()$0"
 		],
 		"description": "frame:getParent()"
 	},
 	"frame 009": {
 		"prefix": "getTitle()",
 		"body": [
-			"getTitle()"
+			"getTitle()$0"
 		],
 		"description": "frame:getTitle()"
 	},
 	"frame 010": {
 		"prefix": "newChild{ title = title, args = table }",
 		"body": [
-			"newChild{ title = ${1:title}, args = ${2:table} }"
+			"newChild{ title = ${1:title}, args = ${2:table} }$0"
 		],
 		"description": "frame:newChild{ title = title, args = table }\n title - title as object\n args - table with arguments"
 	},
 	"frame 011": {
 		"prefix": "preprocess( string )",
 		"body": [
-			"preprocess( ${1:string} )"
+			"preprocess( ${1:string} )$0"
 		],
 		"description": "frame:preprocess( string )\n string - wikitext to be formatted"
 	},
 	"frame 012": {
 		"prefix": "preprocess{ text = string }",
 		"body": [
-			"preprocess{ text = ${1:string} }"
+			"preprocess{ text = ${1:string} }$0"
 		],
 		"description": "frame:preprocess{ text = string }\n text - wikitext to be formatted"
 	},
 	"frame 013": {
 		"prefix": "getArgument( arg )",
 		"body": [
-			"getArgument( ${1:arg} )"
+			"getArgument( ${1:arg} )$0"
 		],
 		"description": "frame:getArgument( arg )\n arg - gets the specified argument"
 	},
 	"frame 014": {
 		"prefix": "getArgument{ name = arg }",
 		"body": [
-			"getArgument{ name = ${1:arg} }"
+			"getArgument{ name = ${1:arg} }$0"
 		],
 		"description": "frame:getArgument{ name = arg }\n name - gets the specified argument"
 	},
 	"frame 015": {
 		"prefix": "newParserValue( text )",
 		"body": [
-			"newParserValue( ${1:text} )"
+			"newParserValue( ${1:text} )$0"
 		],
 		"description": "frame:newParserValue( text )\n text - wikitext to be expanded"
 	},
 	"frame 016": {
 		"prefix": "newParserValue( text = text )",
 		"body": [
-			"newParserValue{ text = ${1:text} }"
+			"newParserValue{ text = ${1:text} }$0"
 		],
 		"description": "frame:newParserValue{ text = text }\n text - wikitext to be expanded"
 	},
 	"frame 017": {
 		"prefix": "newTemplateParserValue{ title = title, args = table }",
 		"body": [
-			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }"
+			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }$0"
 		],
 		"description": "frame:newTemplateParserValue{ title = title, args = table }\n title - name of template to be expanded\n args - arguments to the template"
 	},
 	"frame 018": {
 		"prefix": "argumentPairs()",
 		"body": [
-			"argumentPairs()"
+			"argumentPairs()$0"
 		],
 		"description": "frame:argumentPairs()\nSame as pairs( frame.args )"
 	}
