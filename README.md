@@ -4,11 +4,11 @@ This extension for Visual Studio Code adds snippets for various languages in use
 
 ## Usage
 
-Type part of a snippet, make sure the highlighted entry is the one you want, press `tab` or `enter`, and the snippet unfolds. Inside the snippet there are one or more highlighted areas, these can be replaced, and it is then possible to tab to next item that can be replaced.
+Type part of a snippet, typically by writing something like `mw.ustring.byte`, make sure the highlighted entry is the one you want, press `tab` or `enter`, and the snippet unfolds. Inside the snippet there are one or more highlighted areas, these can be replaced, and it is then possible to tab to next item that can be replaced. Sometimes the highlighted area cover the comma before the argument, that happen when the following is an optional argument.
 
 ![GitHub Logo](hits.png)
 
-The snippets have a prefix that is the method name, and inside Visual Studio Code you might type additionel specifiers. Those are typically the class name or the name of an argument. It is also possible to write the snippets number, even if it is a bit awkward.
+The snippets have a prefix that is the method name, and inside Visual Studio Code you might type additionel specifiers. Those are typically the class name or the name of an argument. It is also possible to write the snippets number, even if it is a bit awkward. Instance methods are found the same way as class methods, but the leading part is skipped on the assumption that it shall be appended to a variable of some sort.
 
 As this is snippets, there is no Intellisense available. This is a bit unfortunate, as the user must learn the method names. They do although work as a typing aid, and especially well as an aid to get the arguments right.
 
@@ -28,7 +28,7 @@ Note that this set of snippets will not provide the standard functions for Lua.
 - [language](src/lua/language.json) static library; interact with Mediawiki language objects
 - [uri](src/lua/uri.json) static library; create encoded uri strings
 - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
-- [util](src/lua/util.json) loadable library; various misc functions for argument parsing
+- [libraryUtil](src/lua/libraryUtil.json) loadable library; various misc functions for argument parsing
 
 Unfinished standard libraries
 
