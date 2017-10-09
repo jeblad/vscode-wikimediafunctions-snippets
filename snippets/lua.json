@@ -112,100 +112,100 @@
 		"description": "Call a parser function, returning an appropriate string.\n"
 	},
 	"frame 005": {
-		"prefix": "expandTemplate{ name = string, args = table }",
+		"prefix": "frame:expandTemplate{ name = string, args = table }",
 		"body": [
-			"expandTemplate{ name = ${1:string}, args = ${2:table} }$0"
+			"frame:expandTemplate{ name = ${1:string}, args = ${2:table} }$0"
 		],
 		"description": "Transclude a template, returning an appropriate string.\n"
 	},
 	"frame 006": {
-		"prefix": "extensionTag( name, content, args )",
+		"prefix": "frame:extensionTag( name, content, args )",
 		"body": [
-			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )$0"
+			"frame:extensionTag( ${1:name}${2:[, content]}${3:[, args]} )$0"
 		],
 		"description": "Call a tag function, returning an appropriate string.\n"
 	},
 	"frame 007": {
-		"prefix": "extensionTag{ name = string, content = string, args =table_or_string }",
+		"prefix": "frame:extensionTag{ name = string, content = string, args =table_or_string }",
 		"body": [
-			"extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }$0"
+			"frame:extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }$0"
 		],
 		"description": "Call a tag function, returning an appropriate string.\n"
 	},
 	"frame 008": {
-		"prefix": "getParent()",
+		"prefix": "frame:getParent()",
 		"body": [
-			"getParent()$0"
+			"frame:getParent()$0"
 		],
 		"description": "Get the frame of the parent, in the \"invoke\" hierarchy.\n"
 	},
 	"frame 009": {
-		"prefix": "getTitle()",
+		"prefix": "frame:getTitle()",
 		"body": [
-			"getTitle()$0"
+			"frame:getTitle()$0"
 		],
 		"description": "Get the title as a string of the frame.\n"
 	},
 	"frame 010": {
-		"prefix": "newChild{ title = title, args = table }",
+		"prefix": "frame:newChild{ title = title, args = table }",
 		"body": [
-			"newChild{ title = ${1:title}, args = ${2:table} }$0"
+			"frame:newChild{ title = ${1:title}, args = ${2:table} }$0"
 		],
 		"description": "Create a new child of the current frame.\n"
 	},
 	"frame 011": {
-		"prefix": "preprocess( string )",
+		"prefix": "frame:preprocess( string )",
 		"body": [
-			"preprocess( ${1:string} )$0"
+			"frame:preprocess( ${1:string} )$0"
 		],
 		"description": "Expand the string in the context of the frame.\n"
 	},
 	"frame 012": {
-		"prefix": "preprocess{ text = string }",
+		"prefix": "frame:preprocess{ text = string }",
 		"body": [
-			"preprocess{ text = ${1:string} }$0"
+			"frame:preprocess{ text = ${1:string} }$0"
 		],
 		"description": "Expand the string in the context of the frame.\n"
 	},
 	"frame 013": {
-		"prefix": "getArgument( arg )",
+		"prefix": "frame:getArgument( arg )",
 		"body": [
-			"getArgument( ${1:arg} )$0"
+			"frame:getArgument( ${1:arg} )$0"
 		],
 		"description": "Gets an object for the specified argument, or nil if the argument is not provided.\n"
 	},
 	"frame 014": {
-		"prefix": "getArgument{ name = arg }",
+		"prefix": "frame:getArgument{ name = arg }",
 		"body": [
-			"getArgument{ name = ${1:arg} }$0"
+			"frame:getArgument{ name = ${1:arg} }$0"
 		],
 		"description": "Gets an object for the specified argument, or nil if the argument is not provided.\n"
 	},
 	"frame 015": {
-		"prefix": "newParserValue( text )",
+		"prefix": "frame:newParserValue( text )",
 		"body": [
-			"newParserValue( ${1:text} )$0"
+			"frame:newParserValue( ${1:text} )$0"
 		],
 		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 016": {
-		"prefix": "newParserValue( text = text )",
+		"prefix": "frame:newParserValue( text = text )",
 		"body": [
-			"newParserValue{ text = ${1:text} }$0"
+			"frame:newParserValue{ text = ${1:text} }$0"
 		],
 		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 017": {
-		"prefix": "newTemplateParserValue{ title = title, args = table }",
+		"prefix": "frame:newTemplateParserValue{ title = title, args = table }",
 		"body": [
-			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }$0"
+			"frame:newTemplateParserValue{ title = ${1:title}, args = ${2:table} }$0"
 		],
 		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 018": {
-		"prefix": "argumentPairs()",
+		"prefix": "frame:argumentPairs()",
 		"body": [
-			"argumentPairs()$0"
+			"frame:argumentPairs()$0"
 		],
 		"description": "Same as pairs( frame.args )\n"
 	},
@@ -366,7 +366,7 @@
 	"mw.language 007": {
 		"prefix": "mw.language.isSupportedLanguage( code )",
 		"body": [
-			"mw.language.isSupportedLanguage(${1:code} )$0"
+			"mw.language.isSupportedLanguage( ${1:code} )$0"
 		],
 		"description": "Checks whether localisation is available for the language code.\n"
 	},
@@ -462,14 +462,14 @@
 		"description": "Formats a number according to rules for the given language.\n"
 	},
 	"mw.language 021": {
-		"prefix": "mw.language:formatDate( format, timestamp, local )",
+		"prefix": "mw.language:formatDate( format, timestamp[, local] )",
 		"body": [
-			":formatDate( ${1:format}, ${2:timestamp}, ${3:local} )$0"
+			":formatDate( ${1:format}, ${2:timestamp${3:, ${4:local}}} )$0"
 		],
 		"description": "Formats a date according to rules for the given language.\n"
 	},
 	"mw.language 022": {
-		"prefix": "mw.language:formatDuration( seconds, allowedIntervals )",
+		"prefix": "mw.language:formatDuration( seconds[, allowedIntervals] )",
 		"body": [
 			":formatDuration( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
 		],
@@ -814,21 +814,21 @@
 	"mw.uri 006 ": {
 		"prefix": "mw.uri.canonicalUrl( page[, query] )",
 		"body": [
-			"mw.uri.canonicalUrl( ${1:page${2:, ${3:query}} )$0"
+			"mw.uri.canonicalUrl( ${1:page${2:, ${3:query}}} )$0"
 		],
 		"description": "Returns a uri for the canonical url, with optional query string/table.\n"
 	},
 	"mw.uri 007 ": {
 		"prefix": "mw.uri.fullUrl( page[, query] )",
 		"body": [
-			"mw.uri.fullUrl( ${1:page${2:, ${3:query}} )$0"
+			"mw.uri.fullUrl( ${1:page${2:, ${3:query}}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 008 ": {
 		"prefix": "mw.uri.localUrl(  page[, query] )",
 		"body": [
-			"mw.uri.localUrl( ${1:page${2:, ${3:query}} )$0"
+			"mw.uri.localUrl( ${1:page${2:, ${3:query}}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
@@ -884,14 +884,14 @@
 	"mw.ustring 003": {
 		"prefix": "mw.ustring.byte( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
+			"mw.ustring.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Returns the ustring as an array of bytes.\n"
 	},
 	"mw.ustring 004": {
 		"prefix": "mw.ustring.byteoffset( s[, l[, i]] )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s${2:, ${3:l${3:, ${4:i}}}}} )$0"
+			"mw.ustring.byteoffset( ${1:s${2:, ${3:l${4:, ${5:i}}}}} )$0"
 		],
 		"description": "Returns the byte offset of a character in the ustring.\n"
 	},
@@ -905,7 +905,7 @@
 	"mw.ustring 006": {
 		"prefix": "mw.ustring.codepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
+			"mw.ustring.codepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Returns the ustring as an array of codepoints.\n"
 	},
@@ -926,7 +926,7 @@
 	"mw.ustring 009": {
 		"prefix": "mw.ustring.gcodepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s${2{, ${3:i${4:, ${5:j}}}}} )$0"
+			"mw.ustring.gcodepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Creates an iterator for the codepoints from the given arguments.\n"
 	},
@@ -968,7 +968,7 @@
 	"mw.ustring 015": {
 		"prefix": "mw.ustring.match( s, pattern[, init] )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern${3:, ${4:init}} )$0"
+			"mw.ustring.match( ${1:s}, ${2:pattern${3:, ${4:init}}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
@@ -982,7 +982,7 @@
 	"mw.ustring 017": {
 		"prefix": "mw.ustring.sub( s, i[, j] )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i${3:, ${4:j}} )$0"
+			"mw.ustring.sub( ${1:s}, ${2:i${3:, ${4:j}}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},

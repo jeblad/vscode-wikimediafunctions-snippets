@@ -23,14 +23,14 @@
 	"mw.ustring 003": {
 		"prefix": "mw.ustring.byte( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
+			"mw.ustring.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Returns the ustring as an array of bytes.\n"
 	},
 	"mw.ustring 004": {
 		"prefix": "mw.ustring.byteoffset( s[, l[, i]] )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s${2:, ${3:l${3:, ${4:i}}}}} )$0"
+			"mw.ustring.byteoffset( ${1:s${2:, ${3:l${4:, ${5:i}}}}} )$0"
 		],
 		"description": "Returns the byte offset of a character in the ustring.\n"
 	},
@@ -44,7 +44,7 @@
 	"mw.ustring 006": {
 		"prefix": "mw.ustring.codepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
+			"mw.ustring.codepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Returns the ustring as an array of codepoints.\n"
 	},
@@ -65,7 +65,7 @@
 	"mw.ustring 009": {
 		"prefix": "mw.ustring.gcodepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s${2{, ${3:i${4:, ${5:j}}}}} )$0"
+			"mw.ustring.gcodepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
 		],
 		"description": "Creates an iterator for the codepoints from the given arguments.\n"
 	},
@@ -107,7 +107,7 @@
 	"mw.ustring 015": {
 		"prefix": "mw.ustring.match( s, pattern[, init] )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern${3:, ${4:init}} )$0"
+			"mw.ustring.match( ${1:s}, ${2:pattern${3:, ${4:init}}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
@@ -121,7 +121,7 @@
 	"mw.ustring 017": {
 		"prefix": "mw.ustring.sub( s, i[, j] )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i${3:, ${4:j}} )$0"
+			"mw.ustring.sub( ${1:s}, ${2:i${3:, ${4:j}}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},

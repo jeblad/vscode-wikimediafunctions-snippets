@@ -51,7 +51,7 @@
 	"mw.language 007": {
 		"prefix": "mw.language.isSupportedLanguage( code )",
 		"body": [
-			"mw.language.isSupportedLanguage(${1:code} )$0"
+			"mw.language.isSupportedLanguage( ${1:code} )$0"
 		],
 		"description": "Checks whether localisation is available for the language code.\n"
 	},
@@ -147,14 +147,14 @@
 		"description": "Formats a number according to rules for the given language.\n"
 	},
 	"mw.language 021": {
-		"prefix": "mw.language:formatDate( format, timestamp, local )",
+		"prefix": "mw.language:formatDate( format, timestamp[, local] )",
 		"body": [
-			":formatDate( ${1:format}, ${2:timestamp}, ${3:local} )$0"
+			":formatDate( ${1:format}, ${2:timestamp${3:, ${4:local}}} )$0"
 		],
 		"description": "Formats a date according to rules for the given language.\n"
 	},
 	"mw.language 022": {
-		"prefix": "mw.language:formatDuration( seconds, allowedIntervals )",
+		"prefix": "mw.language:formatDuration( seconds[, allowedIntervals] )",
 		"body": [
 			":formatDuration( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
 		],
