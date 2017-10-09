@@ -2,7 +2,8 @@
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( "grunt-jsonlint" );
 	grunt.loadNpmTasks( "grunt-markdownlint" );
-	grunt.loadNpmTasks("grunt-merge-json");
+	grunt.loadNpmTasks( "grunt-merge-json" );
+	grunt.loadNpmTasks( "grunt-run" );
 
 	grunt.initConfig( {
 		jsonlint: {
@@ -37,6 +38,17 @@ module.exports = function ( grunt ) {
 					"snippets/lua.json": [ "src/lua/*.json" ]
 				}
 			}
+		},
+		run: {
+			options: {
+				wait: true
+			},
+			package: {
+				cmd: "vsce",
+				args: [
+					"package"
+				]
+			}
 		}
 	} );
 
@@ -49,13 +61,14 @@ module.exports = function ( grunt ) {
 		[
 			"lint"
 		] );
-	grunt.registerTask( "merge",
+	grunt.registerTask( "package",
 		[
-			"merge-json"
+			"merge-json",
+			"run:package"
 		] );
 	grunt.registerTask( "default",
 		[
-			"merge",
-			"test"
+			"test",
+			"package"
 		] );
 };
