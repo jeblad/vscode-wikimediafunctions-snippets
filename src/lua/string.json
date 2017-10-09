@@ -1,23 +1,101 @@
 {
 	"@metadata": {
 		"name": "string",
-		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix.",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"string\", so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
 	},
 	"string 001": {
-		"prefix": "string.byte( s, i, j )",
+		"prefix": "string.byte( s[, i[, j]] )",
 		"body": [
-			"string.byte( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
+			"string.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
 		],
-		"description": "string.byte( s, i[, j] )\n s - string used as source\n i - start index\n j - end index"
+		"description": "Returns the string as an array of bytes.\n"
 	},
 	"string 002": {
 		"prefix": "string.char( ... )",
 		"body": [
 			"string.char( ${1:...} )$0"
 		],
-		"description": "string.char( ... )\n s - chars to be converted and concatenated"
+		"description": "Returns the arguments as a string of chars.\n"
+	},
+
+	"string 003": {
+		"prefix": "string.find( s, pattern[, init[, plain]] )",
+		"body": [
+			"string.find( ${1:s}, ${2:pattern${3:, ${4:init${5:, ${6:plain}}}}} )$0"
+		],
+		"description": "Search for the first occurence of pattern within the string.\n"
+	},
+	"string 004": {
+		"prefix": "string.format( format[, ...] )",
+		"body": [
+			"string.format( ${1:format${2:, ${3:...}}} )$0"
+		],
+		"description": "Formats the string, and injects optional arguments.\n"
+	},
+	"string 005": {
+		"prefix": "string.gmatch( s, pattern )",
+		"body": [
+			"string.gmatch( ${1:s}, ${2:pattern} )$0"
+		],
+		"description": "Creates an iterator for the captures from the given arguments.\n"
+	},
+	"string 006": {
+		"prefix": "string.gsub( s, pattern, repl[, n] )",
+		"body": [
+			"string.gsub( ${1:s}, ${2:pattern}, ${3:repl${4:, ${5:n}}} )$0"
+		],
+		"description": "Returns the string with occurences of patterns replaced.\n"
+	},
+	"string 007": {
+		"prefix": "string.len( s )",
+		"body": [
+			"string.len(${1:s} )$0"
+		],
+		"description": "Calculates the length of the string in bytes.\n"
+	},
+	"string 008": {
+		"prefix": "string.lower( s )",
+		"body": [
+			"string.lower( ${1:s} )$0"
+		],
+		"description": "Change all ascii uppercase letters to lowercase.\n"
+	},
+	"string 009": {
+		"prefix": "string.match( s, pattern[, init] )",
+		"body": [
+			"string.match( ${1:s}, ${2:pattern${3:, ${4:init}} )$0"
+		],
+		"description": "Returns the first part matched by pattern.\n"
+	},
+	"string 010": {
+		"prefix": "string.rep( s, n )",
+		"body": [
+			"string.rep( ${1:s}, ${2:n} )$0"
+		],
+		"description": "Returns a string with n copies of s.\n"
+	},
+	"string 011": {
+		"prefix": "string.reverse( s )",
+		"body": [
+			"string.reverse( ${1:s} )$0"
+		],
+		"description": "Returns the string of chars in reverse byte order.\n"
+	},
+	"string 012": {
+		"prefix": "string.sub( s, i[, j] )",
+		"body": [
+			"string.sub( ${1:s}, ${2:i${3:, ${4:j}} )$0"
+		],
+		"description": "Returns the part given by the arguments.\n"
+	},
+	"string 013": {
+		"prefix": "string.upper( s )",
+		"body": [
+			"string.upper( ${1:s} )$0"
+		],
+		"description": "Change all ascii lowercase letters to uppercase.\n"
 	}
 }

@@ -7,95 +7,95 @@
 		]
 	},
 	"mw.uri 001 ": {
-		"prefix": "mw.uri.encode( s, enctype )",
+		"prefix": "mw.uri.encode( s[, enctype] )",
 		"body": [
-			"mw.uri.encode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.encode( ${1:s${2:, ${3:enctype}}} )$0"
 		],
-		"description": "mw.uri.encode( s[, enctype] )\n s - string used as source\n enctype - encoding to use"
+		"description": "Percent-encodes the string.\n"
 	},
 	"mw.uri 002 ": {
-		"prefix": "mw.uri.decode( s, enctype )",
+		"prefix": "mw.uri.decode( s[, enctype] )",
 		"body": [
-			"mw.uri.decode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.decode( ${1:s${2:, ${3:enctype}}} )$0"
 		],
-		"description": "mw.uri.decode( s[, enctype] )\n s - string used as source"
+		"description": "Percent-decodes the string.\n"
 	},
 	"mw.uri 003 ": {
 		"prefix": "mw.uri.anchorEncode( s )",
 		"body": [
 			"mw.uri.anchorEncode( ${1:s} )$0"
 		],
-		"description": "mw.uri.anchorEncode( s )\n s - string used as source"
+		"description": "Encodes the string for use in a uri fragment.\n"
 	},
 	"mw.uri 004 ": {
 		"prefix": "mw.uri.buildQueryString( table )",
 		"body": [
 			"mw.uri.buildQueryString( ${1:table} )$0"
 		],
-		"description": "mw.uri.buildQueryString( table )"
+		"description": "Encodes the table as a uri query string.\n"
 	},
 	"mw.uri 005 ": {
 		"prefix": "mw.uri.parseQueryString( s, i, j )",
 		"body": [
 			"mw.uri.parseQueryString( ${1:s}, ${2:i}, ${3:j} )$0"
 		],
-		"description": "mw.uri.parseQueryString( s, i, j )\n s - string used as source"
+		"description": "Decodes the query string s to a table.\n"
 	},
 	"mw.uri 006 ": {
-		"prefix": "mw.uri.canonicalUrl( page, query )",
+		"prefix": "mw.uri.canonicalUrl( page[, query] )",
 		"body": [
-			"mw.uri.canonicalUrl( ${1:page}, ${2:query} )$0"
+			"mw.uri.canonicalUrl( ${1:page${2:, ${3:query}} )$0"
 		],
-		"description": "mw.uri.canonicalUrl( page, query )"
+		"description": "Returns a uri for the canonical url, with optional query string/table.\n"
 	},
 	"mw.uri 007 ": {
-		"prefix": "mw.uri.fullUrl( page, query )",
+		"prefix": "mw.uri.fullUrl( page[, query] )",
 		"body": [
-			"mw.uri.fullUrl( ${1:page}, ${2:query} )$0"
+			"mw.uri.fullUrl( ${1:page${2:, ${3:query}} )$0"
 		],
-		"description": "mw.uri.fullUrl( page, query )"
+		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 008 ": {
-		"prefix": "mw.uri.localUrl( page, query )",
+		"prefix": "mw.uri.localUrl(  page[, query] )",
 		"body": [
-			"mw.uri.localUrl( ${1:page}, ${1:query} )$0"
+			"mw.uri.localUrl( ${1:page${2:, ${3:query}} )$0"
 		],
-		"description": "mw.uri.localUrl( page, query )"
+		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 009 ": {
 		"prefix": "mw.uri.new( s )",
 		"body": [
 			"mw.uri.new( ${1:s} )$0"
 		],
-		"description": "mw.uri.new( s )\n s - string used as source"
+		"description": "Constructs a new uri object for the passed string or table.\n"
 	},
 	"mw.uri 010 ": {
 		"prefix": "mw.uri.validate( table )",
 		"body": [
 			"mw.uri.validate( ${1:table} )$0"
 		],
-		"description": "mw.uri.validate( table )"
+		"description": "Validates the passed table or uri object.\n"
 	},
 	"mw.uri 011 ": {
-		"prefix": "parse( s )",
+		"prefix": "mw.uri:parse( s )",
 		"body": [
-			"parse( ${1:s} )$0"
+			":parse( ${1:s} )$0"
 		],
-		"description": "mw.uri:parse( s )\n s - string used as source"
+		"description": "Parses a string into the current uri object.\n"
 	},
 	"mw.uri 012 ": {
-		"prefix": "clone()",
+		"prefix": "mw.uri:clone()",
 		"body": [
-			"clone()$0"
+			":clone()$0"
 		],
-		"description": "mw.uri:clone()"
+		"description": "Makes a copy of the URI object.\n"
 	},
 	"mw.uri 013 ": {
-		"prefix": "extend( parameters )",
+		"prefix": "mw.uri:extend( parameters )",
 		"body": [
-			"extend( ${1:parameters} )$0"
+			":extend( ${1:parameters} )$0"
 		],
-		"description": "mw.uri:extend( parameters )\n parameters - table to be merged into the object's query table"
+		"description": "Merges the parameters into the object's query table.\n"
 	}
 
 }

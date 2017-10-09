@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "frame",
-		"comment": "The library is an object, and as such can not be identified unless intellisense is active.",
+		"comment": "The library is an object, and as such can not be properly identified unless intellisense is active. This is nearly always named as \"frame\", so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
@@ -14,122 +14,122 @@
 		"description": "Table for arguments passed to the frame."
 	},
 	"frame 002": {
-		"prefix": "callParserFunction( name, args )",
+		"prefix": "frame:callParserFunction( name, args )",
 		"body": [
-			"callParserFunction( ${1:name}${2:, ${3:args}} )$0"
+			"frame:callParserFunction( ${1:name}${2:, ${3:args}} )$0"
 		],
-		"description": "frame:callParserFunction( name, args )\n name - string identifying the parser function\n args - table with arguments"
+		"description": "Call a parser function, returning an appropriate string.\n"
 	},
 	"frame 003": {
-		"prefix": "callParserFunction( name, ... )",
+		"prefix": "frame:callParserFunction( name, ... )",
 		"body": [
-			"callParserFunction( ${1:name}${2:, ${3:...}} )$0"
+			"frame:callParserFunction( ${1:name}${2:, ${3:...}} )$0"
 		],
-		"description": "frame:callParserFunction( name, ... )\n name - string identifying the parser function\n collected arguments"
+		"description": "Call a parser function, returning an appropriate string.\n"
 	},
 	"frame 004": {
-		"prefix": "callParserFunction{ name = string, args = table }",
+		"prefix": "frame:callParserFunction{ name = string, args = table }",
 		"body": [
-			"callParserFunction{ name = ${1:string}, args = ${2:table} }$0"
+			"frame:callParserFunction{ name = ${1:string}, args = ${2:table} }$0"
 		],
-		"description": "frame:callParserFunction{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+		"description": "Call a parser function, returning an appropriate string.\n"
 	},
 	"frame 005": {
 		"prefix": "expandTemplate{ name = string, args = table }",
 		"body": [
 			"expandTemplate{ name = ${1:string}, args = ${2:table} }$0"
 		],
-		"description": "frame:expandTemplate{ name = string, args = table }\n name - string identifying the parser function\n args - table with arguments"
+		"description": "Transclude a template, returning an appropriate string.\n"
 	},
 	"frame 006": {
 		"prefix": "extensionTag( name, content, args )",
 		"body": [
 			"extensionTag( ${1:name}${2:[, content]}${3:[, args]} )$0"
 		],
-		"description": "frame:extensionTag( name, content, args )\n name - string identifying the parser function\n content - string containing wikitext\n args - table with arguments"
+		"description": "Call a tag function, returning an appropriate string.\n"
 	},
 	"frame 007": {
 		"prefix": "extensionTag{ name = string, content = string, args =table_or_string }",
 		"body": [
 			"extensionTag{ name = ${1:string}, args = ${2:string}, args = ${3:table_or_string} }$0"
 		],
-		"description": "frame:extensionTag{ name = string, content = string, args = table_or_string }\n name - string identifying the parser function\n content - string containing wikitext\n args - table or string with arguments"
+		"description": "Call a tag function, returning an appropriate string.\n"
 	},
 	"frame 008": {
 		"prefix": "getParent()",
 		"body": [
 			"getParent()$0"
 		],
-		"description": "frame:getParent()"
+		"description": "Get the frame of the parent, in the \"invoke\" hierarchy.\n"
 	},
 	"frame 009": {
 		"prefix": "getTitle()",
 		"body": [
 			"getTitle()$0"
 		],
-		"description": "frame:getTitle()"
+		"description": "Get the title as a string of the frame.\n"
 	},
 	"frame 010": {
 		"prefix": "newChild{ title = title, args = table }",
 		"body": [
 			"newChild{ title = ${1:title}, args = ${2:table} }$0"
 		],
-		"description": "frame:newChild{ title = title, args = table }\n title - title as object\n args - table with arguments"
+		"description": "Create a new child of the current frame.\n"
 	},
 	"frame 011": {
 		"prefix": "preprocess( string )",
 		"body": [
 			"preprocess( ${1:string} )$0"
 		],
-		"description": "frame:preprocess( string )\n string - wikitext to be formatted"
+		"description": "Expand the string in the context of the frame.\n"
 	},
 	"frame 012": {
 		"prefix": "preprocess{ text = string }",
 		"body": [
 			"preprocess{ text = ${1:string} }$0"
 		],
-		"description": "frame:preprocess{ text = string }\n text - wikitext to be formatted"
+		"description": "Expand the string in the context of the frame.\n"
 	},
 	"frame 013": {
 		"prefix": "getArgument( arg )",
 		"body": [
 			"getArgument( ${1:arg} )$0"
 		],
-		"description": "frame:getArgument( arg )\n arg - gets the specified argument"
+		"description": "Gets an object for the specified argument, or nil if the argument is not provided.\n"
 	},
 	"frame 014": {
 		"prefix": "getArgument{ name = arg }",
 		"body": [
 			"getArgument{ name = ${1:arg} }$0"
 		],
-		"description": "frame:getArgument{ name = arg }\n name - gets the specified argument"
+		"description": "Gets an object for the specified argument, or nil if the argument is not provided.\n"
 	},
 	"frame 015": {
 		"prefix": "newParserValue( text )",
 		"body": [
 			"newParserValue( ${1:text} )$0"
 		],
-		"description": "frame:newParserValue( text )\n text - wikitext to be expanded"
+		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 016": {
 		"prefix": "newParserValue( text = text )",
 		"body": [
 			"newParserValue{ text = ${1:text} }$0"
 		],
-		"description": "frame:newParserValue{ text = text }\n text - wikitext to be expanded"
+		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 017": {
 		"prefix": "newTemplateParserValue{ title = title, args = table }",
 		"body": [
 			"newTemplateParserValue{ title = ${1:title}, args = ${2:table} }$0"
 		],
-		"description": "frame:newTemplateParserValue{ title = title, args = table }\n title - name of template to be expanded\n args - arguments to the template"
+		"description": "Returns an object with a method :expand(), that returns :preprocess( text ).\n"
 	},
 	"frame 018": {
 		"prefix": "argumentPairs()",
 		"body": [
 			"argumentPairs()$0"
 		],
-		"description": "frame:argumentPairs()\nSame as pairs( frame.args )"
+		"description": "Same as pairs( frame.args )\n"
 	}
 }

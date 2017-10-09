@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "language",
-		"comment": "This is a mixed library and object. The creator act as a library and can be fully identified by its library prefix, but the created object can not be identified unless intellisense is active.",
+		"comment": "This is a mixed library and object. The creator act as a library and can be fully identified by its library prefix, but the created object can not be identified unless intellisense is active. This is nearly always named as \"mw.language\", as it is part of the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
@@ -11,258 +11,258 @@
 		"body": [
 			"mw.language.fetchLanguageName( ${1:code}, ${2:inLanguage} )$0"
 		],
-		"description": "mw.language.fetchLanguageName( code, inLanguage )\n code - string with source code\n inLanguage - string the destination code"
+		"description": "The full name of the language for the given language code.\n"
 	},
 	"mw.language 002": {
 		"prefix": "mw.language.fetchLanguageNames( inLanguage, include )",
 		"body": [
 			"mw.language.fetchLanguageNames( ${1:inLanguage${2:, ${3:include}}} )$0"
 		],
-		"description": "mw.language.fetchLanguageNames( [inLanguage[, include]] )\n inLanguage - string with destination code\n include - nil, 'all' or 'mwfile'"
+		"description": "Fetch the list of known languages.\n"
 	},
 	"mw.language 003": {
 		"prefix": "mw.language.getContentLanguage()",
 		"body": [
 			"mw.language.getContentLanguage()$0"
 		],
-		"description": "mw.language.getContentLanguage()"
+		"description": "Returns a language object for the default content language.\n"
 	},
 	"mw.language 004": {
 		"prefix": "mw.language.getContentLanguage()",
 		"body": [
 			"mw.getContentLanguage()$0"
 		],
-		"description": "mw.getContentLanguage()"
+		"description": "Returns a language object for the default content language.\n"
 	},
 	"mw.language 005": {
 		"prefix": "mw.language.getFallbacksFor( code )",
 		"body": [
 			"mw.language.getFallbacksFor( ${1:code} )$0"
 		],
-		"description": "mw.language.getFallbacksFor( code )\n code - string with queried language"
+		"description": "Returns a list of fallback language codes for the given code.\n"
 	},
 	"mw.language 006": {
 		"prefix": "mw.language.isKnownLanguageTag( code )",
 		"body": [
 			"mw.language.isKnownLanguageTag( ${1:code} )$0"
 		],
-		"description": "mw.language.isKnownLanguageTag( code )\n code - string with queried language"
+		"description": "Checks whether language code is a valid built-in code with known denomyn.\n"
 	},
 	"mw.language 007": {
 		"prefix": "mw.language.isSupportedLanguage( code )",
 		"body": [
 			"mw.language.isSupportedLanguage(${1:code} )$0"
 		],
-		"description": "mw.language.isSupportedLanguage( code )\n code - string with queried language"
+		"description": "Checks whether localisation is available for the language code.\n"
 	},
 	"mw.language 008": {
 		"prefix": "mw.language.isValidBuiltInCode( code )",
 		"body": [
 			"mw.language.isValidBuiltInCode( ${1:code} )$0"
 		],
-		"description": "mw.language.isValidBuiltInCode( code )\n code - string with queried language"
+		"description": "Checks whether the language code is valid for internal customisation.\n"
 	},
 	"mw.language 009": {
 		"prefix": "mw.language.isValidCode( code )",
 		"body": [
 			"mw.language.isValidCode( ${1:code} )$0"
 		],
-		"description": "mw.language.isValidCode( code )\n code - string with queried language"
+		"description": "Checks whether the language code is superficially valid.\n"
 	},
 	"mw.language 010": {
 		"prefix": "mw.language.new( code )",
 		"body": [
 			"mw.language.new( ${1:code} )$0"
 		],
-		"description": "mw.language.new( code )\n code - string with wanted language"
+		"description": "Creates a new language object."
 	},
 	"mw.language 011": {
-		"prefix": "mw.language.new( code )",
+		"prefix": "mw.getLanguage( code )",
 		"body": [
 			"mw.getLanguage( ${1:code} )$0"
 		],
-		"description": "mw.getLanguage( code )\n code - string with queried language"
+		"description": "Creates a new language object."
 	},
 	"mw.language 012": {
-		"prefix": "getCode()",
+		"prefix": "mw.language:getCode()",
 		"body": [
-			"getCode()$0"
+			":getCode()$0"
 		],
-		"description": "mw.language:getCode()"
+		"description": "Get the language code for the current language object.\n"
 	},
 	"mw.language 013": {
-		"prefix": "getFallbackLanguages()",
+		"prefix": "mw.language:getFallbackLanguages()",
 		"body": [
-			"getFallbackLanguages()$0"
+			":getFallbackLanguages()$0"
 		],
-		"description": "mw.language:getFallbackLanguages()"
+		"description": "Get a list of language fallback codes for the current language object.\n"
 	},
 	"mw.language 014": {
-		"prefix": "isRTL()",
+		"prefix": "mw.language:isRTL()",
 		"body": [
-			"isRTL()$0"
+			":isRTL()$0"
 		],
-		"description": "mw.language:isRTL()"
+		"description": "Checks whether the language code is right-to-left.\n"
 	},
 	"mw.language 015": {
-		"prefix": "lc( s )",
+		"prefix": "mw.language:lc( s )",
 		"body": [
-			"lc( ${1:s} )$0"
+			":lc( ${1:s} )$0"
 		],
-		"description": "mw.language:lc( s )\n s - string to be formatted"
+		"description": "Converts the whole string to lowercase.\n"
 	},
 	"mw.language 016": {
-		"prefix": "lcfirst( s )",
+		"prefix": "mw.language:lcfirst( s )",
 		"body": [
-			"lcfirst( ${1:s} )$0"
+			":lcfirst( ${1:s} )$0"
 		],
-		"description": "mw.language:lcfirst( s )\n s - string to be formatted"
+		"description": "Converts the first char in the string to lowercase.\n"
 	},
 	"mw.language 017": {
-		"prefix": "uc( s )",
+		"prefix": "mw.language:uc( s )",
 		"body": [
-			"uc( ${1:s} )$0"
+			":uc( ${1:s} )$0"
 		],
-		"description": "mw.language:uc( s )\n s - string to be formatted"
+		"description": "Converts the whole string to uppercase.\n"
 	},
 	"mw.language 018": {
-		"prefix": "ucfirst( s )",
+		"prefix": "mw.language:ucfirst( s )",
 		"body": [
-			"ucfirst( ${1:s} )$0"
+			":ucfirst( ${1:s} )$0"
 		],
-		"description": "mw.language:ucfirst( s )\n s - string to be formatted"
+		"description": "Converts the first char in the string to uppercase.\n"
 	},
 	"mw.language 019": {
-		"prefix": "caseFold( s )",
+		"prefix": "mw.language:caseFold( s )",
 		"body": [
-			"caseFold( ${1:s} )$0"
+			":caseFold( ${1:s} )$0"
 		],
-		"description": "mw.language:caseFold( s )\n s - string to be formatted"
+		"description": "Converts the string for case-insensitive comparison.\n"
 	},
 	"mw.language 020": {
-		"prefix": "formatNum( n, options )",
+		"prefix": "mw.language:formatNum( n, options )",
 		"body": [
-			"formatNum( ${1:n}${2:, ${3:options}} )$0"
+			":formatNum( ${1:n${2:, ${3:options}}} )$0"
 		],
-		"description": "mw.language:formatNum( n[, options] )\n s - string to be formatted\n options - table describing formatting"
+		"description": "Formats a number according to rules for the given language.\n"
 	},
 	"mw.language 021": {
-		"prefix": "formatDate( format, timestamp, local )",
+		"prefix": "mw.language:formatDate( format, timestamp, local )",
 		"body": [
-			"formatDate( ${1:format}, ${2:timestamp}, ${3:local} )$0"
+			":formatDate( ${1:format}, ${2:timestamp}, ${3:local} )$0"
 		],
-		"description": "mw.language:formatDate( format, timestamp, local )"
+		"description": "Formats a date according to rules for the given language.\n"
 	},
 	"mw.language 022": {
-		"prefix": "formatDuration( seconds, allowedIntervals )",
+		"prefix": "mw.language:formatDuration( seconds, allowedIntervals )",
 		"body": [
-			"formatDuration( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
+			":formatDuration( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
 		],
-		"description": "mw.language:formatDuration( seconds[, allowedIntervals] )\n seconds - length of interval\n allowedIntervals - table of named intervals"
+		"description": "Formats a duration according to rules for the given language.\n"
 	},
 	"mw.language 023": {
-		"prefix": "parseFormattedNumber( s )",
+		"prefix": "mw.language:parseFormattedNumber( s )",
 		"body": [
-			"parseFormattedNumber( ${1:s} )$0"
+			":parseFormattedNumber( ${1:s} )$0"
 		],
-		"description": "mw.language:parseFormattedNumber( s )\n s - string holding a formatted number"
+		"description": "Inverts a formatted number in a given language into its source form.\n"
 	},
 	"mw.language 024": {
-		"prefix": "convertPlural( n, ... )",
+		"prefix": "mw.language:convertPlural( n, ... )",
 		"body": [
-			"convertPlural( ${1:n}, ${2:...} )$0"
+			":convertPlural( ${1:n}, ${2:...} )$0"
 		],
-		"description": "mw.language:convertPlural( n, ... )\n n - the case count\n variant number of inflections"
+		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 025": {
-		"prefix": "convertPlural( n, forms )",
+		"prefix": "mw.language:convertPlural( n, forms )",
 		"body": [
-			"convertPlural( ${1:n}, ${2:forms} )$0"
+			":convertPlural( ${1:n}, ${2:forms} )$0"
 		],
-		"description": "mw.language:convertPlural( n, forms )\n n - the case count\n forms - table with inflections"
+		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 026": {
-		"prefix": "plural( n, ... )",
+		"prefix": "mw.language:plural( n, ... )",
 		"body": [
-			"plural( ${1:n}, ${2:...} )$0"
+			":plural( ${1:n}, ${2:...} )$0"
 		],
-		"description": "mw.language:plural( n, ... )\n n - the case count\n variant number of inflections"
+		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 027": {
-		"prefix": "plural( n, forms )",
+		"prefix": "mw.language:plural( n, forms )",
 		"body": [
-			"plural( ${1:n}, ${2:forms} )$0"
+			":plural( ${1:n}, ${2:forms} )$0"
 		],
-		"description": "mw.language:plural( n, forms )\n n - the case count\n forms - table with inflections"
+		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 028": {
-		"prefix": "convertGrammar( word, case )",
+		"prefix": "mw.language:convertGrammar( word, case )",
 		"body": [
-			"convertGrammar( ${1:word}, ${2:case} )$0"
+			":convertGrammar( ${1:word}, ${2:case} )$0"
 		],
-		"description": "mw.language:convertGrammar( word, case )\n word - string to be inflected\n case - how to inflect the string"
+		"description": "Choose the appropriate inflection given the language.\n"
 	},
 	"mw.language 029": {
-		"prefix": "grammar( case, word )",
+		"prefix": "mw.language:grammar( case, word )",
 		"body": [
-			"grammar( ${1:word}, ${2:case} )$0"
+			":grammar( ${1:word}, ${2:case} )$0"
 		],
-		"description": "mw.language:grammar( case, word )\n case - how to inflect the string\n word - string to be inflected"
+		"description": "Choose the appropriate inflection given the language.\n"
 	},
 	"mw.language 030": {
-		"prefix": "gender( what, masculine, feminine, neutral )",
+		"prefix": "mw.language:gender( what, masculine, feminine, neutral )",
 		"body": [
-			"gender( ${1:what}, ${2:masculine}, ${3:feminine}, ${4:neutral} )$0"
+			":gender( ${1:what}, ${2:masculine}, ${3:feminine}, ${4:neutral} )$0"
 		],
-		"description": "mw.language:gender( what, masculine, feminine, neutral )\n what - string to be gendrified\n masculine - string\n feminine - string\n neutral - string"
+		"description": "Choose the appropriate gender form given the language.\n"
 	},
 	"mw.language 031": {
-		"prefix": "gender( what, { masculine, feminine, neutral } )",
+		"prefix": "mw.language:gender( what, { masculine, feminine, neutral } )",
 		"body": [
-			"gender( ${1:what}, { ${2:masculine}, ${3:feminine}, ${4:neutral} } )$0"
+			":gender( ${1:what}, { ${2:masculine}, ${3:feminine}, ${4:neutral} } )$0"
 		],
-		"description": "mw.language:gender( what, { masculine, feminine, neutral } )\n what - string to be gendrified\n masculine - string\n feminine - string\n neutral - string"
+		"description": "Choose the appropriate gender form given the language.\n"
 	},
 	"mw.language 032": {
-		"prefix": "getArrow( direction )",
+		"prefix": "mw.language:getArrow( direction )",
 		"body": [
-			"getArrow( ${1:direction} )$0"
+			":getArrow( ${1:direction} )$0"
 		],
-		"description": "mw.language:getArrow( direction )\n direction - one of 'forwards', 'backwards', 'left', 'right', 'up', or 'down'"
+		"description": "Get a Unicode arrow character corresponding to direction given the language.\n"
 	},
 	"mw.language 033": {
-		"prefix": "getDir()",
+		"prefix": "mw.language:getDir()",
 		"body": [
-			"getDir()$0"
+			":getDir()$0"
 		],
-		"description": "mw.language:getDir()"
+		"description": "Get the Unicode direction mark given the language.\n"
 	},
 	"mw.language 034": {
-		"prefix": "getDirMark( opposite )",
+		"prefix": "mw.language:getDirMark( opposite )",
 		"body": [
-			"getDirMark( ${1:opposite} )$0"
+			":getDirMark( ${1:opposite} )$0"
 		],
-		"description": "mw.language:getDirMark( opposite )\n opposite - boolean for inverting direction"
+		"description": "Get the Unicode direction mark corresponding to opposite given the language.\n"
 	},
 	"mw.language 035": {
-		"prefix": "getDirMarkEntity( opposite )",
+		"prefix": "mw.language:getDirMarkEntity( opposite )",
 		"body": [
-			"getDirMarkEntity( ${1:opposite} )$0"
+			":getDirMarkEntity( ${1:opposite} )$0"
 		],
 		"description": "mw.language:getDirMarkEntity( opposite )\n opposite - boolean for inverting direction"
 	},
 	"mw.language 036": {
-		"prefix": "getDurationIntervals( seconds )",
+		"prefix": "mw.language:getDurationIntervals( seconds )",
 		"body": [
-			"getDurationIntervals( ${1:seconds} )$0"
+			":getDurationIntervals( ${1:seconds} )$0"
 		],
-		"description": "mw.language:getDurationIntervals( seconds )\n seconds - length of interval"
+		"description": "Divides a duration according to rules for the given language.\n"
 	},
 	"mw.language 037": {
-		"prefix": "getDurationIntervals( seconds, allowedIntervals )",
+		"prefix": "mw.language:getDurationIntervals( seconds, allowedIntervals )",
 		"body": [
-			"getDurationIntervals( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
+			":getDurationIntervals( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
 		],
-		"description": "mw.language:getDurationIntervals( seconds[, allowedIntervals} )\n seconds - length of interval\n allowedIntervals - table of named intervals"
+		"description": "Divides a duration according to rules for the given language.\n"
 	}
 }

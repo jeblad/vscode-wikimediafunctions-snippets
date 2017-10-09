@@ -1,93 +1,93 @@
 {
 	"@metadata": {
 		"name": "bit32",
-		"comment": "The library is not imported as default, it is \"required\", and can not be identified unless intellisense is active.",
+		"comment": "The library is not imported as default, it is \"required\", and can not be properly identified unless intellisense is active. This is nearly always named as \"bit32\", so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
 	},
 	"bit32 001": {
-		"prefix": "band( ... )",
+		"prefix": "bit32.band( ... )",
 		"body": [
-			"band( ${1:...} )$0"
+			"bit32.band( ${1:...} )$0"
 		],
-		"description": "bit32.band( ... )\n bitwise 'and' of all arguments"
+		"description": "Bitwise \"and\" of all arguments.\n"
 	},
 	"bit32 002": {
-		"prefix": "bnot( ... )",
+		"prefix": "bit32.bnot( ... )",
 		"body": [
-			"bnot( ${1:x} )$0"
+			"bit32.bnot( ${1:x} )$0"
 		],
-		"description": "bit32.bnot( x )\n x - bitwise complement"
+		"description": "Bitwise complement of argument.\n"
 	},
 	"bit32 003": {
-		"prefix": "bor( ... )",
+		"prefix": "bit32.bor( ... )",
 		"body": [
-			"bor( ${1:...} )$0"
+			"bit32.bor( ${1:...} )$0"
 		],
-		"description": "bit32.bor( ... )\n bitwise 'or' of all arguments"
+		"description": "Bitwise \"or\" of all arguments.\n"
 	},
 	"bit32 004": {
-		"prefix": "btest( ... )",
+		"prefix": "bit32.btest( ... )",
 		"body": [
-			"btest( ${1:...} )$0"
+			"bit32.btest( ${1:...} )$0"
 		],
-		"description": "bit32.btest( ... )\n bitwise 'and' of all arguments followed by logical complement"
+		"description": "Bitwise \"and\" of all arguments followed by not equal to zero.\n"
 	},
 	"bit32 005": {
-		"prefix": "bxor( ... )",
+		"prefix": "bit32.bxor( ... )",
 		"body": [
-			"bxor( ${1:...} )$0"
+			"bit32.bxor( ${1:...} )$0"
 		],
-		"description": "bit32.bxor( ... )\n bitwise 'xor' of all arguments"
+		"description": "Bitwise \"xor\" of all arguments.\n"
 	},
 	"bit32 006": {
-		"prefix": "extract( n, field, width)",
+		"prefix": "bit32.extract( n, field, width)",
 		"body": [
-			"extract( ${1:n}, ${2:field}${3:, ${4:width}} )$0"
+			"bit32.extract( ${1:n}, ${2:field${3:, ${4:width}}} )$0"
 		],
-		"description": "bit32.extract( n, field[, width] )\n n - number to use as source\n field - index to start\n width - number of bits to process"
+		"description": "Bitwise extract.\n"
 	},
 	"bit32 007": {
-		"prefix": "replace( n, v, field, width)",
+		"prefix": "bit32.replace( n, v, field, width)",
 		"body": [
-			"replace( ${1:n}, ${2:v}, ${3:field}${4:, ${5:width}} )$0"
+			"bit32.replace( ${1:n}, ${2:v}, ${3:field${4:, ${5:width}}} )$0"
 		],
-		"description": "bit32.replace( n, v, field[, width] )\n n - number to use as source\n v - number to use as replacement\n field - index to start\n width - number of bits to process"
+		"description": "Bitwise replace, "
 	},
 	"bit32 008": {
-		"prefix": "lshift( n, disp )",
+		"prefix": "bit32.lshift( n, disp )",
 		"body": [
-			"lshift( ${1:n}, ${2:disp} )$0"
+			"bit32.lshift( ${1:n}, ${2:disp} )$0"
 		],
-		"description": "bit32.lshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+		"description": "Bitwise left shift.\n"
 	},
 	"bit32 009": {
-		"prefix": "rshift( n, disp )",
+		"prefix": "bit32.rshift( n, disp )",
 		"body": [
-			"rshift( ${1:n}, ${2:disp} )$0"
+			"bit32.rshift( ${1:n}, ${2:disp} )$0"
 		],
-		"description": "bit32.rshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+		"description": "Bitwise right shift.\n"
 	},
 	"bit32 010": {
-		"prefix": "arshift( n, disp )",
+		"prefix": "bit32.arshift( n, disp )",
 		"body": [
-			"arshift( ${1:n}, ${2:disp} )$0"
+			"bit32.arshift( ${1:n}, ${2:disp} )$0"
 		],
-		"description": "bit32.arshift( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+		"description": "Bitwise arithmetic shift.\n"
 	},
 	"bit32 011": {
-		"prefix": "lrotate( n, disp )",
+		"prefix": "bit32.lrotate( n, disp )",
 		"body": [
-			"lrotate( ${1:n}, ${2:disp} )$0"
+			"bit32.lrotate( ${1:n}, ${2:disp} )$0"
 		],
-		"description": "bit32.lrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+		"description": "Bitwise left rotate.\n"
 	},
 	"bit32 012": {
-		"prefix": "rrotate( n, disp )",
+		"prefix": "bit32.rrotate( n, disp )",
 		"body": [
-			"rrotate( ${1:n}, ${2:disp} )$0"
+			"bit32.rrotate( ${1:n}, ${2:disp} )$0"
 		],
-		"description": "bit32.rrotate( n, disp )\n n - number to use as source\n disp - number of bits to displace"
+		"description": "Bitwise right rotate.\n"
 	}
 }

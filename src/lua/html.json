@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "html",
-		"comment": "This is a mixed library and object. The creator act as a library and can be fully identified by its library prefix, but the created object can not be identified unless intellisense is active.",
+		"comment": "This is a mixed library and object. The creator act as a library and can be fully identified by its library prefix, but the created object can not be identified unless intellisense is active. This is nearly always named as \"mw.html\", as it is part of the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
@@ -9,99 +9,99 @@
 	"mw.html 001": {
 		"prefix": "mw.html.create( tagName, args )",
 		"body": [
-			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
+			"mw.html.create( ${1:tagName${2:, ${3:args}}} )$0"
 		],
-		"description": "mw.html.create( tagName, args )\n tagName - string holding tag\n args - table holding options"
+		"description": "Creates a new instance with the given tag.\n"
 	},
 	"mw.html 002": {
-		"prefix": "node( builder )",
+		"prefix": "mw.html:node( builder )",
 		"body": [
-			"node( ${1:builder} )$0"
+			":node( ${1:builder} )$0"
 		],
-		"description": "mw.html:node( builder )\n builder - string holding a representation of the html code"
+		"description": "Appends a child to the current node.\n"
 	},
 	"mw.html 003": {
-		"prefix": "wikitext( ... )",
+		"prefix": "mw.html:wikitext( ... )",
 		"body": [
-			"wikitext( ${1:...} )$0"
+			":wikitext( ${1:...} )$0"
 		],
-		"description": "mw.html:wikitext( ... )\n a number of wikitext fragments"
+		"description": "Appends wikitext strings to the current node.\n"
 	},
 	"mw.html 004": {
-		"prefix": "newline()",
+		"prefix": "mw.html:newline()",
 		"body": [
-			"newline()$0"
+			":newline()$0"
 		],
-		"description": "mw.html:newline()"
+		"description": "Appends a newline to the current node.\n"
 	},
 	"mw.html 005": {
-		"prefix": "tag( tagName, args )",
+		"prefix": "mw.html:tag( tagName, args )",
 		"body": [
-			"tag( ${1:tagName}, ${2:args} )$0"
+			":tag( ${1:tagName}, ${2:args} )$0"
 		],
-		"description": "mw.html:tag( tagName, args )\n tagName - string holding tag\n args - table holding options"
+		"description": "Appends a new child node with the given tag to the current node.\n"
 	},
 	"mw.html 006": {
-		"prefix": "attr( name, value )",
+		"prefix": "mw.html:attr( name, value )",
 		"body": [
-			"attr( ${1:name}, ${2:value} )$0"
+			":attr( ${1:name}, ${2:value} )$0"
 		],
-		"description": "mw.html:attr( name, value )\n name - string identifying attribute\n value - content of attribute"
+		"description": "Set a html attribute with the given name and value on the current node.\n"
 	},
 	"mw.html 007": {
-		"prefix": "attr( table )",
+		"prefix": "mw.html:attr( table )",
 		"body": [
-			"attr( ${1:table} )$0"
+			":attr( ${1:table} )$0"
 		],
-		"description": "mw.html:attr( table )\n table - key-value pairs of attributes"
+		"description": "Set html attributes with the given name and value on the current node.\n"
 	},
 	"mw.html 008": {
-		"prefix": "getAttr( name )",
+		"prefix": "mw.html:getAttr( name )",
 		"body": [
-			"getAttr( ${1:name} )$0"
+			":getAttr( ${1:name} )$0"
 		],
-		"description": "mw.html:getAttr( name )\n name - string identifying attribute"
+		"description": "Get the value of a html attribute previously set on the current node.\n"
 	},
 	"mw.html 009": {
-		"prefix": "addClass( class )",
+		"prefix": "mw.html:addClass( class )",
 		"body": [
-			"addClass( ${1:class} )$0"
+			":addClass( ${1:class} )$0"
 		],
-		"description": "mw.html:addClass( class )\n class - string identifying class"
+		"description": "Adds the class name to the current node.\n"
 	},
 	"mw.html 010": {
-		"prefix": "css( name, value )",
+		"prefix": "mw.html:css( name, value )",
 		"body": [
-			"css( ${1:name}, ${2:value} )$0"
+			":css( ${1:name}, ${2:value} )$0"
 		],
-		"description": "mw.html:css( name, value )\n name - string identifying style\n value - content of style"
+		"description": "Set a css property with the given name and value on the current node.\n"
 	},
 	"mw.html 011": {
-		"prefix": "css( table )",
+		"prefix": "mw.html:css( table )",
 		"body": [
-			"css( ${1:table} )$0"
+			":css( ${1:table} )$0"
 		],
-		"description": "mw.html:css( table )\n table - key-value pairs of styles"
+		"description": "Set css properties with the given name and value on the current node.\n"
 	},
 	"mw.html 012": {
-		"prefix": "cssText( css )",
+		"prefix": "mw.html:cssText( css )",
 		"body": [
-			"cssText( ${1:css} )$0"
+			":cssText( ${1:css} )$0"
 		],
-		"description": "mw.html:cssText( css )\n css - raw styles"
+		"description": "Add raw css to the style attribute on the current node.\n"
 	},
 	"mw.html 013": {
-		"prefix": "done()",
+		"prefix": "mw.html:done()",
 		"body": [
-			"done()$0"
+			":done()$0"
 		],
-		"description": "mw.html:done()"
+		"description": "Returns the parent node under which the current node was created.\n"
 	},
 	"mw.html 014": {
-		"prefix": "allDone()",
+		"prefix": "mw.html:allDone()",
 		"body": [
-			"allDone()$0"
+			":allDone()$0"
 		],
-		"description": "mw.html:allDone()"
+		"description": "Returns the root node under which the current node was created."
 	}
 }

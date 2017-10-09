@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"name": "mw",
-		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by its library prefix.",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by its library prefix. This is nearly always named as \"mw\", as it is the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
 		]
@@ -11,69 +11,69 @@
 		"body": [
 			"mw.addWarning( ${1:text} )$0"
 		],
-		"description": "mw.addWarning( text )\n text - string with wikitext"
+		"description": "Adds a warning above the preview during editing.\n"
 	},
 	"mw 002": {
 		"prefix": "mw.allToString( ... )",
 		"body": [
 			"mw.allToString( ${1:...} )$0"
 		],
-		"description": "mw.allToString( ... )\n calls tostring() on all args"
+		"description": "Calls tostring() on all arguments and concatenates them.\n"
 	},
 	"mw 003": {
 		"prefix": "mw.clone( value )",
 		"body": [
 			"mw.clone( ${1:value} )$0"
 		],
-		"description": "mw.clone( value )\n value - any to be converted"
+		"description": "Creates a deep copy of a value.\n"
 	},
 	"mw 004": {
 		"prefix": "mw.getCurrentFrame()",
 		"body": [
 			"mw.getCurrentFrame()$0"
 		],
-		"description": "mw.getCurrentFrame()"
+		"description": "Get the current frame object.\n"
 	},
 	"mw 005": {
 		"prefix": "mw.incrementExpensiveFunctionCount()",
 		"body": [
 			"mw.incrementExpensiveFunctionCount()$0"
 		],
-		"description": "mw.incrementExpensiveFunctionCount()"
+		"description": "Adds one to the count, and throws an exception when overflowing.\n"
 	},
 	"mw 006": {
 		"prefix": "mw.isSubsting()",
 		"body": [
 			"mw.isSubsting()$0"
 		],
-		"description": "mw.isSubsting()"
+		"description": "Checks if last invoke is substed.\n"
 	},
 	"mw 007": {
 		"prefix": "mw.loadData( module )",
 		"body": [
 			"mw.loadData( ${1:module} )$0"
 		],
-		"description": "mw.loadData( module )\n module - string identifying a page"
+		"description": "Loads data from a separate page.\n"
 	},
 	"mw 008": {
 		"prefix": "mw.dumpObject( object )",
 		"body": [
 			"mw.dumpObject( ${1:object} )$0"
 		],
-		"description": "mw.dumpObject( object )\n object - any to be serialized to readable form"
+		"description": "Serializes object to a human-readable representation.\n"
 	},
 	"mw 009": {
 		"prefix": "mw.log( ... )",
 		"body": [
 			"mw.log( ${1:...} )$0"
 		],
-		"description": "mw.log( ... )\n calls tostring() on all args"
+		"description": "Surface serialize and appends the result to the log buffer.\n"
 	},
 	"mw 010": {
 		"prefix": "mw.logObject ( object, prefix )",
 		"body": [
-			"mw.logObject( ${1:object}${2:, ${3:prefix}} )$0"
+			"mw.logObject( ${1:object${2:, ${3:prefix}}} )$0"
 		],
-		"description": "mw.logObject( object [, prefix] )\n object - will be run through mw.dumpObject()\n prefix - string prepended to object"
+		"description": "Serializes object to a human-readable representation and appends the result to the log buffer.\n"
 	}
 }
