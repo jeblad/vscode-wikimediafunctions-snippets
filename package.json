@@ -40,6 +40,7 @@
         "grunt-jsonlint": "1.1.0",
         "grunt-markdownlint": "^1.0.41",
         "grunt-merge-json": "^0.9.5",
+        "grunt-run": "^0.8.0",
         "markdownlint": "^0.3.1"
     },
     "dependencies": {
