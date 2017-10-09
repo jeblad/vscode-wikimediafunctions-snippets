@@ -72,7 +72,7 @@
 	"mw 010": {
 		"prefix": "mw.logObject ( object, prefix )",
 		"body": [
-			"mw.logObject( ${1:object${2:, ${3:prefix}}} )$0"
+			"mw.logObject( ${1:object}${2:, ${3:prefix}} )$0"
 		],
 		"description": "Serializes object to a human-readable representation and appends the result to the log buffer.\n"
 	}

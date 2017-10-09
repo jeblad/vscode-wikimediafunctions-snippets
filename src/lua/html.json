@@ -9,7 +9,7 @@
 	"mw.html 001": {
 		"prefix": "mw.html.create( tagName, args )",
 		"body": [
-			"mw.html.create( ${1:tagName${2:, ${3:args}}} )$0"
+			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
 		],
 		"description": "Creates a new instance with the given tag.\n"
 	},

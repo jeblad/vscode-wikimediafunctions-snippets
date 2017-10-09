@@ -44,14 +44,14 @@
 	"bit32 006": {
 		"prefix": "bit32.extract( n, field, width)",
 		"body": [
-			"bit32.extract( ${1:n}, ${2:field${3:, ${4:width}}} )$0"
+			"bit32.extract( ${1:n}, ${2:field}${3:, ${4:width}} )$0"
 		],
 		"description": "Bitwise extract.\n"
 	},
 	"bit32 007": {
 		"prefix": "bit32.replace( n, v, field, width)",
 		"body": [
-			"bit32.replace( ${1:n}, ${2:v}, ${3:field${4:, ${5:width}}} )$0"
+			"bit32.replace( ${1:n}, ${2:v}, ${3:field}${4:, ${5:width}} )$0"
 		],
 		"description": "Bitwise replace, "
 	},

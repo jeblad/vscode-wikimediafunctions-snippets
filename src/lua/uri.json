@@ -9,14 +9,14 @@
 	"mw.uri 001 ": {
 		"prefix": "mw.uri.encode( s[, enctype] )",
 		"body": [
-			"mw.uri.encode( ${1:s${2:, ${3:enctype}}} )$0"
+			"mw.uri.encode( ${1:s}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-encodes the string.\n"
 	},
 	"mw.uri 002 ": {
 		"prefix": "mw.uri.decode( s[, enctype] )",
 		"body": [
-			"mw.uri.decode( ${1:s${2:, ${3:enctype}}} )$0"
+			"mw.uri.decode( ${1:s}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-decodes the string.\n"
 	},
@@ -44,21 +44,21 @@
 	"mw.uri 006 ": {
 		"prefix": "mw.uri.canonicalUrl( page[, query] )",
 		"body": [
-			"mw.uri.canonicalUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.canonicalUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the canonical url, with optional query string/table.\n"
 	},
 	"mw.uri 007 ": {
 		"prefix": "mw.uri.fullUrl( page[, query] )",
 		"body": [
-			"mw.uri.fullUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.fullUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 008 ": {
 		"prefix": "mw.uri.localUrl(  page[, query] )",
 		"body": [
-			"mw.uri.localUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.localUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},

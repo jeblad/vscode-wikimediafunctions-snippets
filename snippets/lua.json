@@ -37,14 +37,14 @@
 	"bit32 006": {
 		"prefix": "bit32.extract( n, field, width)",
 		"body": [
-			"bit32.extract( ${1:n}, ${2:field${3:, ${4:width}}} )$0"
+			"bit32.extract( ${1:n}, ${2:field}${3:, ${4:width}} )$0"
 		],
 		"description": "Bitwise extract.\n"
 	},
 	"bit32 007": {
 		"prefix": "bit32.replace( n, v, field, width)",
 		"body": [
-			"bit32.replace( ${1:n}, ${2:v}, ${3:field${4:, ${5:width}}} )$0"
+			"bit32.replace( ${1:n}, ${2:v}, ${3:field}${4:, ${5:width}} )$0"
 		],
 		"description": "Bitwise replace, "
 	},
@@ -226,7 +226,7 @@
 	"mw.html 001": {
 		"prefix": "mw.html.create( tagName, args )",
 		"body": [
-			"mw.html.create( ${1:tagName${2:, ${3:args}}} )$0"
+			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
 		],
 		"description": "Creates a new instance with the given tag.\n"
 	},
@@ -331,7 +331,7 @@
 	"mw.language 002": {
 		"prefix": "mw.language.fetchLanguageNames( inLanguage, include )",
 		"body": [
-			"mw.language.fetchLanguageNames( ${1:inLanguage${2:, ${3:include}}} )$0"
+			"mw.language.fetchLanguageNames( ${1:inLanguage}${2:, ${3:include}} )$0"
 		],
 		"description": "Fetch the list of known languages.\n"
 	},
@@ -457,21 +457,21 @@
 	"mw.language 020": {
 		"prefix": "mw.language:formatNum( n, options )",
 		"body": [
-			":formatNum( ${1:n${2:, ${3:options}}} )$0"
+			":formatNum( ${1:n}${2:, ${3:options}} )$0"
 		],
 		"description": "Formats a number according to rules for the given language.\n"
 	},
 	"mw.language 021": {
 		"prefix": "mw.language:formatDate( format, timestamp[, local] )",
 		"body": [
-			":formatDate( ${1:format}, ${2:timestamp${3:, ${4:local}}} )$0"
+			":formatDate( ${1:format}, ${2:timestamp}${3:, ${4:local}} )$0"
 		],
 		"description": "Formats a date according to rules for the given language.\n"
 	},
 	"mw.language 022": {
 		"prefix": "mw.language:formatDuration( seconds[, allowedIntervals] )",
 		"body": [
-			":formatDuration( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
+			":formatDuration( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
 		],
 		"description": "Formats a duration according to rules for the given language.\n"
 	},
@@ -576,7 +576,7 @@
 	"mw.language 037": {
 		"prefix": "mw.language:getDurationIntervals( seconds, allowedIntervals )",
 		"body": [
-			":getDurationIntervals( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
+			":getDurationIntervals( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
 		],
 		"description": "Divides a duration according to rules for the given language.\n"
 	},
@@ -681,14 +681,14 @@
 	"mw 010": {
 		"prefix": "mw.logObject ( object, prefix )",
 		"body": [
-			"mw.logObject( ${1:object${2:, ${3:prefix}}} )$0"
+			"mw.logObject( ${1:object}${2:, ${3:prefix}} )$0"
 		],
 		"description": "Serializes object to a human-readable representation and appends the result to the log buffer.\n"
 	},
 	"string 001": {
 		"prefix": "string.byte( s[, i[, j]] )",
 		"body": [
-			"string.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}} )$0"
+			"string.byte( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
 		],
 		"description": "Returns the string as an array of bytes.\n"
 	},
@@ -702,14 +702,14 @@
 	"string 003": {
 		"prefix": "string.find( s, pattern[, init[, plain]] )",
 		"body": [
-			"string.find( ${1:s}, ${2:pattern${3:, ${4:init${5:, ${6:plain}}}}} )$0"
+			"string.find( ${1:s}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
 		],
 		"description": "Search for the first occurence of pattern within the string.\n"
 	},
 	"string 004": {
 		"prefix": "string.format( format[, ...] )",
 		"body": [
-			"string.format( ${1:format${2:, ${3:...}}} )$0"
+			"string.format( ${1:format}${2:, ${3:...}} )$0"
 		],
 		"description": "Formats the string, and injects optional arguments.\n"
 	},
@@ -723,14 +723,14 @@
 	"string 006": {
 		"prefix": "string.gsub( s, pattern, repl[, n] )",
 		"body": [
-			"string.gsub( ${1:s}, ${2:pattern}, ${3:repl${4:, ${5:n}}} )$0"
+			"string.gsub( ${1:s}, ${2:pattern}, ${3:repl}${4:, ${5:n}} )$0"
 		],
 		"description": "Returns the string with occurences of patterns replaced.\n"
 	},
 	"string 007": {
 		"prefix": "string.len( s )",
 		"body": [
-			"string.len(${1:s} )$0"
+			"string.len( ${1:s} )$0"
 		],
 		"description": "Calculates the length of the string in bytes.\n"
 	},
@@ -744,7 +744,7 @@
 	"string 009": {
 		"prefix": "string.match( s, pattern[, init] )",
 		"body": [
-			"string.match( ${1:s}, ${2:pattern${3:, ${4:init}} )$0"
+			"string.match( ${1:s}, ${2:pattern}${3:, ${4:init}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
@@ -765,7 +765,7 @@
 	"string 012": {
 		"prefix": "string.sub( s, i[, j] )",
 		"body": [
-			"string.sub( ${1:s}, ${2:i${3:, ${4:j}} )$0"
+			"string.sub( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},
@@ -779,14 +779,14 @@
 	"mw.uri 001 ": {
 		"prefix": "mw.uri.encode( s[, enctype] )",
 		"body": [
-			"mw.uri.encode( ${1:s${2:, ${3:enctype}}} )$0"
+			"mw.uri.encode( ${1:s}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-encodes the string.\n"
 	},
 	"mw.uri 002 ": {
 		"prefix": "mw.uri.decode( s[, enctype] )",
 		"body": [
-			"mw.uri.decode( ${1:s${2:, ${3:enctype}}} )$0"
+			"mw.uri.decode( ${1:s}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-decodes the string.\n"
 	},
@@ -814,21 +814,21 @@
 	"mw.uri 006 ": {
 		"prefix": "mw.uri.canonicalUrl( page[, query] )",
 		"body": [
-			"mw.uri.canonicalUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.canonicalUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the canonical url, with optional query string/table.\n"
 	},
 	"mw.uri 007 ": {
 		"prefix": "mw.uri.fullUrl( page[, query] )",
 		"body": [
-			"mw.uri.fullUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.fullUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 008 ": {
 		"prefix": "mw.uri.localUrl(  page[, query] )",
 		"body": [
-			"mw.uri.localUrl( ${1:page${2:, ${3:query}}} )$0"
+			"mw.uri.localUrl( ${1:page}${2:, ${3:query}} )$0"
 		],
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
@@ -884,14 +884,14 @@
 	"mw.ustring 003": {
 		"prefix": "mw.ustring.byte( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.byte( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
+			"mw.ustring.byte( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
 		],
 		"description": "Returns the ustring as an array of bytes.\n"
 	},
 	"mw.ustring 004": {
 		"prefix": "mw.ustring.byteoffset( s[, l[, i]] )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s${2:, ${3:l${4:, ${5:i}}}}} )$0"
+			"mw.ustring.byteoffset( ${1:s}${2:, ${3:l}${4:, ${5:i}}} )$0"
 		],
 		"description": "Returns the byte offset of a character in the ustring.\n"
 	},
@@ -905,28 +905,28 @@
 	"mw.ustring 006": {
 		"prefix": "mw.ustring.codepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
+			"mw.ustring.codepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
 		],
 		"description": "Returns the ustring as an array of codepoints.\n"
 	},
 	"mw.ustring 007": {
 		"prefix": "mw.ustring.find( s, pattern[, init[, plain]] )",
 		"body": [
-			"mw.ustring.find( ${1:s}, ${2:pattern${3:, ${4:init${5:, ${6:plain}}}}} )$0"
+			"mw.ustring.find( ${1:s}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
 		],
 		"description": "Search for the first occurence of pattern within the ustring.\n"
 	},
 	"mw.ustring 008": {
 		"prefix": "mw.ustring.format( format[, ...] )",
 		"body": [
-			"mw.ustring.format( ${1:format${2:, ${3:...}}} )$0"
+			"mw.ustring.format( ${1:format}${2:, ${3:...}} )$0"
 		],
 		"description": "Formats the ustring, and injects optional arguments.\n"
 	},
 	"mw.ustring 009": {
 		"prefix": "mw.ustring.gcodepoint( s[, i[, j]] )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s${2:, ${3:i${4:, ${5:j}}}}} )$0"
+			"mw.ustring.gcodepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
 		],
 		"description": "Creates an iterator for the codepoints from the given arguments.\n"
 	},
@@ -940,7 +940,7 @@
 	"mw.ustring 011": {
 		"prefix": "mw.ustring.gsub( s, pattern, repl[, n] )",
 		"body": [
-			"mw.ustring.gsub(${1:s}, ${2:pattern}, ${3:repl${4:, ${5:n}}} )$0"
+			"mw.ustring.gsub(${1:s}, ${2:pattern}, ${3:repl}${4:, ${5:n}} )$0"
 		],
 		"description": "Returns the ustring with occurences of patterns replaced.\n"
 	},
@@ -968,7 +968,7 @@
 	"mw.ustring 015": {
 		"prefix": "mw.ustring.match( s, pattern[, init] )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern${3:, ${4:init}}} )$0"
+			"mw.ustring.match( ${1:s}, ${2:pattern}${3:, ${4:init}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
@@ -982,7 +982,7 @@
 	"mw.ustring 017": {
 		"prefix": "mw.ustring.sub( s, i[, j] )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i${3:, ${4:j}}} )$0"
+			"mw.ustring.sub( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},

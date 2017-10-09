@@ -16,7 +16,7 @@
 	"mw.language 002": {
 		"prefix": "mw.language.fetchLanguageNames( inLanguage, include )",
 		"body": [
-			"mw.language.fetchLanguageNames( ${1:inLanguage${2:, ${3:include}}} )$0"
+			"mw.language.fetchLanguageNames( ${1:inLanguage}${2:, ${3:include}} )$0"
 		],
 		"description": "Fetch the list of known languages.\n"
 	},
@@ -142,21 +142,21 @@
 	"mw.language 020": {
 		"prefix": "mw.language:formatNum( n, options )",
 		"body": [
-			":formatNum( ${1:n${2:, ${3:options}}} )$0"
+			":formatNum( ${1:n}${2:, ${3:options}} )$0"
 		],
 		"description": "Formats a number according to rules for the given language.\n"
 	},
 	"mw.language 021": {
 		"prefix": "mw.language:formatDate( format, timestamp[, local] )",
 		"body": [
-			":formatDate( ${1:format}, ${2:timestamp${3:, ${4:local}}} )$0"
+			":formatDate( ${1:format}, ${2:timestamp}${3:, ${4:local}} )$0"
 		],
 		"description": "Formats a date according to rules for the given language.\n"
 	},
 	"mw.language 022": {
 		"prefix": "mw.language:formatDuration( seconds[, allowedIntervals] )",
 		"body": [
-			":formatDuration( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
+			":formatDuration( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
 		],
 		"description": "Formats a duration according to rules for the given language.\n"
 	},
@@ -261,7 +261,7 @@
 	"mw.language 037": {
 		"prefix": "mw.language:getDurationIntervals( seconds, allowedIntervals )",
 		"body": [
-			":getDurationIntervals( ${1:seconds${2:, ${3:allowedIntervals}}} )$0"
+			":getDurationIntervals( ${1:seconds}${2:, ${3:allowedIntervals}} )$0"
 		],
 		"description": "Divides a duration according to rules for the given language.\n"
 	}
