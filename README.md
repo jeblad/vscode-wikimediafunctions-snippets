@@ -18,10 +18,9 @@ The set of snippets are mostly motivated by what I (the author) have found usefu
 
 ### Lua
 
-Note that this set of snippets will not provide the standard functions for Lua.
+Scribunto libraries
 
 - [mw](src/lua/mw.json) static library; basic functions from Scribunto to interface with Mediawiki
-- [bit32](src/lua/but32.json) loadable library; bit operations
 - [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
 - [hash](src/lua/hash.json) static library; basic hashing
 - [html](src/lua/html.json) static library; create html tags
@@ -30,13 +29,17 @@ Note that this set of snippets will not provide the standard functions for Lua.
 - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
 - [libraryUtil](src/lua/libraryUtil.json) loadable library; various misc functions for argument parsing
 
+Standard libraries
+
+- [bit32](src/lua/but32.json) loadable library; bit operations
+- [string](src/lua/string.json) loadable library; string operations
+
 Unfinished standard libraries
 
 - debug library
 - math library
 - os library
 - package library
-- string library
 - table library
 
 Unfinished Scribunto libraries
