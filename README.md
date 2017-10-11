@@ -31,7 +31,7 @@ Static libraries
 
 Loadable libraries
 
-- [libraryUtil](src/lua/libraryUtil.json) loadable library; various misc functions for argument parsing
+- [libraryUtil](src/lua/libraryUtil.json) loadable library; manipulate arguments
 
 Standard libraries
 
