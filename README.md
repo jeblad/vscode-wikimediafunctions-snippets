@@ -35,7 +35,6 @@ Scribunto libraries
   - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
   - [title](src/lua/title.json) static library; get, create and manipulate title objects
 
-
 Loadable libraries
 
 - [bit32](src/lua/but32.json) loadable library; bit operations
