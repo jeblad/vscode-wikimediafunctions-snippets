@@ -1,0 +1,44 @@
+{
+	"@metadata": {
+		"name": "os",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"package\", so it is pretty safe to assume it can be used as prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"package 001": {
+		"prefix": "require( lib )",
+		"body": [
+			"require( ${1:lib} )$0"
+		],
+		"description": "Load, register and return the lib within the current invoke, if necessary, as a table.\n"
+	},
+	"package 002": {
+		"prefix": "package.loaded",
+		"body": [
+			"package.loaded$0"
+		],
+		"description": "The loaded modules, as a table.\n"
+	},
+	"package 003": {
+		"prefix": "package.loaders",
+		"body": [
+			"package.loaders$0"
+		],
+		"description": "The searcher functions to use while loading modules, as a table.\n"
+	},
+	"package 004": {
+		"prefix": "package.preload",
+		"body": [
+			"package.preload$0"
+		],
+		"description": "The loader functions used by the first searcher, as a table.\n"
+	},
+	"package 005": {
+		"prefix": "package.seeall( table )",
+		"body": [
+			"package.seeall( ${1:table} )$0"
+		],
+		"description": "Sets the __index metamethod for table to _G.\n"
+	}
+}

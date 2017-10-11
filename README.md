@@ -18,32 +18,33 @@ The set of snippets are mostly motivated by what I (the author) have found usefu
 
 ### Lua
 
-Static libraries
+Standard libraries
+
+- [os](src/lua/os.json) static library; os operations (only time-date functions)
+- [package](src/lua/package.json) static library; package operations
+- [string](src/lua/string.json) static library; string operations
+
+Scribunto libraries
 
 - [mw](src/lua/mw.json) static library; basic functions from Scribunto to interface with Mediawiki
-- [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
-- [hash](src/lua/hash.json) static library; basic hashing
-- [html](src/lua/html.json) static library; create and manipulate html tags
-- [language](src/lua/language.json) static library; get, create and manipulate language objects
-- [uri](src/lua/uri.json) static library; create and manipulate encoded uri strings
-- [ustring](src/lua/ustring.json) static library; manipulate unicode strings
-- [title](src/lua/title.json) static library; get, create and manipulate title objects
+  - [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
+  - [hash](src/lua/hash.json) static library; basic hashing
+  - [html](src/lua/html.json) static library; create and manipulate html tags
+  - [language](src/lua/language.json) static library; get, create and manipulate language objects
+  - [uri](src/lua/uri.json) static library; create and manipulate encoded uri strings
+  - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
+  - [title](src/lua/title.json) static library; get, create and manipulate title objects
+
 
 Loadable libraries
 
-- [libraryUtil](src/lua/libraryUtil.json) loadable library; manipulate arguments
-
-Standard libraries
-
 - [bit32](src/lua/but32.json) loadable library; bit operations
-- [os](src/lua/os.json) loadable library; os operations (only time-date functions)
-- [string](src/lua/string.json) loadable library; string operations
+- [libraryUtil](src/lua/libraryUtil.json) loadable library; manipulate arguments
 
 Unfinished standard libraries
 
 - debug library
 - math library
-- package library
 - table library
 
 Unfinished Scribunto libraries
