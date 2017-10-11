@@ -776,6 +776,363 @@
 		],
 		"description": "Change all ascii lowercase letters to uppercase.\n"
 	},
+	"mw.title 001 ": {
+		"prefix": "mw.title.equals( a, b )",
+		"body": [
+			"mw.title.equals( ${1:a}, ${2:b} )$0"
+		],
+		"description": "Checks whether two titles are logical equal, as a boolean.\n"
+	},
+	"mw.title 002 ": {
+		"prefix": "mw.title.compare( a, b )",
+		"body": [
+			"mw.title.compare( ${1:a}, ${2:b} )$0"
+		],
+		"description": "Chekshow two titles are grammatically ordered, as an integer.\n"
+	},
+	"mw.title 003 ": {
+		"prefix": "mw.title.getCurrentTitle()",
+		"body": [
+			"mw.title.getCurrentTitle()$0"
+		],
+		"description": "Gets the title for the current page, as an object.\n"
+	},
+	"mw.title 004 ": {
+		"prefix": "mw.title.new( text, namespace)",
+		"body": [
+			"mw.title.new( ${1:text}, ${2:namespace} )$0"
+		],
+		"description": "Creates a new title object.\n"
+	},
+	"mw.title 005 ": {
+		"prefix": "mw.title.new( id)",
+		"body": [
+			"mw.title.new( ${1:id} )$0"
+		],
+		"description": "Creates a new title object.\n"
+	},
+	"mw.title 006 ": {
+		"prefix": "mw.title.makeTitle( namespace, title, fragment, interwiki )",
+		"body": [
+			"mw.title.makeTitle( ${1:namespace}, ${2:title}${3:, ${4:fragment}${5:, ${6:interwiki}}} )$0"
+		],
+		"description": "Creates a title object in the given namespace namespace.\n"
+	},
+	"mw.title 007 ": {
+		"prefix": "mw.title.id",
+		"body": [
+			".id$0"
+		],
+		"description": "The instance id, as an integer(?).\n"
+	},
+	"mw.title 008 ": {
+		"prefix": "mw.title.interwiki",
+		"body": [
+			".interwiki$0"
+		],
+		"description": "The instance interwiki, as a string.\n"
+	},
+	"mw.title 009 ": {
+		"prefix": "mw.title.namespace",
+		"body": [
+			".namespace$0"
+		],
+		"description": "The instance namespace, as an integer.\n"
+	},
+	"mw.title 010 ": {
+		"prefix": "mw.title.fragment",
+		"body": [
+			".fragment$0"
+		],
+		"description": "The instance fragment, as a string.\n"
+	},
+	"mw.title 011 ": {
+		"prefix": "mw.title.nsText",
+		"body": [
+			".nsText$0"
+		],
+		"description": "The instance namespace text, as a string.\n"
+	},
+	"mw.title 012 ": {
+		"prefix": "mw.title.subjectNsText",
+		"body": [
+			".subjectNsText$0"
+		],
+		"description": "The instance subject namespace text, as a string.\n"
+	},
+	"mw.title 013 ": {
+		"prefix": "mw.title.text",
+		"body": [
+			".text$0"
+		],
+		"description": "The instance text, as a string.\n"
+	},
+	"mw.title 014 ": {
+		"prefix": "mw.title.prefixedText",
+		"body": [
+			".prefixedText$0"
+		],
+		"description": "The instance prefixed text, as a string.\n"
+	},
+	"mw.title 015 ": {
+		"prefix": "mw.title.fullText",
+		"body": [
+			".fullText$0"
+		],
+		"description": "The instance full text, as a string.\n"
+	},
+	"mw.title 016 ": {
+		"prefix": "mw.title.rootText",
+		"body": [
+			".rootText$0"
+		],
+		"description": "The instance root text, as a string.\n"
+	},
+	"mw.title 017 ": {
+		"prefix": "mw.title.baseText",
+		"body": [
+			".baseText$0"
+		],
+		"description": "The instance base text, as a string.\n"
+	},
+	"mw.title 018 ": {
+		"prefix": "mw.title.subpageText",
+		"body": [
+			".subpageText$0"
+		],
+		"description": "The instance subpage text, as a string.\n"
+	},
+	"mw.title 019 ": {
+		"prefix": "mw.title.canTalk",
+		"body": [
+			".canTalk$0"
+		],
+		"description": "Whether the instance can have a talk page, as a boolean(?).\n"
+	},
+	"mw.title 020 ": {
+		"prefix": "mw.title.exists",
+		"body": [
+			".exists$0"
+		],
+		"description": "Whether the instance exists, as a boolean.\n"
+	},
+	"mw.title 021 ": {
+		"prefix": "mw.title.fileExists",
+		"body": [
+			".fileExists$0"
+		],
+		"description": "Whether the instance has a file substructure, as a boolean(?).\n"
+	},
+	"mw.title 022 ": {
+		"prefix": "mw.title.file",
+		"body": [
+			".file$0"
+		],
+		"description": "Root for the instance file substructure, as a table.\n"
+	},
+	"mw.title 023 ": {
+		"prefix": "mw.title.isContentPage",
+		"body": [
+			".isContentPage$0"
+		],
+		"description": "Whether the instance is in a content namespace, as a boolean.\n"
+	},
+	"mw.title 024 ": {
+		"prefix": "mw.title.isExternal",
+		"body": [
+			".isExternal$0"
+		],
+		"description": "Whether the instance has an interwiki prefix, as a boolean.\n"
+	},
+	"mw.title 025 ": {
+		"prefix": "mw.title.isLocal",
+		"body": [
+			".isLocal$0"
+		],
+		"description": "Whether the instance is local to the project, as a boolean.\n"
+	},
+	"mw.title 026 ": {
+		"prefix": "mw.title.isRedirect",
+		"body": [
+			".isRedirect$0"
+		],
+		"description": "Whether the instance is a redirect, as a boolean.\n"
+	},
+	"mw.title 027 ": {
+		"prefix": "mw.title.isSpecialPage",
+		"body": [
+			".isSpecialPage$0"
+		],
+		"description": "Whether the instance is a special page, as a boolean.\n"
+	},
+	"mw.title 028 ": {
+		"prefix": "mw.title.isSubpage",
+		"body": [
+			".isSubpage$0"
+		],
+		"description": "Whether the instance is a subpage, as a boolean.\n"
+	},
+	"mw.title 029 ": {
+		"prefix": "mw.title.isTalkPage",
+		"body": [
+			".isTalkPage$0"
+		],
+		"description": "Whether the instance is a talk page, as a boolean.\n"
+	},
+	"mw.title 030 ": {
+		"prefix": "mw.title:isSubpageOf( title2 )",
+		"body": [
+			":isSubpageOf( ${1:title2} )$0"
+		],
+		"description": "Checks whether the instance is a subpage of the current title, as a boolean.\n"
+	},
+	"mw.title 031 ": {
+		"prefix": "mw.title:inNamespace( ns )",
+		"body": [
+			":inNamespace( ${1:ns} ):$0"
+		],
+		"description": "Checks whether the instance is within the given namespace, as a boolean.\n"
+	},
+	"mw.title 032 ": {
+		"prefix": "mw.title:inNamespaces( ... )",
+		"body": [
+			":inNamespaces( $1{:...} )$0"
+		],
+		"description": "Checks whether the instance is within one of the given namespaces, as a boolean.\n"
+	},
+	"mw.title 033 ": {
+		"prefix": "mw.title:hasSubjectNamespace( ns )",
+		"body": [
+			":hasSubjectNamespace( ${1:ns} )$0"
+		],
+		"description": "Checks whether the instance subject namespace is within the given namespace, as a boolean.\n"
+	},
+	"mw.title 034 ": {
+		"prefix": "mw.title.contentModel",
+		"body": [
+			".contentModel$0"
+		],
+		"description": "The instance content model, as a string.\n"
+	},
+	"mw.title 035 ": {
+		"prefix": "mw.title.basePageTitle",
+		"body": [
+			".basePageTitle$0"
+		],
+		"description": "The instance base page title, as a title object.\n"
+	},
+	"mw.title 036 ": {
+		"prefix": "mw.title.rootPageTitle",
+		"body": [
+			".rootPageTitle$0"
+		],
+		"description": "The instance root page title, as a title object.\n"
+	},
+	"mw.title 037 ": {
+		"prefix": "mw.title.talkPageTitle",
+		"body": [
+			".talkPageTitle$0"
+		],
+		"description": "The instance talk page title, as a title object.\n"
+	},
+	"mw.title 038 ": {
+		"prefix": "mw.title.subjectPageTitle",
+		"body": [
+			".subjectPageTitle$0"
+		],
+		"description": "The instance subject page title, as a title object.\n"
+	},
+	"mw.title 039 ": {
+		"prefix": "mw.title.redirectTarget",
+		"body": [
+			".redirectTarget$0"
+		],
+		"description": "Gets the instance target if it is a redirect, as a title object.\n"
+	},
+	"mw.title 040 ": {
+		"prefix": "mw.title.protectionLevels",
+		"body": [
+			".protectionLevels$0"
+		],
+		"description": "The instance protection level, as a table.\n"
+	},
+	"mw.title 041 ": {
+		"prefix": "mw.title:subPageTitle( text )",
+		"body": [
+			":subPageTitle( ${1:text} )$0"
+		],
+		"description": "Sets the instance subpage title, as a title object.\n"
+	},
+	"mw.title 042 ": {
+		"prefix": "mw.title:partialUrl( query, proto )",
+		"body": [
+			":$0"
+		],
+		"description": "Gets the instance subject page title, as a string.\n"
+	},
+	"mw.title 043 ": {
+		"prefix": "mw.title:localUrl( query )",
+		"body": [
+			":partialUrl( ${1:query}, ${2:proto} )$0"
+		],
+		"description": "The instance local url, as a (?)\n"
+	},
+	"mw.title 044 ": {
+		"prefix": "mw.title:canonicalUrl( query )",
+		"body": [
+			":canonicalUrl( ${1:query} )$0"
+		],
+		"description": "The instance canonical url, as a (?)\n"
+	},
+	"mw.title 045 ": {
+		"prefix": "mw.title:getContent()",
+		"body": [
+			":getContent()$0"
+		],
+		"description": "The instance unparsed content, as a string.\n"
+	},
+	"mw.title 046 ": {
+		"prefix": "mw.title.file.exists",
+		"body": [
+			".exists$0"
+		],
+		"description": "Whether the instance exists, as a boolean.\n"
+	},
+	"mw.title 047 ": {
+		"prefix": "mw.title.file.width",
+		"body": [
+			".width$0"
+		],
+		"description": "The instance width, as an integer.\n"
+	},
+	"mw.title 048 ": {
+		"prefix": "mw.title.file.height",
+		"body": [
+			".height$0"
+		],
+		"description": "The instance height, as an integer.\n"
+	},
+	"mw.title 049 ": {
+		"prefix": "mw.title.file.pages",
+		"body": [
+			".pages$0"
+		],
+		"description": "The instance pages, as a table.\n"
+	},
+	"mw.title 050 ": {
+		"prefix": "mw.title.file.size",
+		"body": [
+			".size$0"
+		],
+		"description": "The instance size, in bytes.\n"
+	},
+	"mw.title 051 ": {
+		"prefix": "mw.title.file.mimeType",
+		"body": [
+			".mimeType$0"
+		],
+		"description": "The instance mime type, as a string.\n"
+	},
 	"mw.uri 001 ": {
 		"prefix": "mw.uri.encode( s[, enctype] )",
 		"body": [

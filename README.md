@@ -18,15 +18,19 @@ The set of snippets are mostly motivated by what I (the author) have found usefu
 
 ### Lua
 
-Scribunto libraries
+Static libraries
 
 - [mw](src/lua/mw.json) static library; basic functions from Scribunto to interface with Mediawiki
 - [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
 - [hash](src/lua/hash.json) static library; basic hashing
-- [html](src/lua/html.json) static library; create html tags
-- [language](src/lua/language.json) static library; interact with Mediawiki language objects
-- [uri](src/lua/uri.json) static library; create encoded uri strings
+- [html](src/lua/html.json) static library; create and manipulate html tags
+- [language](src/lua/language.json) static library; get, create and manipulate language objects
+- [uri](src/lua/uri.json) static library; create and manipulate encoded uri strings
 - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
+- [title](src/lua/title.json) static library; get, create and manipulate title objects
+
+Loadable libraries
+
 - [libraryUtil](src/lua/libraryUtil.json) loadable library; various misc functions for argument parsing
 
 Standard libraries
@@ -47,7 +51,6 @@ Unfinished Scribunto libraries
 - message library (mixed library and object); as an object it can't be properly identified unless intellisense works for Lua
 - site library; this is a proper library imported as default and can be properly identified by prefix alone
 - text library; this is a proper library imported as default and can be properly identified by prefix alone
-- title library (mixed library and object); as an object it can't be properly identified unless intellisense works for Lua
 
 ## Installation
 
