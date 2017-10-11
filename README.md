@@ -36,13 +36,13 @@ Loadable libraries
 Standard libraries
 
 - [bit32](src/lua/but32.json) loadable library; bit operations
+- [os](src/lua/os.json) loadable library; os operations (only time-date functions)
 - [string](src/lua/string.json) loadable library; string operations
 
 Unfinished standard libraries
 
 - debug library
 - math library
-- os library
 - package library
 - table library
 
