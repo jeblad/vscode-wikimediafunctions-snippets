@@ -1426,5 +1426,446 @@
 			"mw.ustring.upper( ${1:s} )$0"
 		],
 		"description": "Change all unicode lowercase letters to uppercase.\n"
+	},
+	"pickle.adapt 001": {
+		"prefix": "pickle.subject",
+		"body": [
+			"subject$0"
+		],
+		"description": "Access current subject.\n"
+	},
+	"pickle.adapt 002": {
+		"prefix": "pickle.subject( obj[, ...] )",
+		"body": [
+			"subject( ${1:obj}${2, ${3:...}} )$0"
+		],
+		"description": "Create subject, add multitype argument(s), and chain.\n"
+	},
+	"pickle.adapt 003": {
+		"prefix": "pickle.expect",
+		"body": [
+			"expect$0"
+		],
+		"description": "Access current expectation.\n"
+	},
+	"pickle.adapt 004": {
+		"prefix": "pickle.expect( obj[, ...] )",
+		"body": [
+			"expect( ${1:obj}${2, ${3:...}} )$0"
+		],
+		"description": "Create an expectation, add multitype argument(s), and chain.\n"
+	},
+	"pickle.adapt 005": {
+		"prefix": "pickle.adapt:first()",
+		"body": [
+			":first()$0"
+		],
+		"description": "Pick the first of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 006": {
+		"prefix": "pickle.adapt:second()",
+		"body": [
+			":second()$0"
+		],
+		"description": "Pick the second of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 007": {
+		"prefix": "pickle.adapt:third()",
+		"body": [
+			":third()$0"
+		],
+		"description": "Pick the third of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 008": {
+		"prefix": "pickle.adapt:fourth()",
+		"body": [
+			":fourth()$0"
+		],
+		"description": "Pick the fourth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 009": {
+		"prefix": "pickle.adapt:fifth()",
+		"body": [
+			":fifth()$0"
+		],
+		"description": "Pick the fifth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 010": {
+		"prefix": "pickle.adapt:sixth()",
+		"body": [
+			":sixth()$0"
+		],
+		"description": "Pick the sixth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 011": {
+		"prefix": "pickle.adapt:seventh()",
+		"body": [
+			":seventh()$0"
+		],
+		"description": "Pick the seventh of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 012": {
+		"prefix": "pickle.adapt:eight()",
+		"body": [
+			":eight()$0"
+		],
+		"description": "Pick the eight of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 013": {
+		"prefix": "pickle.adapt:ninth()",
+		"body": [
+			":ninth()$0"
+		],
+		"description": "Pick the ninth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 014": {
+		"prefix": "pickle.adapt:tenth()",
+		"body": [
+			":tenth()$0"
+		],
+		"description": "Pick the tenth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 015": {
+		"prefix": "pickle.adapt:eleventh()",
+		"body": [
+			":eleventh()$0"
+		],
+		"description": "Pick the eleventh of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 016": {
+		"prefix": "pickle.adapt:twelfth()",
+		"body": [
+			":twelfth()$0"
+		],
+		"description": "Pick the twelfth of the internal arguments, and chain.\n"
+	},
+	"pickle.adapt 017": {
+		"prefix": "pickle.adapt:asType()",
+		"body": [
+			":asType()$0"
+		],
+		"description": "Transform the internal argument to its type, and chain.\n"
+	},
+	"pickle.adapt 018": {
+		"prefix": "pickle.adapt:asUpper()",
+		"body": [
+			":asUpper()$0"
+		],
+		"description": "Transform the internal argument to its uppercase string form, and chain.\n"
+	},
+	"pickle.adapt 019": {
+		"prefix": "pickle.adapt:asLower()",
+		"body": [
+			":asLower()$0"
+		],
+		"description": "Transform the internal argument to its lowercase string form, and chain.\n"
+	},
+	"pickle.adapt 020": {
+		"prefix": "pickle.adapt:asUpperFirst()",
+		"body": [
+			":asUpperFirst()$0"
+		],
+		"description": "Transform the internal argument to its uppercase first string form, and chain.\n"
+	},
+	"pickle.adapt 021": {
+		"prefix": "pickle.adapt:asLowerFirst()",
+		"body": [
+			":asLowerFirst()$0"
+		],
+		"description": "Transform the internal argument to its lowercase string form, and chain.\n"
+	},
+	"pickle.adapt 022": {
+		"prefix": "pickle.adapt:asReverse()",
+		"body": [
+			":asReverse()$0"
+		],
+		"description": "Transform the internal argument to its reverse string form, and chain.\n"
+	},
+	"pickle.adapt 023": {
+		"prefix": "pickle.adapt:asUUpper()",
+		"body": [
+			":asUUpper()$0"
+		],
+		"description": "Transform the internal argument to its Unicode uppercase string form, and chain.\n"
+	},
+	"pickle.adapt 024": {
+		"prefix": "pickle.adapt:asULower()",
+		"body": [
+			":asULower()$0"
+		],
+		"description": "Transform the internal argument to its Unicode lowercase string form, and chain.\n"
+	},
+	"pickle.adapt 025": {
+		"prefix": "pickle.adapt:asUUpperFirst()",
+		"body": [
+			":asUUpperFirst()$0"
+		],
+		"description": "Transform the internal argument to its Unicode uppercase first string form, and chain.\n"
+	},
+	"pickle.adapt 026": {
+		"prefix": "pickle.adapt:asULowerFirst()",
+		"body": [
+			":asULowerFirst()$0"
+		],
+		"description": "Transform the internal argument to its Unicode lowercase string form, and chain.\n"
+	},
+	"pickle.adapt 027": {
+		"prefix": "pickle.adapt:asUNFC()",
+		"body": [
+			":asUNFC()$0"
+		],
+		"description": "Transform the internal argument to its Unicode Normalized Form C, and chain.\n"
+	},
+	"pickle.adapt 028": {
+		"prefix": "pickle.adapt:asUNFD()",
+		"body": [
+			":asUNFD()$0"
+		],
+		"description": "Transform the internal argument to its Unicode Normalized Form D, and chain.\n"
+	},
+	"pickle.adapt 029": {
+		"prefix": "pickle.adapt:asNumber()",
+		"body": [
+			":asNumber()$0"
+		],
+		"description": "Transform the internal argument to a number, and chain.\n"
+	},
+	"pickle.adapt 030": {
+		"prefix": "pickle.adapt:asString()",
+		"body": [
+			":asString()$0"
+		],
+		"description": "Transform the internal argument to a string, and chain.\n"
+	},
+	"pickle.adapt 031": {
+		"prefix": "pickle.adapt:asFloor()",
+		"body": [
+			":asFloor()$0"
+		],
+		"description": "Transform the internal argument to the lower integer, and chain.\n"
+	},
+	"pickle.adapt 032": {
+		"prefix": "pickle.adapt:asCeil()",
+		"body": [
+			":asCeil()$0"
+		],
+		"description": "Transform the internal argument to the higher integer, and chain.\n"
+	},
+	"pickle.adapt 033": {
+		"prefix": "pickle.adapt:asRound()",
+		"body": [
+			":asRound()$0"
+		],
+		"description": "Transform the internal argument to the rounded noumber, and chain.\n"
+	},
+	"pickle.adapt 034": {
+		"prefix": "pickle.adapt:asInteger()",
+		"body": [
+			":asInteger()$0"
+		],
+		"description": "Transform the internal argument to the integer part, and chain.\n"
+	},
+	"pickle.adapt 035": {
+		"prefix": "pickle.adapt:asFraction()",
+		"body": [
+			":asFraction()$0"
+		],
+		"description": "Transform the internal argument to the fraction part, and chain.\n"
+	},
+	"pickle.adapt 036": {
+		"prefix": "pickle.adapt:toBeEqual()",
+		"body": [
+			":toBeEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is equal to second, and chain.\n"
+	},
+	"pickle.adapt 037": {
+		"prefix": "pickle.adapt:toBeBooleanEqual()",
+		"body": [
+			":toBeBooleanEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is boolean equal to second, and chain.\n"
+	},
+	"pickle.adapt 038": {
+		"prefix": "pickle.adapt:toBeStrictEqual()",
+		"body": [
+			":toBeStrictEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is strict equal to second, and chain.\n"
+	},
+	"pickle.adapt 039": {
+		"prefix": "pickle.adapt:toBeSame()",
+		"body": [
+			":toBeSame()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is same to second, and chain.\n"
+	},
+	"pickle.adapt 040": {
+		"prefix": "pickle.adapt:toBeDeepEqual()",
+		"body": [
+			":toBeDeepEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is deep equal to second, and chain.\n"
+	},
+	"pickle.adapt 041": {
+		"prefix": "pickle.adapt:toBeContained()",
+		"body": [
+			":toBeContained()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is contained in second, and chain.\n"
+	},
+	"pickle.adapt 042": {
+		"prefix": "pickle.adapt:toBeLesserThan()",
+		"body": [
+			":toBeLesserThan()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is lesser than second, and chain.\n"
+	},
+	"pickle.adapt 043": {
+		"prefix": "pickle.adapt:toBeGreaterThan()",
+		"body": [
+			":toBeGreaterThan()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is greater than second, and chain.\n"
+	},
+	"pickle.adapt 044": {
+		"prefix": "pickle.adapt:toBeLesserOrEqual()",
+		"body": [
+			":toBeLesserOrEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is lesser or equal to second, and chain.\n"
+	},
+	"pickle.adapt 045": {
+		"prefix": "pickle.adapt:toBeGreaterOrEqual()",
+		"body": [
+			":toBeGreaterOrEqual()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is greater or equal to second, and chain.\n"
+	},
+	"pickle.adapt 046": {
+		"prefix": "pickle.adapt:toBeMatch()",
+		"body": [
+			":toBeMatch()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is a match in second, and chain.\n"
+	},
+	"pickle.adapt 047": {
+		"prefix": "pickle.adapt:toBeUMatch()",
+		"body": [
+			":toBeUMatch()$0"
+		],
+		"description": "Compare the internal arguments by checking if first is a Unicode match in second, and chain.\n"
+	},
+	"pickle 001": {
+		"prefix": "pickle.describe( arg[, ...] )",
+		"body": [
+			"return describe( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add multitype argument(s), and chain.\n"
+	},
+	"pickle 002": {
+		"prefix": "pickle.describe { subject }",
+		"body": [
+			"return describe { ${1:subject} }$0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add subject, and chain.\n"
+	},
+	"pickle 003": {
+		"prefix": "pickle.describe \"message\"",
+		"body": [
+			"return describe \"${1:message}\" $0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add message, and chain.\n"
+	},
+	"pickle 004": {
+		"prefix": "pickle.context( arg[, ...] )",
+		"body": [
+			"context( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Create frame context, add multitype argument(s), and chain.\n"
+	},
+	"pickle 005": {
+		"prefix": "pickle.context { subject }",
+		"body": [
+			"context { ${1:subject} }$0"
+		],
+		"description": "Create frame context, add subject, and chain.\n"
+	},
+	"pickle 006": {
+		"prefix": "pickle.describe \"message\"",
+		"body": [
+			"context \"${1:message}\" $0"
+		],
+		"description": "Create frame context, add message, and chain.\n"
+	},
+	"pickle 007": {
+		"prefix": "pickle.it( arg[, ...] )",
+		"body": [
+			"it( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Create frame it, add multitype argument(s), and chain.\n"
+	},
+	"pickle 008": {
+		"prefix": "pickle.it { subject }",
+		"body": [
+			"it { ${1:subject} }$0"
+		],
+		"description": "Create frame it, add subject, and chain.\n"
+	},
+	"pickle 009": {
+		"prefix": "pickle.it \"message\"",
+		"body": [
+			"it \"${1:message}\" $0"
+		],
+		"description": "Create frame it, add message, and chain.\n"
+	},
+	"pickle 010": {
+		"prefix": "pickle.frame { subject }",
+		"body": [
+			" { ${1:subject} } $0"
+		],
+		"description": "Add subject to current frame, and chain.\n"
+	},
+	"pickle 011": {
+		"prefix": "pickle.frame \"message\"",
+		"body": [
+			" \"${1:message}\" $0"
+		],
+		"description": "Add message to current frame, and chain.\n"
+	},
+	"pickle 012": {
+		"prefix": "pickle.frame (function() end)",
+		"body": [
+			" (function() $0 end)"
+		],
+		"description": "Add fixture to current frame, and chain.\n"
+	},
+	"pickle.spy 001": {
+		"prefix": "pickle.carp( [str] )",
+		"body": [
+			"carp( ${1:str} )$0"
+		],
+		"description": "Warn called without exiting, with caller and arguments, and chain.\n"
+	},
+	"pickle.spy 002": {
+		"prefix": "pickle.cluck( [str] )",
+		"body": [
+			"cluck( ${1:str} )$0"
+		],
+		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain.\n"
+	},
+	"pickle.spy 003": {
+		"prefix": "pickle.croak( [str] )",
+		"body": [
+			"croak( ${1:str} )$0"
+		],
+		"description": "Warn called with exit, with caller and arguments, and chain.\n"
+	},
+	"pickle.spy 004": {
+		"prefix": "pickle.confess( [str] )",
+		"body": [
+			"confess( ${1:str} )$0"
+		],
+		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain.\n"
 	}
 }

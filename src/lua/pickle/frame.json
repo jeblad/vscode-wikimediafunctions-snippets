@@ -1,0 +1,93 @@
+{
+	"@metadata": {
+		"name": "pickle",
+		"comment": "The library is only partly imported as default, full load is \"bootstrapped\", and it can not be properly identified. It is nearly always identified by its access points, but together with \"pickle\" it is pretty safe to assume they can be used as prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"pickle 001": {
+		"prefix": "pickle.describe( arg[, ...] )",
+		"body": [
+			"return describe( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add multitype argument(s), and chain.\n"
+	},
+	"pickle 002": {
+		"prefix": "pickle.describe { subject }",
+		"body": [
+			"return describe { ${1:subject} }$0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add subject, and chain.\n"
+	},
+	"pickle 003": {
+		"prefix": "pickle.describe \"message\"",
+		"body": [
+			"return describe \"${1:message}\" $0"
+		],
+		"description": "Bootstrap pickle, create frame describe, add message, and chain.\n"
+	},
+	"pickle 004": {
+		"prefix": "pickle.context( arg[, ...] )",
+		"body": [
+			"context( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Create frame context, add multitype argument(s), and chain.\n"
+	},
+	"pickle 005": {
+		"prefix": "pickle.context { subject }",
+		"body": [
+			"context { ${1:subject} }$0"
+		],
+		"description": "Create frame context, add subject, and chain.\n"
+	},
+	"pickle 006": {
+		"prefix": "pickle.describe \"message\"",
+		"body": [
+			"context \"${1:message}\" $0"
+		],
+		"description": "Create frame context, add message, and chain.\n"
+	},
+	"pickle 007": {
+		"prefix": "pickle.it( arg[, ...] )",
+		"body": [
+			"it( ${1:arg${2:, ${3:...}} )$0"
+		],
+		"description": "Create frame it, add multitype argument(s), and chain.\n"
+	},
+	"pickle 008": {
+		"prefix": "pickle.it { subject }",
+		"body": [
+			"it { ${1:subject} }$0"
+		],
+		"description": "Create frame it, add subject, and chain.\n"
+	},
+	"pickle 009": {
+		"prefix": "pickle.it \"message\"",
+		"body": [
+			"it \"${1:message}\" $0"
+		],
+		"description": "Create frame it, add message, and chain.\n"
+	},
+	"pickle 010": {
+		"prefix": "pickle.frame { subject }",
+		"body": [
+			" { ${1:subject} } $0"
+		],
+		"description": "Add subject to current frame, and chain.\n"
+	},
+	"pickle 011": {
+		"prefix": "pickle.frame \"message\"",
+		"body": [
+			" \"${1:message}\" $0"
+		],
+		"description": "Add message to current frame, and chain.\n"
+	},
+	"pickle 012": {
+		"prefix": "pickle.frame (function() end)",
+		"body": [
+			" (function() $0 end)"
+		],
+		"description": "Add fixture to current frame, and chain.\n"
+	}
+}

@@ -35,7 +35,10 @@ module.exports = function ( grunt ) {
 			},
 			"snippets": {
 				files: {
-					"snippets/lua.json": [ "src/lua/*.json" ]
+					"snippets/lua.json": [
+						"src/lua/*.json",
+						"src/lua/*/*.json"
+					]
 				}
 			}
 		},

@@ -35,6 +35,10 @@ Scribunto libraries
   - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
   - [title](src/lua/title.json) static library; get, create and manipulate title objects
 
+Pickle libraries
+
+- [pickle](src/lua/pickle.json) static library; basic functions from Pickle to bootstrap and interact
+
 Loadable libraries
 
 - [bit32](src/lua/but32.json) loadable library; bit operations
