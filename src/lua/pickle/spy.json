@@ -11,27 +11,27 @@
 		"body": [
 			"carp( ${1:str} )$0"
 		],
-		"description": "Warn called without exiting, with caller and arguments, and chain.\n"
+		"description": "Warn called without exiting, with caller and arguments, and chain on return\n"
 	},
 	"pickle.spy 002": {
 		"prefix": "pickle.cluck( [str] )",
 		"body": [
 			"cluck( ${1:str} )$0"
 		],
-		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain.\n"
+		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain on return\n"
 	},
 	"pickle.spy 003": {
 		"prefix": "pickle.croak( [str] )",
 		"body": [
 			"croak( ${1:str} )$0"
 		],
-		"description": "Warn called with exit, with caller and arguments, and chain.\n"
+		"description": "Warn called with exit, with caller and arguments, and chain on return\n"
 	},
 	"pickle.spy 004": {
 		"prefix": "pickle.confess( [str] )",
 		"body": [
 			"confess( ${1:str} )$0"
 		],
-		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain.\n"
+		"description": "Warn called without exiting, with caller, arguments and stack trace, and chain on return\n"
 	}
 }
