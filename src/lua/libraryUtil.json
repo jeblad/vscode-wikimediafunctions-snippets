@@ -1,6 +1,6 @@
 {
 	"@metadata": {
-		"name": "util",
+		"name": "libraryUtil",
 		"comment": "The library is not imported as default, it is \"required\", and can not be identified unless intellisense is active. This is nearly always named as \"libraryUtil\", so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"

@@ -1,6 +1,6 @@
 {
 	"@metadata": {
-		"name": "os",
+		"name": "package",
 		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"package\", so it is pretty safe to assume it can be used as prefix.",
 		"authors": [
 			"Jeblad"
