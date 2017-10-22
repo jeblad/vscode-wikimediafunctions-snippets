@@ -226,7 +226,7 @@
 		],
 		"description": "Get instance member value.\n"
 	},
-	"class.get 009": {
+	"class.is 009": {
 		"prefix": "class.is",
 		"body": [
 			"--- Is instance $1 value",
@@ -239,7 +239,7 @@
 		],
 		"description": "Is instance member something.\n"
 	},
-	"class.get 010": {
+	"class.has 010": {
 		"prefix": "class.has",
 		"body": [
 			"--- Has instance $1 value",
