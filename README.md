@@ -18,43 +18,40 @@ The set of snippets are mostly motivated by what I (the author) have found usefu
 
 ### Lua
 
-Standard libraries
+#### Standard libraries
 
-- [os](src/lua/os.json) static library; os operations (only time-date functions)
-- [package](src/lua/package.json) static library; package operations
-- [string](src/lua/string.json) static library; string operations
+Not included, available through other extensions.
 
-Scribunto libraries
+#### Scribunto libraries
 
-- [mw](src/lua/mw.json) static library; basic functions from Scribunto to interface with Mediawiki
-  - [frame](src/lua/frame.json) static library; interactions with calls from Mediawiki
-  - [hash](src/lua/hash.json) static library; basic hashing
-  - [html](src/lua/html.json) static library; create and manipulate html tags
-  - [language](src/lua/language.json) static library; get, create and manipulate language objects
-  - [uri](src/lua/uri.json) static library; create and manipulate encoded uri strings
-  - [ustring](src/lua/ustring.json) static library; manipulate unicode strings
-  - [title](src/lua/title.json) static library; get, create and manipulate title objects
+Libraries loaded by Scribunto
 
-Pickle libraries
+- [frame](src/lua/mw/frame.json) &mdash; interactions with calls from Mediawiki
 
-- [pickle](src/lua/pickle.json) static library; basic functions from Pickle to bootstrap and interact
+Libraries available through the “mw” structure
 
-Loadable libraries
+- [mw](src/lua/mw/mw.json) &mdash; basic functions from Scribunto to interface with Mediawiki
+  - [hash](src/lua/mw/hash.json) &mdash; basic hashing
+  - [html](src/lua/mw/html.json) &mdash; create and manipulate html tags
+  - [language](src/lua/mw/language.json) &mdash; get, create and manipulate language objects
+  - [uri](src/lua/mw/uri.json) &mdash; create and manipulate encoded uri strings
+  - [ustring](src/lua/mw/ustring.json) &mdash; manipulate unicode strings
+  - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
+  - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
+  - [message](src/lua/mw/message.json) (unfinished) &mdash; create and manipulate messages
+  - [site](src/lua/mw/site.json) (unfinished) &mdash; access site-specific information
 
-- [bit32](src/lua/but32.json) loadable library; bit operations
-- [libraryUtil](src/lua/libraryUtil.json) loadable library; manipulate arguments
+Libraries that must be explicitly required
 
-Unfinished standard libraries
+- [libraryUtil](src/lua/libraryUtil.json) &mdash; manipulate arguments
 
-- debug library
-- math library
-- table library
+#### Pickle libraries
 
-Unfinished Scribunto libraries
+Libraries that use bootstrapping
 
-- message library (mixed library and object); as an object it can't be properly identified unless intellisense works for Lua
-- site library; this is a proper library imported as default and can be properly identified by prefix alone
-- text library; this is a proper library imported as default and can be properly identified by prefix alone
+- [frame](src/lua/pickle/frame.json) &mdash; create and manipulate examples; describe, context, and it
+- [adapt](src/lua/pickle/frame.json) &mdash; create and manipulate assertions; subjects and expectations
+- [spy](src/lua/pickle/frame.json) &mdash; create and manipulate spies; carp, cluck, croak, and confess
 
 ## Installation
 
