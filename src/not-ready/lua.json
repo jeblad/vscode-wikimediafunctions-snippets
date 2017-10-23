@@ -7,79 +7,87 @@
 		]
 	},
 	"lua.if 001": {
-		"prefix": "lua.if",
+		"prefix": "if",
 		"body": [
 			"if ${1:test} then",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "If structure.\n"
 	},
 	"lua.elseif 002": {
-		"prefix": "lua.elseif",
+		"prefix": "elseif",
 		"body": [
 			"elseif ${1:test} then",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "Else-if substructure.\n"
 	},
 	"lua.else 003": {
-		"prefix": "lua.else",
+		"prefix": "else",
 		"body": [
 			"else",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "Else substructure.\n"
 	},
-	"lua.while 004": {
-		"prefix": "lua.while",
+	"lua.end 004": {
+		"prefix": "end",
+		"body": [
+			"end",
+			"$0"
+		],
+		"description": "End substructure.\n"
+	},
+	"lua.while 005": {
+		"prefix": "while",
 		"body": [
 			"while ${1:test} do",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "While structure.\n"
 	},
-	"lua.repeat 005": {
-		"prefix": "lua.repeat",
+	"lua.repeat 006": {
+		"prefix": "repeat",
 		"body": [
 			"repeat",
-			"\t$0",
-			"until ${1:test}"
+			"\t$0"
 		],
 		"description": "Repeat structure.\n"
 	},
-	"lua.for-numeric 005": {
-		"prefix": "lua.for-numeric",
+	"lua.until 006": {
+		"prefix": "until",
+		"body": [
+			"until ${1:test}",
+			"$0"
+		],
+		"description": "Repeat structure.\n"
+	},
+	"lua.for-numeric 007": {
+		"prefix": "for-numeric",
 		"body": [
 			"for ${1:var} = ${2:from}, ${3:to}${4:, ${5:step}} do",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "Numeric for structure.\n"
 	},
-	"lua.for-pairs 006": {
-		"prefix": "lua.for-pairs",
+	"lua.for-pairs 008": {
+		"prefix": "for-pairs",
 		"body": [
 			"for ${1:key} in pairs( ${2:table} ) do",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "Pairs for structure.\n"
 	},
-	"lua.for-ipairs 007": {
-		"prefix": "lua.for-ipairs",
+	"lua.for-ipairs 009": {
+		"prefix": "for-ipairs",
 		"body": [
 			"for ${1:key},${2:value} in ipairs( ${3:table} ) do",
-			"\t$0",
-			"end"
+			"\t$0"
 		],
 		"description": "Ipairs for structure.\n"
 	},
-	"lua.return 008": {
-		"prefix": "lua.return",
+	"lua.do-return 010": {
+		"prefix": "do-return",
 		"body": [
 			"do return $0 end"
 		],
