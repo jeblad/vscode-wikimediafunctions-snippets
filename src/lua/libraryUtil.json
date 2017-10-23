@@ -6,38 +6,38 @@
 			"Jeblad"
 		]
 	},
-	"util 001": {
+	"libraryUtil 001": {
 		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
 		"body": [
 			"libraryUtil.checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
 		],
 		"description": "Check type and raise exception on wrong type.\n"
 	},
-	"util 002": {
+	"libraryUtil 002": {
 		"prefix": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )",
 		"body": [
 			"libraryUtil.checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )$0"
 		],
 		"description": "Check types and raise exception if type is not listed.\n"
 	},
-	"util 003": {
+	"libraryUtil 003": {
 		"prefix": "libraryUtil.checkTypeForIndex( index, value, expectType )",
 		"body": [
 			"libraryUtil.checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )$0"
 		],
 		"description": "Raises an error if type of value does not match.\n"
 	},
-	"util 004": {
+	"libraryUtil 004": {
 		"prefix": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
 		"body": [
 			"libraryUtil.checkTypeForNamedArg( ${1:name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
 		],
 		"description": "Raises an error if type of arg does not match.\n"
 	},
-	"util 005": {
-		"prefix": "makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
+	"libraryUtil 005": {
+		"prefix": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
 		"body": [
-			"makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )$0"
+			"libraryUtil.makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )$0"
 		],
 		"description": "Returns a function for self-tests.\n"
 	}
