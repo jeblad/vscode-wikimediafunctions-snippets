@@ -34,12 +34,12 @@ Libraries available through the “mw” structure
   - [hash](src/lua/mw/hash.json) &mdash; basic hashing
   - [html](src/lua/mw/html.json) &mdash; create and manipulate html tags
   - [language](src/lua/mw/language.json) &mdash; get, create and manipulate language objects
-  - [uri](src/lua/mw/uri.json) &mdash; create and manipulate encoded uri strings
-  - [ustring](src/lua/mw/ustring.json) &mdash; manipulate unicode strings
-  - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
-  - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
   - [message](src/lua/mw/message.json) (unfinished) &mdash; create and manipulate messages
   - [site](src/lua/mw/site.json) &mdash; access site-specific information
+  - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
+  - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
+  - [uri](src/lua/mw/uri.json) &mdash; create and manipulate encoded uri strings
+  - [ustring](src/lua/mw/ustring.json) &mdash; manipulate unicode strings
   - [wikibase](src/lua/mw/wikibase.json) &mdash; access repo-specific information
 
 Libraries that must be explicitly required
@@ -50,8 +50,8 @@ Libraries that must be explicitly required
 
 Libraries that use bootstrapping
 
-- [frame](src/lua/pickle/frame.json) &mdash; create and manipulate examples; describe, context, and it
 - [adapt](src/lua/pickle/frame.json) &mdash; create and manipulate assertions; subjects and expectations
+- [frame](src/lua/pickle/frame.json) &mdash; create and manipulate examples; describe, context, and it
 - [spy](src/lua/pickle/frame.json) &mdash; create and manipulate spies; carp, cluck, croak, and confess
 
 ## Installation
