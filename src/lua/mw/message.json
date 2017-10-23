@@ -1,0 +1,135 @@
+{
+	"@metadata": {
+		"name": "message",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"mw.message\", as it is part of the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"mw.message 001": {
+		"prefix": "mw.message.new( key, ... )",
+		"body": [
+			"mw.message.new( ${1:key}${2:, ${3:...}} )$0"
+		],
+		"description": "Creates a new instance with the given key.\n"
+	},
+	"mw.message 002": {
+		"prefix": "mw.message.newFallbackparams( ... )",
+		"body": [
+			"mw.message.newFallbackparams( ${1:...} )$0"
+		],
+		"description": "Creates a new instance with the first existing key.\n"
+	},
+	"mw.message 003": {
+		"prefix": "mw.message.newRawMessage( text[, ... )",
+		"body": [
+			"mw.message.newRawMessage( ${1:text}${2:, ${3:...}} )$0"
+		],
+		"description": "Creates a new instance, with the given text.\n"
+	},
+	"mw.message 004": {
+		"prefix": "mw.message.rawParam( value )",
+		"body": [
+			"mw.message.rawParam( ${1:value} )$0"
+		],
+		"description": "Wraps the value so that it will not be parsed as wikitext.\n"
+	},
+	"mw.message 005": {
+		"prefix": "mw.message.numParam( value )",
+		"body": [
+			"mw.message.numParam( ${1:value} )$0"
+		],
+		"description": "Wraps the value so that it will be parsed as a number.\n"
+	},
+	"mw.message 006": {
+		"prefix": "mw.message.getDefaultLanguage()",
+		"body": [
+			"mw.message.getDefaultLanguage()$0"
+		],
+		"description": "Returns a Language object for the default language.\n"
+	},
+	"mw.message 007": {
+		"prefix": "mw.message:params( ... )",
+		"body": [
+			":params( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 008": {
+		"prefix": "mw.message:params( params )",
+		"body": [
+			":params( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 009": {
+		"prefix": "mw.message:rawParams( ... )",
+		"body": [
+			":rawParams( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 010": {
+		"prefix": "mw.message:rawParams( params )",
+		"body": [
+			":rawParams( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 011": {
+		"prefix": "mw.message:numParams( ... )",
+		"body": [
+			":numParams( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 012": {
+		"prefix": "mw.message:numParams( params )",
+		"body": [
+			":numParams( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 013": {
+		"prefix": "mw.message:inLanguage( language )",
+		"body": [
+			":inLanguage( ${1:language} )$0"
+		],
+		"description": "Add the language to use to the message, and chain.\n"
+	},
+	"mw.message 014": {
+		"prefix": "mw.message:useDatabase( bool )",
+		"body": [
+			":useDatabase( ${1:bool} )$0"
+		],
+		"description": "Whether to find messages in the database or use the default messages, and chain.\n"
+	},
+	"mw.message 015": {
+		"prefix": "mw.message:plain()",
+		"body": [
+			":plain()$0"
+		],
+		"description": "Substitute parameters and return the wikitext.\n"
+	},
+	"mw.message 016": {
+		"prefix": "mw.message:exists()",
+		"body": [
+			":exists()$0"
+		],
+		"description": "Returns a boolean indicating whether the message key exists.\n"
+	},
+	"mw.message 017": {
+		"prefix": "mw.message:isBlank()",
+		"body": [
+			":isBlank()$0"
+		],
+		"description": "Returns a boolean indicating whether the message has content.\n"
+	},
+	"mw.message 018": {
+		"prefix": "mw.message:isDisabled()",
+		"body": [
+			":isDisabled()$0"
+		],
+		"description": "Returns a boolean indicating whether the message is disabled.\n"
+	}
+}
