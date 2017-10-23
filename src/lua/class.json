@@ -256,5 +256,15 @@
 			"$0"
 		],
 		"description": "Has instance member something.\n"
+	},
+	"class.method 011": {
+		"prefix": "class.method",
+		"body": [
+			"--- Method $1",
+			"function ${TM_FILENAME_BASE/[^a-z]*([a-z]+)/${1:/capitalize}/g}:${1:name}()",
+			"end",
+			"$0"
+		],
+		"description": "Instance method.\n"
 	}
 }
