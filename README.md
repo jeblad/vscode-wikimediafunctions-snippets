@@ -54,6 +54,12 @@ Libraries that use bootstrapping
 - [frame](src/lua/pickle/frame.json) &mdash; create and manipulate examples; describe, context, and it
 - [spy](src/lua/pickle/frame.json) &mdash; create and manipulate spies; carp, cluck, croak, and confess
 
+#### Additional snippets
+
+There a few additional snippets
+
+- [class](src/lua/class.json) &mdash; basic structures for a class structure using tables
+
 ## Installation
 
 1. Install Visual Studio Code 0.10.1 or higher
