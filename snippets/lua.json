@@ -876,85 +876,6 @@
 		],
 		"description": "Returns a function for self-tests.\n"
 	},
-	"lua.if 001": {
-		"prefix": "lua.if",
-		"body": [
-			"if ${1:test} then",
-			"\t$0",
-			"end"
-		],
-		"description": "If structure.\n"
-	},
-	"lua.elseif 002": {
-		"prefix": "lua.elseif",
-		"body": [
-			"elseif ${1:test} then",
-			"\t$0",
-			"end"
-		],
-		"description": "Else-if substructure.\n"
-	},
-	"lua.else 003": {
-		"prefix": "lua.else",
-		"body": [
-			"else",
-			"\t$0",
-			"end"
-		],
-		"description": "Else substructure.\n"
-	},
-	"lua.while 004": {
-		"prefix": "lua.while",
-		"body": [
-			"while ${1:test} do",
-			"\t$0",
-			"end"
-		],
-		"description": "While structure.\n"
-	},
-	"lua.repeat 005": {
-		"prefix": "lua.repeat",
-		"body": [
-			"repeat",
-			"\t$0",
-			"until ${1:test}"
-		],
-		"description": "Repeat structure.\n"
-	},
-	"lua.for-numeric 005": {
-		"prefix": "lua.for-numeric",
-		"body": [
-			"for ${1:var} = ${2:from}, ${3:to}${4:, ${5:step}} do",
-			"\t$0",
-			"end"
-		],
-		"description": "Numeric for structure.\n"
-	},
-	"lua.for-pairs 006": {
-		"prefix": "lua.for-pairs",
-		"body": [
-			"for ${1:key} in pairs( ${2:table} ) do",
-			"\t$0",
-			"end"
-		],
-		"description": "Pairs for structure.\n"
-	},
-	"lua.for-ipairs 007": {
-		"prefix": "lua.for-ipairs",
-		"body": [
-			"for ${1:key},${2:value} in ipairs( ${3:table} ) do",
-			"\t$0",
-			"end"
-		],
-		"description": "Ipairs for structure.\n"
-	},
-	"lua.return 008": {
-		"prefix": "lua.return",
-		"body": [
-			"do return $0 end"
-		],
-		"description": "Return within do structure.\n"
-	},
 	"mw 001": {
 		"prefix": "mw.addWarning( text )",
 		"body": [
@@ -1766,6 +1687,202 @@
 			"mw.ustring.upper( ${1:s} )$0"
 		],
 		"description": "Change all unicode lowercase letters to uppercase.\n"
+	},
+	"mw.wikibase 001": {
+		"prefix": "mw.wikibase.getEntity( [entityId] )",
+		"body": [
+			"mw.wikibase.getEntity( ${1:entityId} )$0"
+		],
+		"description": "Returns the entity forthe current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 002": {
+		"prefix": "mw.wikibase.getEntityObject( [entityId] )",
+		"body": [
+			"mw.wikibase.getEntityObject( ${1:entityId} )$0"
+		],
+		"description": "Returns the entity for the current item, or the one with the entity id.\nAlias for mw.wikibase.getEntity\n"
+	},
+	"mw.wikibase 003": {
+		"prefix": "mw.wikibase.getEntityIdForCurrentPage()",
+		"body": [
+			"mw.wikibase.getEntityIdForCurrentPage()$0"
+		],
+		"description": "Returns the entity id for the current page.\n"
+	},
+	"mw.wikibase 004": {
+		"prefix": "mw.wikibase.getEntityIdForTitle( title )",
+		"body": [
+			"mw.wikibase.getEntityIdForTitle( ${1:title} )"
+		],
+		"description": "Returns the entity id for the linked title.\n"
+	},
+	"mw.wikibase 005": {
+		"prefix": "mw.wikibase.getEntityUrl( [entityId] )",
+		"body": [
+			"mw.wikibase.getEntityUrl( ${1:entityId} )$0"
+		],
+		"description": "Returns the url for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 006": {
+		"prefix": "mw.wikibase.label( [entityId] )",
+		"body": [
+			"mw.wikibase.label( ${1:entityId} )$0"
+		],
+		"description": "Returns the label for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 007": {
+		"prefix": "mw.wikibase.getLabelWithLang( [entityId] )",
+		"body": [
+			"mw.wikibase.getLabelWithLang( ${1:entityId} )$0"
+		],
+		"description": "Returns the label and language for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 008": {
+		"prefix": "mw.wikibase.sitelink( [entityId] )",
+		"body": [
+			"mw.wikibase.sitelink( ${1:entityId} )$0"
+		],
+		"description": "Returns the sitelink (page title) for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 009": {
+		"prefix": "mw.wikibase.description( [entityId] )",
+		"body": [
+			"mw.wikibase.description( ${1:entityId} )$0"
+		],
+		"description": "Returns the description for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 010": {
+		"prefix": "mw.wikibase.getDescriptionWithLang( [entityId] )",
+		"body": [
+			"mw.wikibase.getDescriptionWithLang( ${1:entityId} )$0"
+		],
+		"description": "Returns the description and language for the current item, or the one with the entity id.\n"
+	},
+	"mw.wikibase 011": {
+		"prefix": "mw.wikibase.renderSnak( snak )",
+		"body": [
+			"mw.wikibase.renderSnak( ${1:snak} )$0"
+		],
+		"description": "Returns an escaped wikitext version of the snak.\n"
+	},
+	"mw.wikibase 012": {
+		"prefix": "mw.wikibase.formatValue( snak )",
+		"body": [
+			"mw.wikibase.formatValue( ${1:snak} )$0"
+		],
+		"description": "Returns a rich wikitext version of the snak.\n"
+	},
+	"mw.wikibase 013": {
+		"prefix": "mw.wikibase.renderSnaks( snaks )",
+		"body": [
+			"mw.wikibase.renderSnaks( ${1:snaks} )$0"
+		],
+		"description": "Returns escaped wikitext versions of the snaks.\n"
+	},
+	"mw.wikibase 014": {
+		"prefix": "mw.wikibase.formatValues( snaks )",
+		"body": [
+			"mw.wikibase.formatValues( ${1:snaks} )$0"
+		],
+		"description": "Returns rich wikitext versions of the snaks.\n"
+	},
+	"mw.wikibase 015": {
+		"prefix": "mw.wikibase.resolvePropertyId( propertyLabelOrId )",
+		"body": [
+			"mw.wikibase.resolvePropertyId( ${1:propertyLabelOrId} )$0"
+		],
+		"description": "Returns the property id for the property with the label or id.\n"
+	},
+	"mw.wikibase 016": {
+		"prefix": "mw.wikibase.getPropertyOrder()",
+		"body": [
+			"mw.wikibase.getPropertyOrder()$0"
+		],
+		"description": "Returns a table with properties given weights.\n"
+	},
+	"mw.wikibase 017": {
+		"prefix": "mw.wikibase.orderProperties( propertyIds )",
+		"body": [
+			"mw.wikibase.orderProperties( ${1:propertyIds} )$0"
+		],
+		"description": "Returns a table with the property ids in sorted order.\n"
+	},
+	"mw.wikibase 018": {
+		"prefix": "mw.wikibase.getBestStatements( entityId, propertyId )",
+		"body": [
+			"mw.wikibase.getBestStatements( ${1:entityId}, ${2:propertyId} )$0"
+		],
+		"description": "Returns the best statements for the given entity and property id.\n"
+	},
+	"mw.wikibase 019": {
+		"prefix": "mw.wikibase:getLabel( [langCode] )",
+		"body": [
+			":getLabel( ${1:langCode} )$0"
+		],
+		"description": "Returns the label for the instance, in the current or given language.\n"
+	},
+	"mw.wikibase 020": {
+		"prefix": "mw.wikibase:getLabelWithLang( [langCode] )",
+		"body": [
+			":getLabelWithLang( ${1:langCode} )$0"
+		],
+		"description": "Returns the label and language for the instance, in the current or given language.\n"
+	},
+	"mw.wikibase 021": {
+		"prefix": "mw.wikibase:getSitelink( [globalSiteId] )",
+		"body": [
+			":getSitelink( ${1:globalSiteId} )$0"
+		],
+		"description": "Returns the sitelink (page title) for the instance, for the current or given global site id.\n"
+	},
+	"mw.wikibase 022": {
+		"prefix": "mw.wikibase:getDescription( [langCode] )",
+		"body": [
+			":getDescription( ${1:langCode} )$0"
+		],
+		"description": "Returns the description for the instance, in the current or given language.\n"
+	},
+	"mw.wikibase 023": {
+		"prefix": "mw.wikibase:getDescriptionWithLang( [langCode] )",
+		"body": [
+			":getDescriptionWithLang( ${1:langCode} )$0"
+		],
+		"description": "Returns the description and language for the instance, in the current or given language.\n"
+	},
+	"mw.wikibase 024": {
+		"prefix": "mw.wikibase:getProperties()$0",
+		"body": [
+			":getProperties()"
+		],
+		"description": "Returns a table for the instance with all used property ids.\n"
+	},
+	"mw.wikibase 025": {
+		"prefix": "mw.wikibase:getBestStatements( propertyId )",
+		"body": [
+			":getBestStatements( ${1:propertyId} )$0"
+		],
+		"description": "Returns the best statements for the instance, given the property id.\n"
+	},
+	"mw.wikibase 026": {
+		"prefix": "mw.wikibase:formatPropertyValues( propertyLabelOrId[, acceptableRanks] )",
+		"body": [
+			":formatPropertyValues( ${1:propertyId}${2:, ${3:acceptableRanks}} )$0"
+		],
+		"description": "Returns an escaped wikitext version of the snak.\n"
+	},
+	"mw.wikibase 027": {
+		"prefix": "mw.wikibase:formatStatements( propertyLabelOrId[, acceptableRanks] )",
+		"body": [
+			":formatStatements( ${1:propertyId}${2:, ${3:acceptableRanks}} )$0"
+		],
+		"description": "Returns a rich wikitext version of the snak.\n"
+	},
+	"mw.wikibase 028": {
+		"prefix": "mw.wikibase.entity.claimRanks",
+		"body": [
+			"mw.wikibase.entity.claimRanks$0"
+		],
+		"description": "A table that contains a map of all available claim ranks.\n"
 	},
 	"pickle.adapt 001": {
 		"prefix": "pickle.subject",
