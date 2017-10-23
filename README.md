@@ -34,7 +34,7 @@ Libraries available through the “mw” structure
   - [hash](src/lua/mw/hash.json) &mdash; basic hashing
   - [html](src/lua/mw/html.json) &mdash; create and manipulate html tags
   - [language](src/lua/mw/language.json) &mdash; get, create and manipulate language objects
-  - [message](src/lua/mw/message.json) (unfinished) &mdash; create and manipulate messages
+  - [message](src/lua/mw/message.json) &mdash; create and manipulate messages
   - [site](src/lua/mw/site.json) &mdash; access site-specific information
   - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
   - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
@@ -58,7 +58,7 @@ Libraries that use bootstrapping
 
 There a few additional snippets
 
-- [class](src/lua/class.json) &mdash; basic structures for a class structure using tables
+- [table-class](src/lua/class.json) &mdash; table-based class structures, see [Object Orientation Tutorial](http://lua-users.org/wiki/ObjectOrientationTutorial) (*Simple metatable-based class* and *Inheritance*)
 
 ## Installation
 
