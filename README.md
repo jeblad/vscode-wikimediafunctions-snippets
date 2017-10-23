@@ -39,7 +39,7 @@ Libraries available through the “mw” structure
   - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
   - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
   - [message](src/lua/mw/message.json) (unfinished) &mdash; create and manipulate messages
-  - [site](src/lua/mw/site.json) (unfinished) &mdash; access site-specific information
+  - [site](src/lua/mw/site.json) &mdash; access site-specific information
   - [wikibase](src/lua/mw/wikibase.json) &mdash; access repo-specific information
 
 Libraries that must be explicitly required
