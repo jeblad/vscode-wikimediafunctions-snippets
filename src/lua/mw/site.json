@@ -1,0 +1,107 @@
+{
+	"@metadata": {
+		"name": "site",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"mw.site\", as it is part of the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"mw.site 001": {
+		"prefix": "mw.site.currentVersion",
+		"body": [
+			"mw.site.currentVersion$0"
+		],
+		"description": "The current installed version of MediaWiki.\n"
+	},
+	"mw.site 002": {
+		"prefix": "mw.site.scriptPath",
+		"body": [
+			"mw.site.scriptPath$0"
+		],
+		"description": "The value of $wgScriptPath.\n"
+	},
+	"mw.site 003": {
+		"prefix": "mw.site.server",
+		"body": [
+			"mw.site.server$0"
+		],
+		"description": "The value of $wgServer.\n"
+	},
+	"mw.site 004": {
+		"prefix": "mw.site.siteName",
+		"body": [
+			"mw.site.siteName$0"
+		],
+		"description": "The value of $wgSitename.\n"
+	},
+	"mw.site 005": {
+		"prefix": "mw.site.stylePath",
+		"body": [
+			"mw.site.stylePath$0"
+		],
+		"description": "The value of $wgStylePath.\n"
+	},
+	"mw.site 006": {
+		"prefix": "mw.site.namespaces",
+		"body": [
+			"mw.site.namespaces$0"
+		],
+		"description": "Table holding all namespaces as number and canonical name.\n"
+	},
+	"mw.site 007": {
+		"prefix": "mw.site.contentNamespaces",
+		"body": [
+			"mw.site.contentNamespaces$0"
+		],
+		"description": "Table holding all content namespaces as number and canonical name.\n"
+	},
+	"mw.site 008": {
+		"prefix": "mw.site.subjectNamespaces",
+		"body": [
+			"mw.site.subjectNamespaces$0"
+		],
+		"description": "Table holding all subject namespaces as number and canonical name.\n"
+	},
+	"mw.site 009": {
+		"prefix": "mw.site.talkNamespaces",
+		"body": [
+			"mw.site.talkNamespaces$0"
+		],
+		"description": "Table holding all talk namespaces as number and canonical name.\n"
+	},
+	"mw.site 010": {
+		"prefix": "mw.site.stats",
+		"body": [
+			"mw.site.stats$0"
+		],
+		"description": "A table holding site statistics.\n"
+	},
+	"mw.site 011": {
+		"prefix": "mw.site.pagesInCategory( category[, which] )",
+		"body": [
+			"mw.site.pagesInCategory( ${1:category}${2:, ${3:which}} )$0"
+		],
+		"description": "A table or an integer for number of members in the category.\n"
+	},
+	"mw.site 012": {
+		"prefix": "mw.site.pagesInNamespace( nsNum )",
+		"body": [
+			"mw.site.pagesInNamespace( ${1:nsNum} )$0"
+		],
+		"description": "An integer for number of members in the namespace.\n"
+	},
+	"mw.site 013": {
+		"prefix": "mw.site.usersInGroup( group )",
+		"body": [
+			"mw.site.usersInGroup( ${1:group} )$0"
+		],
+		"description": "An integer for number of userss in the group.\n"
+	},
+	"mw.site 014": {
+		"prefix": "mw.site.interwikiMap( filter )",
+		"body": [
+			"mw.site.interwikiMap( ${1:filter} )$0"
+		],
+		"description": "A table holding data about available interwiki prefixes.\n"
+	}
+}
