@@ -334,6 +334,16 @@
 		],
 		"description": "Has instance member something.\n"
 	},
+	"class.method 011": {
+		"prefix": "class.method",
+		"body": [
+			"--- Method $1",
+			"function ${TM_FILENAME_BASE/[^a-z]*([a-z]+)/${1:/capitalize}/g}:${1:name}()",
+			"end",
+			"$0"
+		],
+		"description": "Instance method.\n"
+	},
 	"frame 001": {
 		"prefix": "args",
 		"body": [
@@ -866,7 +876,85 @@
 		],
 		"description": "Returns a function for self-tests.\n"
 	},
-	"lua.": {},
+	"lua.if 001": {
+		"prefix": "lua.if",
+		"body": [
+			"if ${1:test} then",
+			"\t$0",
+			"end"
+		],
+		"description": "If structure.\n"
+	},
+	"lua.elseif 002": {
+		"prefix": "lua.elseif",
+		"body": [
+			"elseif ${1:test} then",
+			"\t$0",
+			"end"
+		],
+		"description": "Else-if substructure.\n"
+	},
+	"lua.else 003": {
+		"prefix": "lua.else",
+		"body": [
+			"else",
+			"\t$0",
+			"end"
+		],
+		"description": "Else substructure.\n"
+	},
+	"lua.while 004": {
+		"prefix": "lua.while",
+		"body": [
+			"while ${1:test} do",
+			"\t$0",
+			"end"
+		],
+		"description": "While structure.\n"
+	},
+	"lua.repeat 005": {
+		"prefix": "lua.repeat",
+		"body": [
+			"repeat",
+			"\t$0",
+			"until ${1:test}"
+		],
+		"description": "Repeat structure.\n"
+	},
+	"lua.for-numeric 005": {
+		"prefix": "lua.for-numeric",
+		"body": [
+			"for ${1:var} = ${2:from}, ${3:to}${4:, ${5:step}} do",
+			"\t$0",
+			"end"
+		],
+		"description": "Numeric for structure.\n"
+	},
+	"lua.for-pairs 006": {
+		"prefix": "lua.for-pairs",
+		"body": [
+			"for ${1:key} in pairs( ${2:table} ) do",
+			"\t$0",
+			"end"
+		],
+		"description": "Pairs for structure.\n"
+	},
+	"lua.for-ipairs 007": {
+		"prefix": "lua.for-ipairs",
+		"body": [
+			"for ${1:key},${2:value} in ipairs( ${3:table} ) do",
+			"\t$0",
+			"end"
+		],
+		"description": "Ipairs for structure.\n"
+	},
+	"lua.return 008": {
+		"prefix": "lua.return",
+		"body": [
+			"do return $0 end"
+		],
+		"description": "Return within do structure.\n"
+	},
 	"mw 001": {
 		"prefix": "mw.addWarning( text )",
 		"body": [
