@@ -1,0 +1,114 @@
+{
+	"@metadata": {
+		"name": "ustring",
+		"comment": "The library is imported as default, it is \"implied\", and can be fully identified by the library prefix. This is nearly always named as \"mw.text\", as it is part of the standard mw-lib, so it is pretty safe to assume it can be used as prefix.",
+		"authors": [
+			"Jeblad"
+		]
+	},
+	"mw.text 001": {
+		"prefix": "mw.text.decode( string )",
+		"body": [
+			"mw.text.decode( ${1:string} )$0"
+		],
+		"description": "Replaces HTML entities in the string with the corresponding characters.\n"
+	},
+	"mw.text 002": {
+		"prefix": "mw.text.encode( string[, charset] )",
+		"body": [
+			"mw.text.encode( ${1:string}${2:, ${3:charset}} )$0"
+		],
+		"description": "Replaces characters in the string with the corresponding HTML entities.\n"
+	},
+	"mw.text 003": {
+		"prefix": "mw.text.jsonDecode( string[, flags] )",
+		"body": [
+			"mw.text.jsonDecode( ${1:string}${2:, ${3:flags}} )$0"
+		],
+		"description": "Decodes a JSON string into an Unicode string.\n"
+	},
+	"mw.text 004": {
+		"prefix": "mw.text.jsonEncode( string[, flags] )",
+		"body": [
+			"mw.text.jsonEncode( ${1:string}${2:, ${3:flags}} )$0"
+		],
+		"description": "Encodes a Unicode string into a JSON string.\n"
+	},
+	"mw.text 005": {
+		"prefix": "mw.text.killMarkers( string )",
+		"body": [
+			"mw.text.killMarkers( ${1:string} )$0"
+		],
+		"description": "Removes all MediaWiki strip markers from a string.\n"
+	},
+	"mw.text 006": {
+		"prefix": "mw.text.listToText( list[, separator, conjunction] )",
+		"body": [
+			"mw.text.listToText( ${1:list}${2:, ${3:separator}, ${$:conjunction}} )$0"
+		],
+		"description": "Join a list with separator and conjugate, according to current locale or given arguments.\n"
+	},
+	"mw.text 007": {
+		"prefix": "mw.text.nowiki( string )",
+		"body": [
+			"mw.text.nowiki( ${1:string} )$0"
+		],
+		"description": "Encodes various characters as HTML entities.\n"
+	},
+	"mw.text 008": {
+		"prefix": "mw.text.split( string, pattern[, plain] )",
+		"body": [
+			"mw.text.split( ${1:string}, ${2:pattern}${3:, ${4:plain}} )$0"
+		],
+		"description": "Returns a table with substrings at boundaries matching the Ustring pattern pattern.\n"
+	},
+	"mw.text 009": {
+		"prefix": "mw.text.gsplit( string, pattern[, plain] )",
+		"body": [
+			"mw.text.gsplit( ${1:string}, ${2:pattern}${3:, ${4:plain}} )$0"
+		],
+		"description": "Returns an iterator for substrings at boundaries matching the Ustring pattern pattern.\n"
+	},
+	"mw.text 010": {
+		"prefix": "mw.text.tag( name, attributes, content )",
+		"body": [
+			"mw.text.tag( ${1:name}, ${2:attributes}, ${3:content} )$0"
+		],
+		"description": "Returns an HTML-style tag for name with attributes and content.\n"
+	},
+	"mw.text 011": {
+		"prefix": "mw.text.tag{ name = name, attrs = attributes, content = string|false}",
+		"body": [
+			"mw.text.tag{ name = ${1:name}, attrs = ${2:attributes}${3:, content = ${4:content}} }$0"
+		],
+		"description": "Returns an HTML-style tag for name with attributes and content.\n"
+	},
+	"mw.text 012": {
+		"prefix": "mw.text.trim( string[, charset] )",
+		"body": [
+			"mw.text.trim( ${1:string}${2:, ${3:charset}} )$0"
+		],
+		"description": "Returns a string where whitespace or charset are removed from the beginning and end.\n"
+	},
+	"mw.text 013": {
+		"prefix": "mw.text.truncate( string, length[, ellipsis[, adjustLength] )",
+		"body": [
+			"mw.text.truncate( ${1:string}, ${2:length}${3:, ${4:ellipsis${5:, ${6:adjustLength}}}} )$0"
+		],
+		"description": "Returns a string truncated to length, negative counted from the end, optionally adding ellipsis, and optionally including ellipsis in the calculation.\n"
+	},
+	"mw.text 014": {
+		"prefix": "mw.text.unstripNoWiki( string )",
+		"body": [
+			"mw.text.unstripNoWiki( ${1:string} )$0"
+		],
+		"description": "Returns a string where strip markers are replaced with the corresponding text.\n"
+	},
+	"mw.text 015": {
+		"prefix": "mw.text.unstrip( string )",
+		"body": [
+			"mw.text.unstrip( ${1:string} )$0"
+		],
+		"description": "Returns a string where strip markers are replaced before calling killMarkers.\n"
+	}
+}
