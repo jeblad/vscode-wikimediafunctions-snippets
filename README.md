@@ -26,39 +26,39 @@ Not included, available through other extensions.
 
 Libraries loaded by Scribunto
 
-- [frame](src/lua/mw/frame.json) &mdash; interactions with calls from Mediawiki
+- [frame](src/lua/mw/frame.json) — interactions with calls from Mediawiki
 
 Libraries available through the “mw” structure
 
-- [mw](src/lua/mw/mw.json) &mdash; basic functions from Scribunto to interface with Mediawiki
-  - [hash](src/lua/mw/hash.json) &mdash; basic hashing
-  - [html](src/lua/mw/html.json) &mdash; create and manipulate html tags
-  - [language](src/lua/mw/language.json) &mdash; get, create and manipulate language objects
-  - [message](src/lua/mw/message.json) &mdash; create and manipulate messages
-  - [site](src/lua/mw/site.json) &mdash; access site-specific information
-  - [text](src/lua/mw/text.json) &mdash; additional manipulation of strings
-  - [title](src/lua/mw/title.json) &mdash; get, create and manipulate title objects
-  - [uri](src/lua/mw/uri.json) &mdash; create and manipulate encoded uri strings
-  - [ustring](src/lua/mw/ustring.json) &mdash; manipulate unicode strings
-  - [wikibase](src/lua/mw/wikibase.json) &mdash; access repo-specific information
+- [mw](src/lua/mw/mw.json) — basic functions from Scribunto to interface with Mediawiki
+  - [hash](src/lua/mw/hash.json) — basic hashing
+  - [html](src/lua/mw/html.json) — create and manipulate html tags
+  - [language](src/lua/mw/language.json) — get, create and manipulate language objects
+  - [message](src/lua/mw/message.json) — create and manipulate messages
+  - [site](src/lua/mw/site.json) — access site-specific information
+  - [text](src/lua/mw/text.json) — additional manipulation of strings
+  - [title](src/lua/mw/title.json) — get, create and manipulate title objects
+  - [uri](src/lua/mw/uri.json) — create and manipulate encoded uri strings
+  - [ustring](src/lua/mw/ustring.json) — manipulate unicode strings
+  - [wikibase](src/lua/mw/wikibase.json) — access repo-specific information
 
 Libraries that must be explicitly required
 
-- [libraryUtil](src/lua/libraryUtil.json) &mdash; manipulate arguments
+- [libraryUtil](src/lua/libraryUtil.json) — manipulate arguments
 
 #### Pickle libraries
 
 Libraries that use bootstrapping
 
-- [adapt](src/lua/pickle/frame.json) &mdash; create and manipulate assertions; subjects and expectations
-- [frame](src/lua/pickle/frame.json) &mdash; create and manipulate examples; describe, context, and it
-- [spy](src/lua/pickle/frame.json) &mdash; create and manipulate spies; carp, cluck, croak, and confess
+- [adapt](src/lua/pickle/frame.json) — create and manipulate assertions; “subjects” and “expectations”
+- [frame](src/lua/pickle/frame.json) — create and manipulate examples; “describe”, “context”, and “it”
+- [spy](src/lua/pickle/frame.json) — create and manipulate spies; “carp”, “cluck”, “croak”, and “confess”
 
 #### Additional snippets
 
 There a few additional snippets
 
-- [class-table](src/lua/class-table.json) &mdash; table-based class structures, see [Object Orientation Tutorial](http://lua-users.org/wiki/ObjectOrientationTutorial) (*Simple metatable-based class* and *Inheritance*)
+- [class-table](src/lua/class-table.json) — table-based class structures, see [Object Orientation Tutorial](http://lua-users.org/wiki/ObjectOrientationTutorial) (“Simple metatable-based class” and “Inheritance”)
 
 ## Installation
 
