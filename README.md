@@ -58,7 +58,7 @@ Libraries that use bootstrapping
 
 There a few additional snippets
 
-- [table-class](src/lua/class.json) &mdash; table-based class structures, see [Object Orientation Tutorial](http://lua-users.org/wiki/ObjectOrientationTutorial) (*Simple metatable-based class* and *Inheritance*)
+- [class-table](src/lua/class-table.json) &mdash; table-based class structures, see [Object Orientation Tutorial](http://lua-users.org/wiki/ObjectOrientationTutorial) (*Simple metatable-based class* and *Inheritance*)
 
 ## Installation
 
