@@ -386,10 +386,45 @@
 		],
 		"description": "Same as pairs( frame.args )\n"
 	},
-	"mw.hash 001": {
-		"prefix": "mw.hash.hashValue( algo, value )",
+	"libraryUtil 001": {
+		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
 		"body": [
-			"mw.hash.hashValue( ${1:algo}, ${2:value} )$0"
+			"libraryUtil.checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
+		],
+		"description": "Check type and raise exception on wrong type.\n"
+	},
+	"libraryUtil 002": {
+		"prefix": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )",
+		"body": [
+			"libraryUtil.checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )$0"
+		],
+		"description": "Check types and raise exception if type is not listed.\n"
+	},
+	"libraryUtil 003": {
+		"prefix": "libraryUtil.checkTypeForIndex( index, value, expectType )",
+		"body": [
+			"libraryUtil.checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )$0"
+		],
+		"description": "Raises an error if type of value does not match.\n"
+	},
+	"libraryUtil 004": {
+		"prefix": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
+		"body": [
+			"libraryUtil.checkTypeForNamedArg( ${1:name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
+		],
+		"description": "Raises an error if type of arg does not match.\n"
+	},
+	"libraryUtil 005": {
+		"prefix": "libraryUtil.makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
+		"body": [
+			"libraryUtil.makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )$0"
+		],
+		"description": "Returns a function for self-tests.\n"
+	},
+	"mw.hash 001": {
+		"prefix": "mw.hash.hashValue( algorithm, value )",
+		"body": [
+			"mw.hash.hashValue( ${1:algorithm}, ${2:value} )$0"
 		],
 		"description": "Hashes a string value with the specified algorithm.\n"
 	},
@@ -401,9 +436,9 @@
 		"description": "Returns a list of supported hashing algorithms.\n"
 	},
 	"mw.html 001": {
-		"prefix": "mw.html.create( tagName, args )",
+		"prefix": "mw.html.create( tagName, argsTable )",
 		"body": [
-			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
+			"mw.html.create( ${1:tagName}${2:, ${3:argsTable}} )$0"
 		],
 		"description": "Creates a new instance with the given tag.\n"
 	},
@@ -429,9 +464,9 @@
 		"description": "Appends a newline to the current node.\n"
 	},
 	"mw.html 005": {
-		"prefix": "mw.html:tag( tagName, args )",
+		"prefix": "mw.html:tag( tagName, argsTable )",
 		"body": [
-			":tag( ${1:tagName}, ${2:args} )$0"
+			":tag( ${1:tagName}, ${2:argsTable} )$0"
 		],
 		"description": "Appends a new child node with the given tag to the current node.\n"
 	},
@@ -443,9 +478,9 @@
 		"description": "Set a html attribute with the given name and value on the current node.\n"
 	},
 	"mw.html 007": {
-		"prefix": "mw.html:attr( table )",
+		"prefix": "mw.html:attr( argsTable )",
 		"body": [
-			":attr( ${1:table} )$0"
+			":attr( ${1:argsTable} )$0"
 		],
 		"description": "Set html attributes with the given name and value on the current node.\n"
 	},
@@ -471,9 +506,9 @@
 		"description": "Set a css property with the given name and value on the current node.\n"
 	},
 	"mw.html 011": {
-		"prefix": "mw.html:css( table )",
+		"prefix": "mw.html:css( cssTable )",
 		"body": [
-			":css( ${1:table} )$0"
+			":css( ${1:cssTable} )$0"
 		],
 		"description": "Set css properties with the given name and value on the current node.\n"
 	},
@@ -527,53 +562,53 @@
 		"description": "Returns a language object for the default content language.\n"
 	},
 	"mw.language 005": {
-		"prefix": "mw.language.getFallbacksFor( code )",
+		"prefix": "mw.language.getFallbacksFor( langCode )",
 		"body": [
-			"mw.language.getFallbacksFor( ${1:code} )$0"
+			"mw.language.getFallbacksFor( ${1:langCode} )$0"
 		],
 		"description": "Returns a list of fallback language codes for the given code.\n"
 	},
 	"mw.language 006": {
-		"prefix": "mw.language.isKnownLanguageTag( code )",
+		"prefix": "mw.language.isKnownLanguageTag( langCode )",
 		"body": [
-			"mw.language.isKnownLanguageTag( ${1:code} )$0"
+			"mw.language.isKnownLanguageTag( ${1:langCode} )$0"
 		],
 		"description": "Checks whether language code is a valid built-in code with known denomyn.\n"
 	},
 	"mw.language 007": {
-		"prefix": "mw.language.isSupportedLanguage( code )",
+		"prefix": "mw.language.isSupportedLanguage( langCode )",
 		"body": [
-			"mw.language.isSupportedLanguage( ${1:code} )$0"
+			"mw.language.isSupportedLanguage( ${1:langCode} )$0"
 		],
 		"description": "Checks whether localisation is available for the language code.\n"
 	},
 	"mw.language 008": {
-		"prefix": "mw.language.isValidBuiltInCode( code )",
+		"prefix": "mw.language.isValidBuiltInCode( langCode )",
 		"body": [
-			"mw.language.isValidBuiltInCode( ${1:code} )$0"
+			"mw.language.isValidBuiltInCode( ${1:langCode} )$0"
 		],
 		"description": "Checks whether the language code is valid for internal customisation.\n"
 	},
 	"mw.language 009": {
-		"prefix": "mw.language.isValidCode( code )",
+		"prefix": "mw.language.isValidCode( langCode )",
 		"body": [
-			"mw.language.isValidCode( ${1:code} )$0"
+			"mw.language.isValidCode( ${1:langCode} )$0"
 		],
 		"description": "Checks whether the language code is superficially valid.\n"
 	},
 	"mw.language 010": {
-		"prefix": "mw.language.new( code )",
+		"prefix": "mw.language.new( langCode )",
 		"body": [
-			"mw.language.new( ${1:code} )$0"
+			"mw.language.new( ${1:langCode} )$0"
 		],
-		"description": "Creates a new language object."
+		"description": "Creates a new language object for the language code."
 	},
 	"mw.language 011": {
-		"prefix": "mw.getLanguage( code )",
+		"prefix": "mw.getLanguage( langCode )",
 		"body": [
-			"mw.getLanguage( ${1:code} )$0"
+			"mw.getLanguage( ${1:langCode} )$0"
 		],
-		"description": "Creates a new language object."
+		"description": "Creates a new language object for the language object."
 	},
 	"mw.language 012": {
 		"prefix": "mw.language:getCode()",
@@ -597,44 +632,44 @@
 		"description": "Checks whether the language code is right-to-left.\n"
 	},
 	"mw.language 015": {
-		"prefix": "mw.language:lc( s )",
+		"prefix": "mw.language:lc( string )",
 		"body": [
-			":lc( ${1:s} )$0"
+			":lc( ${1:string} )$0"
 		],
 		"description": "Converts the whole string to lowercase.\n"
 	},
 	"mw.language 016": {
-		"prefix": "mw.language:lcfirst( s )",
+		"prefix": "mw.language:lcfirst( string )",
 		"body": [
-			":lcfirst( ${1:s} )$0"
+			":lcfirst( ${1:string} )$0"
 		],
 		"description": "Converts the first char in the string to lowercase.\n"
 	},
 	"mw.language 017": {
-		"prefix": "mw.language:uc( s )",
+		"prefix": "mw.language:uc( string )",
 		"body": [
-			":uc( ${1:s} )$0"
+			":uc( ${1:string} )$0"
 		],
 		"description": "Converts the whole string to uppercase.\n"
 	},
 	"mw.language 018": {
-		"prefix": "mw.language:ucfirst( s )",
+		"prefix": "mw.language:ucfirst( string )",
 		"body": [
-			":ucfirst( ${1:s} )$0"
+			":ucfirst( ${1:string} )$0"
 		],
 		"description": "Converts the first char in the string to uppercase.\n"
 	},
 	"mw.language 019": {
-		"prefix": "mw.language:caseFold( s )",
+		"prefix": "mw.language:caseFold( string )",
 		"body": [
-			":caseFold( ${1:s} )$0"
+			":caseFold( ${1:string} )$0"
 		],
 		"description": "Converts the string for case-insensitive comparison.\n"
 	},
 	"mw.language 020": {
-		"prefix": "mw.language:formatNum( n, options )",
+		"prefix": "mw.language:formatNum( number, options )",
 		"body": [
-			":formatNum( ${1:n}${2:, ${3:options}} )$0"
+			":formatNum( ${1:number}${2:, ${3:options}} )$0"
 		],
 		"description": "Formats a number according to rules for the given language.\n"
 	},
@@ -653,37 +688,37 @@
 		"description": "Formats a duration according to rules for the given language.\n"
 	},
 	"mw.language 023": {
-		"prefix": "mw.language:parseFormattedNumber( s )",
+		"prefix": "mw.language:parseFormattedNumber( string )",
 		"body": [
-			":parseFormattedNumber( ${1:s} )$0"
+			":parseFormattedNumber( ${1:string} )$0"
 		],
 		"description": "Inverts a formatted number in a given language into its source form.\n"
 	},
 	"mw.language 024": {
-		"prefix": "mw.language:convertPlural( n, ... )",
+		"prefix": "mw.language:convertPlural( number, ... )",
 		"body": [
-			":convertPlural( ${1:n}, ${2:...} )$0"
+			":convertPlural( ${1:number}, ${2:...} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 025": {
-		"prefix": "mw.language:convertPlural( n, forms )",
+		"prefix": "mw.language:convertPlural( number, forms )",
 		"body": [
-			":convertPlural( ${1:n}, ${2:forms} )$0"
+			":convertPlural( ${1:number}, ${2:forms} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 026": {
-		"prefix": "mw.language:plural( n, ... )",
+		"prefix": "mw.language:plural( number, ... )",
 		"body": [
-			":plural( ${1:n}, ${2:...} )$0"
+			":plural( ${1:number}, ${2:...} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 027": {
-		"prefix": "mw.language:plural( n, forms )",
+		"prefix": "mw.language:plural( number, forms )",
 		"body": [
-			":plural( ${1:n}, ${2:forms} )$0"
+			":plural( ${1:number}, ${2:forms} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
@@ -757,40 +792,131 @@
 		],
 		"description": "Divides a duration according to rules for the given language.\n"
 	},
-	"util 001": {
-		"prefix": "libraryUtil.checkType( name, argIdx, arg, expectType, nilOk )",
+	"mw.message 001": {
+		"prefix": "mw.message.new( key, ... )",
 		"body": [
-			"libraryUtil.checkType( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
+			"mw.message.new( ${1:key}${2:, ${3:...}} )$0"
 		],
-		"description": "Check type and raise exception on wrong type.\n"
+		"description": "Creates a new instance with the given key.\n"
 	},
-	"util 002": {
-		"prefix": "libraryUtil.checkTypeMulti( name, argIdx, arg, expectTypes )",
+	"mw.message 002": {
+		"prefix": "mw.message.newFallbackparams( ... )",
 		"body": [
-			"libraryUtil.checkTypeMulti( ${1:name}, ${2:argIdx}, ${3:arg}, ${4:expectTypes} )$0"
+			"mw.message.newFallbackparams( ${1:...} )$0"
 		],
-		"description": "Check types and raise exception if type is not listed.\n"
+		"description": "Creates a new instance with the first existing key.\n"
 	},
-	"util 003": {
-		"prefix": "libraryUtil.checkTypeForIndex( index, value, expectType )",
+	"mw.message 003": {
+		"prefix": "mw.message.newRawMessage( text[, ... )",
 		"body": [
-			"libraryUtil.checkTypeForIndex( ${1:index}, ${2:value}, ${3:expectType} )$0"
+			"mw.message.newRawMessage( ${1:text}${2:, ${3:...}} )$0"
 		],
-		"description": "Raises an error if type of value does not match.\n"
+		"description": "Creates a new instance, with the given text.\n"
 	},
-	"util 004": {
-		"prefix": "libraryUtil.checkTypeForNamedArg( name, argName, arg, expectType, nilOk )",
+	"mw.message 004": {
+		"prefix": "mw.message.rawParam( value )",
 		"body": [
-			"libraryUtil.checkTypeForNamedArg( ${1:name}, ${2:argName}, ${3:arg}, ${4:expectType}, ${5:nilOk} )$0"
+			"mw.message.rawParam( ${1:value} )$0"
 		],
-		"description": "Raises an error if type of arg does not match.\n"
+		"description": "Wraps the value so that it will not be parsed as wikitext.\n"
 	},
-	"util 005": {
-		"prefix": "makeCheckSelfFunction( libraryName, varName, selfObj, selfObjDesc )",
+	"mw.message 005": {
+		"prefix": "mw.message.numParam( value )",
 		"body": [
-			"makeCheckSelfFunction( ${1:libraryName}, ${2:varName}, ${3:selfObj}, ${4:selfObjDesc} )$0"
+			"mw.message.numParam( ${1:value} )$0"
 		],
-		"description": "Returns a function for self-tests.\n"
+		"description": "Wraps the value so that it will be parsed as a number.\n"
+	},
+	"mw.message 006": {
+		"prefix": "mw.message.getDefaultLanguage()",
+		"body": [
+			"mw.message.getDefaultLanguage()$0"
+		],
+		"description": "Returns a Language object for the default language.\n"
+	},
+	"mw.message 007": {
+		"prefix": "mw.message:params( ... )",
+		"body": [
+			":params( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 008": {
+		"prefix": "mw.message:params( params )",
+		"body": [
+			":params( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 009": {
+		"prefix": "mw.message:rawParams( ... )",
+		"body": [
+			":rawParams( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 010": {
+		"prefix": "mw.message:rawParams( params )",
+		"body": [
+			":rawParams( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 011": {
+		"prefix": "mw.message:numParams( ... )",
+		"body": [
+			":numParams( ${1:...} )$0"
+		],
+		"description": "Add varargs to the message, and chain.\n"
+	},
+	"mw.message 012": {
+		"prefix": "mw.message:numParams( params )",
+		"body": [
+			":numParams( ${1:params} )$0"
+		],
+		"description": "Add params table to the message, and chain.\n"
+	},
+	"mw.message 013": {
+		"prefix": "mw.message:inLanguage( language )",
+		"body": [
+			":inLanguage( ${1:language} )$0"
+		],
+		"description": "Add the language to use to the message, and chain.\n"
+	},
+	"mw.message 014": {
+		"prefix": "mw.message:useDatabase( bool )",
+		"body": [
+			":useDatabase( ${1:bool} )$0"
+		],
+		"description": "Whether to find messages in the database or use the default messages, and chain.\n"
+	},
+	"mw.message 015": {
+		"prefix": "mw.message:plain()",
+		"body": [
+			":plain()$0"
+		],
+		"description": "Substitute parameters and return the wikitext.\n"
+	},
+	"mw.message 016": {
+		"prefix": "mw.message:exists()",
+		"body": [
+			":exists()$0"
+		],
+		"description": "Returns a boolean indicating whether the message key exists.\n"
+	},
+	"mw.message 017": {
+		"prefix": "mw.message:isBlank()",
+		"body": [
+			":isBlank()$0"
+		],
+		"description": "Returns a boolean indicating whether the message has content.\n"
+	},
+	"mw.message 018": {
+		"prefix": "mw.message:isDisabled()",
+		"body": [
+			":isDisabled()$0"
+		],
+		"description": "Returns a boolean indicating whether the message is disabled.\n"
 	},
 	"mw 001": {
 		"prefix": "mw.addWarning( text )",
@@ -862,6 +988,209 @@
 		],
 		"description": "Serializes object to a human-readable representation and appends the result to the log buffer.\n"
 	},
+	"mw.site 001": {
+		"prefix": "mw.site.currentVersion",
+		"body": [
+			"mw.site.currentVersion$0"
+		],
+		"description": "The current installed version of MediaWiki.\n"
+	},
+	"mw.site 002": {
+		"prefix": "mw.site.scriptPath",
+		"body": [
+			"mw.site.scriptPath$0"
+		],
+		"description": "The value of $wgScriptPath.\n"
+	},
+	"mw.site 003": {
+		"prefix": "mw.site.server",
+		"body": [
+			"mw.site.server$0"
+		],
+		"description": "The value of $wgServer.\n"
+	},
+	"mw.site 004": {
+		"prefix": "mw.site.siteName",
+		"body": [
+			"mw.site.siteName$0"
+		],
+		"description": "The value of $wgSitename.\n"
+	},
+	"mw.site 005": {
+		"prefix": "mw.site.stylePath",
+		"body": [
+			"mw.site.stylePath$0"
+		],
+		"description": "The value of $wgStylePath.\n"
+	},
+	"mw.site 006": {
+		"prefix": "mw.site.namespaces",
+		"body": [
+			"mw.site.namespaces$0"
+		],
+		"description": "Table holding all namespaces as number and canonical name.\n"
+	},
+	"mw.site 007": {
+		"prefix": "mw.site.contentNamespaces",
+		"body": [
+			"mw.site.contentNamespaces$0"
+		],
+		"description": "Table holding all content namespaces as number and canonical name.\n"
+	},
+	"mw.site 008": {
+		"prefix": "mw.site.subjectNamespaces",
+		"body": [
+			"mw.site.subjectNamespaces$0"
+		],
+		"description": "Table holding all subject namespaces as number and canonical name.\n"
+	},
+	"mw.site 009": {
+		"prefix": "mw.site.talkNamespaces",
+		"body": [
+			"mw.site.talkNamespaces$0"
+		],
+		"description": "Table holding all talk namespaces as number and canonical name.\n"
+	},
+	"mw.site 010": {
+		"prefix": "mw.site.stats",
+		"body": [
+			"mw.site.stats$0"
+		],
+		"description": "A table holding site statistics.\n"
+	},
+	"mw.site 011": {
+		"prefix": "mw.site.pagesInCategory( category[, which] )",
+		"body": [
+			"mw.site.pagesInCategory( ${1:category}${2:, ${3:which}} )$0"
+		],
+		"description": "A table or an integer for number of members in the category.\n"
+	},
+	"mw.site 012": {
+		"prefix": "mw.site.pagesInNamespace( nsNum )",
+		"body": [
+			"mw.site.pagesInNamespace( ${1:nsNum} )$0"
+		],
+		"description": "An integer for number of members in the namespace.\n"
+	},
+	"mw.site 013": {
+		"prefix": "mw.site.usersInGroup( group )",
+		"body": [
+			"mw.site.usersInGroup( ${1:group} )$0"
+		],
+		"description": "An integer for number of userss in the group.\n"
+	},
+	"mw.site 014": {
+		"prefix": "mw.site.interwikiMap( filter )",
+		"body": [
+			"mw.site.interwikiMap( ${1:filter} )$0"
+		],
+		"description": "A table holding data about available interwiki prefixes.\n"
+	},
+	"mw.text 001": {
+		"prefix": "mw.text.decode( string )",
+		"body": [
+			"mw.text.decode( ${1:string} )$0"
+		],
+		"description": "Replaces HTML entities in the string with the corresponding characters.\n"
+	},
+	"mw.text 002": {
+		"prefix": "mw.text.encode( string[, charset] )",
+		"body": [
+			"mw.text.encode( ${1:string}${2:, ${3:charset}} )$0"
+		],
+		"description": "Replaces characters in the string with the corresponding HTML entities.\n"
+	},
+	"mw.text 003": {
+		"prefix": "mw.text.jsonDecode( string[, flags] )",
+		"body": [
+			"mw.text.jsonDecode( ${1:string}${2:, ${3:flags}} )$0"
+		],
+		"description": "Decodes a JSON string into an Unicode string.\n"
+	},
+	"mw.text 004": {
+		"prefix": "mw.text.jsonEncode( string[, flags] )",
+		"body": [
+			"mw.text.jsonEncode( ${1:string}${2:, ${3:flags}} )$0"
+		],
+		"description": "Encodes a Unicode string into a JSON string.\n"
+	},
+	"mw.text 005": {
+		"prefix": "mw.text.killMarkers( string )",
+		"body": [
+			"mw.text.killMarkers( ${1:string} )$0"
+		],
+		"description": "Removes all MediaWiki strip markers from a string.\n"
+	},
+	"mw.text 006": {
+		"prefix": "mw.text.listToText( list[, separator, conjunction] )",
+		"body": [
+			"mw.text.listToText( ${1:list}${2:, ${3:separator}, ${$:conjunction}} )$0"
+		],
+		"description": "Join a list with separator and conjugate, according to current locale or given arguments.\n"
+	},
+	"mw.text 007": {
+		"prefix": "mw.text.nowiki( string )",
+		"body": [
+			"mw.text.nowiki( ${1:string} )$0"
+		],
+		"description": "Encodes various characters as HTML entities.\n"
+	},
+	"mw.text 008": {
+		"prefix": "mw.text.split( string, pattern[, plain] )",
+		"body": [
+			"mw.text.split( ${1:string}, ${2:pattern}${3:, ${4:plain}} )$0"
+		],
+		"description": "Returns a table with substrings at boundaries matching the Ustring pattern pattern.\n"
+	},
+	"mw.text 009": {
+		"prefix": "mw.text.gsplit( string, pattern[, plain] )",
+		"body": [
+			"mw.text.gsplit( ${1:string}, ${2:pattern}${3:, ${4:plain}} )$0"
+		],
+		"description": "Returns an iterator for substrings at boundaries matching the Ustring pattern pattern.\n"
+	},
+	"mw.text 010": {
+		"prefix": "mw.text.tag( name, attributes, content )",
+		"body": [
+			"mw.text.tag( ${1:name}, ${2:attributes}, ${3:content} )$0"
+		],
+		"description": "Returns an HTML-style tag for name with attributes and content.\n"
+	},
+	"mw.text 011": {
+		"prefix": "mw.text.tag{ name = name, attrs = attributes, content = string|false}",
+		"body": [
+			"mw.text.tag{ name = ${1:name}, attrs = ${2:attributes}${3:, content = ${4:content}} }$0"
+		],
+		"description": "Returns an HTML-style tag for name with attributes and content.\n"
+	},
+	"mw.text 012": {
+		"prefix": "mw.text.trim( string[, charset] )",
+		"body": [
+			"mw.text.trim( ${1:string}${2:, ${3:charset}} )$0"
+		],
+		"description": "Returns a string where whitespace or charset are removed from the beginning and end.\n"
+	},
+	"mw.text 013": {
+		"prefix": "mw.text.truncate( string, length[, ellipsis[, adjustLength] )",
+		"body": [
+			"mw.text.truncate( ${1:string}, ${2:length}${3:, ${4:ellipsis${5:, ${6:adjustLength}}}} )$0"
+		],
+		"description": "Returns a string truncated to length, negative counted from the end, optionally adding ellipsis, and optionally including ellipsis in the calculation.\n"
+	},
+	"mw.text 014": {
+		"prefix": "mw.text.unstripNoWiki( string )",
+		"body": [
+			"mw.text.unstripNoWiki( ${1:string} )$0"
+		],
+		"description": "Returns a string where strip markers are replaced with the corresponding text.\n"
+	},
+	"mw.text 015": {
+		"prefix": "mw.text.unstrip( string )",
+		"body": [
+			"mw.text.unstrip( ${1:string} )$0"
+		],
+		"description": "Returns a string where strip markers are replaced before calling killMarkers.\n"
+	},
 	"mw.title 001 ": {
 		"prefix": "mw.title.equals( a, b )",
 		"body": [
@@ -874,7 +1203,7 @@
 		"body": [
 			"mw.title.compare( ${1:a}, ${2:b} )$0"
 		],
-		"description": "Chekshow two titles are grammatically ordered, as an integer.\n"
+		"description": "Cheks how two titles are grammatically ordered, as an integer.\n"
 	},
 	"mw.title 003 ": {
 		"prefix": "mw.title.getCurrentTitle()",
@@ -891,9 +1220,9 @@
 		"description": "Creates a new title object.\n"
 	},
 	"mw.title 005 ": {
-		"prefix": "mw.title.new( id)",
+		"prefix": "mw.title.new( idNumber)",
 		"body": [
-			"mw.title.new( ${1:id} )$0"
+			"mw.title.new( ${1:idNumber} )$0"
 		],
 		"description": "Creates a new title object.\n"
 	},
@@ -1066,11 +1395,11 @@
 		"description": "Whether the instance is a talk page, as a boolean.\n"
 	},
 	"mw.title 030 ": {
-		"prefix": "mw.title:isSubpageOf( title2 )",
+		"prefix": "mw.title:isSubpageOf( parent )",
 		"body": [
-			":isSubpageOf( ${1:title2} )$0"
+			":isSubpageOf( ${1:parent} )$0"
 		],
-		"description": "Checks whether the instance is a subpage of the current title, as a boolean.\n"
+		"description": "Checks whether the instance is a subpage of the parent title, as a boolean.\n"
 	},
 	"mw.title 031 ": {
 		"prefix": "mw.title:inNamespace( ns )",
@@ -1220,23 +1549,23 @@
 		"description": "The instance mime type, as a string.\n"
 	},
 	"mw.uri 001 ": {
-		"prefix": "mw.uri.encode( s[, enctype] )",
+		"prefix": "mw.uri.encode( string[, enctype] )",
 		"body": [
-			"mw.uri.encode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.encode( ${1:string}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-encodes the string.\n"
 	},
 	"mw.uri 002 ": {
-		"prefix": "mw.uri.decode( s[, enctype] )",
+		"prefix": "mw.uri.decode( string[, enctype] )",
 		"body": [
-			"mw.uri.decode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.decode( ${1:string}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-decodes the string.\n"
 	},
 	"mw.uri 003 ": {
-		"prefix": "mw.uri.anchorEncode( s )",
+		"prefix": "mw.uri.anchorEncode( string )",
 		"body": [
-			"mw.uri.anchorEncode( ${1:s} )$0"
+			"mw.uri.anchorEncode( ${1:string} )$0"
 		],
 		"description": "Encodes the string for use in a uri fragment.\n"
 	},
@@ -1248,9 +1577,9 @@
 		"description": "Encodes the table as a uri query string.\n"
 	},
 	"mw.uri 005 ": {
-		"prefix": "mw.uri.parseQueryString( s, i, j )",
+		"prefix": "mw.uri.parseQueryString( string, firstIndex, lastIndex )",
 		"body": [
-			"mw.uri.parseQueryString( ${1:s}, ${2:i}, ${3:j} )$0"
+			"mw.uri.parseQueryString( ${1:string}, ${2:i}, ${3:j} )$0"
 		],
 		"description": "Decodes the query string s to a table.\n"
 	},
@@ -1276,9 +1605,9 @@
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 009 ": {
-		"prefix": "mw.uri.new( s )",
+		"prefix": "mw.uri.new( string )",
 		"body": [
-			"mw.uri.new( ${1:s} )$0"
+			"mw.uri.new( ${1:string} )$0"
 		],
 		"description": "Constructs a new uri object for the passed string or table.\n"
 	},
@@ -1290,9 +1619,9 @@
 		"description": "Validates the passed table or uri object.\n"
 	},
 	"mw.uri 011 ": {
-		"prefix": "mw.uri:parse( s )",
+		"prefix": "mw.uri:parse( string )",
 		"body": [
-			":parse( ${1:s} )$0"
+			":parse( ${1:string} )$0"
 		],
 		"description": "Parses a string into the current uri object.\n"
 	},
@@ -1325,16 +1654,16 @@
 		"description": "The maximum allowed length of a ustring, in bytes.\n"
 	},
 	"mw.ustring 003": {
-		"prefix": "mw.ustring.byte( s[, i[, j]] )",
+		"prefix": "mw.ustring.byte( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.byte( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.byte( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Returns the ustring as an array of bytes.\n"
 	},
 	"mw.ustring 004": {
-		"prefix": "mw.ustring.byteoffset( s[, l[, i]] )",
+		"prefix": "mw.ustring.byteoffset( string[, length[, start]] )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s}${2:, ${3:l}${4:, ${5:i}}} )$0"
+			"mw.ustring.byteoffset( ${1:string}${2:, ${3:length}${4:, ${5:start}}} )$0"
 		],
 		"description": "Returns the byte offset of a character in the ustring.\n"
 	},
@@ -1346,16 +1675,16 @@
 		"description": "Returns the arguments as a ustring of chars.\n"
 	},
 	"mw.ustring 006": {
-		"prefix": "mw.ustring.codepoint( s[, i[, j]] )",
+		"prefix": "mw.ustring.codepoint( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.codepoint( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Returns the ustring as an array of codepoints.\n"
 	},
 	"mw.ustring 007": {
-		"prefix": "mw.ustring.find( s, pattern[, init[, plain]] )",
+		"prefix": "mw.ustring.find( string, pattern[, init[, plain]] )",
 		"body": [
-			"mw.ustring.find( ${1:s}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
+			"mw.ustring.find( ${1:string}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
 		],
 		"description": "Search for the first occurence of pattern within the ustring.\n"
 	},
@@ -1367,86 +1696,86 @@
 		"description": "Formats the ustring, and injects optional arguments.\n"
 	},
 	"mw.ustring 009": {
-		"prefix": "mw.ustring.gcodepoint( s[, i[, j]] )",
+		"prefix": "mw.ustring.gcodepoint( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.gcodepoint( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Creates an iterator for the codepoints from the given arguments.\n"
 	},
 	"mw.ustring 010": {
-		"prefix": "mw.ustring.gmatch( s, pattern )",
+		"prefix": "mw.ustring.gmatch( string, pattern )",
 		"body": [
-			"mw.ustring.gmatch( ${1:s}, ${2:pattern} )$0"
+			"mw.ustring.gmatch( ${1:string}, ${2:pattern} )$0"
 		],
 		"description": "Creates an iterator for the captures from the given arguments.\n"
 	},
 	"mw.ustring 011": {
-		"prefix": "mw.ustring.gsub( s, pattern, repl[, n] )",
+		"prefix": "mw.ustring.gsub( string, pattern, replacement[, number] )",
 		"body": [
-			"mw.ustring.gsub(${1:s}, ${2:pattern}, ${3:repl}${4:, ${5:n}} )$0"
+			"mw.ustring.gsub(${1:string}, ${2:pattern}, ${3:replacement}${4:, ${5:number}} )$0"
 		],
 		"description": "Returns the ustring with occurences of patterns replaced.\n"
 	},
 	"mw.ustring 012": {
-		"prefix": "mw.ustring.isutf8( s )",
+		"prefix": "mw.ustring.isutf8( string )",
 		"body": [
-			"mw.ustring.isutf8( ${1:s} )$0"
+			"mw.ustring.isutf8( ${1:string} )$0"
 		],
 		"description": "Checks whether the ustring is valid UTF-8.\n"
 	},
 	"mw.ustring 013": {
-		"prefix": "mw.ustring.len( s )",
+		"prefix": "mw.ustring.len( string )",
 		"body": [
-			"mw.ustring.len( ${1:s} )$0"
+			"mw.ustring.len( ${1:string} )$0"
 		],
 		"description": "Calculates the length of the string in bytes.\n"
 	},
 	"mw.ustring 014": {
-		"prefix": "mw.ustring.lower( s )",
+		"prefix": "mw.ustring.lower( string )",
 		"body": [
-			"mw.ustring.lower( ${1:s} )$0"
+			"mw.ustring.lower( ${1:string} )$0"
 		],
 		"description": "Change all unicode uppercase letters to lowercase.\n"
 	},
 	"mw.ustring 015": {
-		"prefix": "mw.ustring.match( s, pattern[, init] )",
+		"prefix": "mw.ustring.match( string, pattern[, init] )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern}${3:, ${4:init}} )$0"
+			"mw.ustring.match( ${1:string}, ${2:pattern}${3:, ${4:init}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
 	"mw.ustring 016": {
-		"prefix": "mw.ustring.rep( s, n )",
+		"prefix": "mw.ustring.rep( string, number )",
 		"body": [
-			"mw.ustring.rep( ${1:s}, ${2:n} )$0"
+			"mw.ustring.rep( ${1:string}, ${2:number} )$0"
 		],
-		"description": "Returns a string with n copies of s.\n"
+		"description": "Returns a string with number copies of string.\n"
 	},
 	"mw.ustring 017": {
-		"prefix": "mw.ustring.sub( s, i[, j] )",
+		"prefix": "mw.ustring.sub( string, firstIndex[, lastIndex] )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
+			"mw.ustring.sub( ${1:string}, ${2:firstIndex}${3:, ${4:lastIndex}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},
 	"mw.ustring 018": {
-		"prefix": "mw.ustring.toNFC( s )",
+		"prefix": "mw.ustring.toNFC( string )",
 		"body": [
-			"mw.ustring.toNFC( ${1:s} )$0"
+			"mw.ustring.toNFC( ${1:string} )$0"
 		],
 		"description": "Converts the string to Normalization Form C.\n"
 	},
 	"mw.ustring 019": {
-		"prefix": "mw.ustring.toNFD( s )",
+		"prefix": "mw.ustring.toNFD( string )",
 		"body": [
-			"mw.ustring.toNFD( ${1:s} )$0"
+			"mw.ustring.toNFD( ${1:string} )$0"
 		],
 		"description": "Converts the string to Normalization Form D.\n"
 	},
 	"mw.ustring 020": {
-		"prefix": "mw.ustring.upper( s )",
+		"prefix": "mw.ustring.upper( string )",
 		"body": [
-			"mw.ustring.upper( ${1:s} )$0"
+			"mw.ustring.upper( ${1:string} )$0"
 		],
 		"description": "Change all unicode lowercase letters to uppercase.\n"
 	},
