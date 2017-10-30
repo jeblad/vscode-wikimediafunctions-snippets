@@ -21,9 +21,9 @@
 		"description": "The time according to the format string, as a string or table.\n"
 	},
 	"os 003": {
-		"prefix": "os.difftime( t2, t1 )",
+		"prefix": "os.difftime( time2, time1 )",
 		"body": [
-			"os.difftime( ${1:t2}, ${2:t1} )$0"
+			"os.difftime( ${1:time2}, ${2:time1} )$0"
 		],
 		"description": "The difference in CPU time, as an integer.\n"
 	},

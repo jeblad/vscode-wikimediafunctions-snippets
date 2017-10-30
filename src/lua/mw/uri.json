@@ -7,23 +7,23 @@
 		]
 	},
 	"mw.uri 001 ": {
-		"prefix": "mw.uri.encode( s[, enctype] )",
+		"prefix": "mw.uri.encode( string[, enctype] )",
 		"body": [
-			"mw.uri.encode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.encode( ${1:string}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-encodes the string.\n"
 	},
 	"mw.uri 002 ": {
-		"prefix": "mw.uri.decode( s[, enctype] )",
+		"prefix": "mw.uri.decode( string[, enctype] )",
 		"body": [
-			"mw.uri.decode( ${1:s}${2:, ${3:enctype}} )$0"
+			"mw.uri.decode( ${1:string}${2:, ${3:enctype}} )$0"
 		],
 		"description": "Percent-decodes the string.\n"
 	},
 	"mw.uri 003 ": {
-		"prefix": "mw.uri.anchorEncode( s )",
+		"prefix": "mw.uri.anchorEncode( string )",
 		"body": [
-			"mw.uri.anchorEncode( ${1:s} )$0"
+			"mw.uri.anchorEncode( ${1:string} )$0"
 		],
 		"description": "Encodes the string for use in a uri fragment.\n"
 	},
@@ -35,9 +35,9 @@
 		"description": "Encodes the table as a uri query string.\n"
 	},
 	"mw.uri 005 ": {
-		"prefix": "mw.uri.parseQueryString( s, i, j )",
+		"prefix": "mw.uri.parseQueryString( string, firstIndex, lastIndex )",
 		"body": [
-			"mw.uri.parseQueryString( ${1:s}, ${2:i}, ${3:j} )$0"
+			"mw.uri.parseQueryString( ${1:string}, ${2:i}, ${3:j} )$0"
 		],
 		"description": "Decodes the query string s to a table.\n"
 	},
@@ -63,9 +63,9 @@
 		"description": "Returns a uri for the full url, with optional query string/table.\n"
 	},
 	"mw.uri 009 ": {
-		"prefix": "mw.uri.new( s )",
+		"prefix": "mw.uri.new( string )",
 		"body": [
-			"mw.uri.new( ${1:s} )$0"
+			"mw.uri.new( ${1:string} )$0"
 		],
 		"description": "Constructs a new uri object for the passed string or table.\n"
 	},
@@ -77,9 +77,9 @@
 		"description": "Validates the passed table or uri object.\n"
 	},
 	"mw.uri 011 ": {
-		"prefix": "mw.uri:parse( s )",
+		"prefix": "mw.uri:parse( string )",
 		"body": [
-			":parse( ${1:s} )$0"
+			":parse( ${1:string} )$0"
 		],
 		"description": "Parses a string into the current uri object.\n"
 	},

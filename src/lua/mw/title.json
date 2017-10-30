@@ -18,7 +18,7 @@
 		"body": [
 			"mw.title.compare( ${1:a}, ${2:b} )$0"
 		],
-		"description": "Chekshow two titles are grammatically ordered, as an integer.\n"
+		"description": "Cheks how two titles are grammatically ordered, as an integer.\n"
 	},
 	"mw.title 003 ": {
 		"prefix": "mw.title.getCurrentTitle()",
@@ -35,9 +35,9 @@
 		"description": "Creates a new title object.\n"
 	},
 	"mw.title 005 ": {
-		"prefix": "mw.title.new( id)",
+		"prefix": "mw.title.new( idNumber)",
 		"body": [
-			"mw.title.new( ${1:id} )$0"
+			"mw.title.new( ${1:idNumber} )$0"
 		],
 		"description": "Creates a new title object.\n"
 	},
@@ -210,11 +210,11 @@
 		"description": "Whether the instance is a talk page, as a boolean.\n"
 	},
 	"mw.title 030 ": {
-		"prefix": "mw.title:isSubpageOf( title2 )",
+		"prefix": "mw.title:isSubpageOf( parent )",
 		"body": [
-			":isSubpageOf( ${1:title2} )$0"
+			":isSubpageOf( ${1:parent} )$0"
 		],
-		"description": "Checks whether the instance is a subpage of the current title, as a boolean.\n"
+		"description": "Checks whether the instance is a subpage of the parent title, as a boolean.\n"
 	},
 	"mw.title 031 ": {
 		"prefix": "mw.title:inNamespace( ns )",

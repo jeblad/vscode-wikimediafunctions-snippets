@@ -7,9 +7,9 @@
 		]
 	},
 	"mw.html 001": {
-		"prefix": "mw.html.create( tagName, args )",
+		"prefix": "mw.html.create( tagName, argsTable )",
 		"body": [
-			"mw.html.create( ${1:tagName}${2:, ${3:args}} )$0"
+			"mw.html.create( ${1:tagName}${2:, ${3:argsTable}} )$0"
 		],
 		"description": "Creates a new instance with the given tag.\n"
 	},
@@ -35,9 +35,9 @@
 		"description": "Appends a newline to the current node.\n"
 	},
 	"mw.html 005": {
-		"prefix": "mw.html:tag( tagName, args )",
+		"prefix": "mw.html:tag( tagName, argsTable )",
 		"body": [
-			":tag( ${1:tagName}, ${2:args} )$0"
+			":tag( ${1:tagName}, ${2:argsTable} )$0"
 		],
 		"description": "Appends a new child node with the given tag to the current node.\n"
 	},
@@ -49,9 +49,9 @@
 		"description": "Set a html attribute with the given name and value on the current node.\n"
 	},
 	"mw.html 007": {
-		"prefix": "mw.html:attr( table )",
+		"prefix": "mw.html:attr( argsTable )",
 		"body": [
-			":attr( ${1:table} )$0"
+			":attr( ${1:argsTable} )$0"
 		],
 		"description": "Set html attributes with the given name and value on the current node.\n"
 	},
@@ -77,9 +77,9 @@
 		"description": "Set a css property with the given name and value on the current node.\n"
 	},
 	"mw.html 011": {
-		"prefix": "mw.html:css( table )",
+		"prefix": "mw.html:css( cssTable )",
 		"body": [
-			":css( ${1:table} )$0"
+			":css( ${1:cssTable} )$0"
 		],
 		"description": "Set css properties with the given name and value on the current node.\n"
 	},

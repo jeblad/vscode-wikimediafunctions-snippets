@@ -21,16 +21,16 @@
 		"description": "The maximum allowed length of a ustring, in bytes.\n"
 	},
 	"mw.ustring 003": {
-		"prefix": "mw.ustring.byte( s[, i[, j]] )",
+		"prefix": "mw.ustring.byte( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.byte( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.byte( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Returns the ustring as an array of bytes.\n"
 	},
 	"mw.ustring 004": {
-		"prefix": "mw.ustring.byteoffset( s[, l[, i]] )",
+		"prefix": "mw.ustring.byteoffset( string[, length[, start]] )",
 		"body": [
-			"mw.ustring.byteoffset( ${1:s}${2:, ${3:l}${4:, ${5:i}}} )$0"
+			"mw.ustring.byteoffset( ${1:string}${2:, ${3:length}${4:, ${5:start}}} )$0"
 		],
 		"description": "Returns the byte offset of a character in the ustring.\n"
 	},
@@ -42,16 +42,16 @@
 		"description": "Returns the arguments as a ustring of chars.\n"
 	},
 	"mw.ustring 006": {
-		"prefix": "mw.ustring.codepoint( s[, i[, j]] )",
+		"prefix": "mw.ustring.codepoint( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.codepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.codepoint( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Returns the ustring as an array of codepoints.\n"
 	},
 	"mw.ustring 007": {
-		"prefix": "mw.ustring.find( s, pattern[, init[, plain]] )",
+		"prefix": "mw.ustring.find( string, pattern[, init[, plain]] )",
 		"body": [
-			"mw.ustring.find( ${1:s}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
+			"mw.ustring.find( ${1:string}, ${2:pattern}${3:, ${4:init}${5:, ${6:plain}}} )$0"
 		],
 		"description": "Search for the first occurence of pattern within the ustring.\n"
 	},
@@ -63,86 +63,86 @@
 		"description": "Formats the ustring, and injects optional arguments.\n"
 	},
 	"mw.ustring 009": {
-		"prefix": "mw.ustring.gcodepoint( s[, i[, j]] )",
+		"prefix": "mw.ustring.gcodepoint( string[, firstIndex[, lastIndex]] )",
 		"body": [
-			"mw.ustring.gcodepoint( ${1:s}${2:, ${3:i}${4:, ${5:j}}} )$0"
+			"mw.ustring.gcodepoint( ${1:string}${2:, ${3:firstIndex}${4:, ${5:lastIndex}}} )$0"
 		],
 		"description": "Creates an iterator for the codepoints from the given arguments.\n"
 	},
 	"mw.ustring 010": {
-		"prefix": "mw.ustring.gmatch( s, pattern )",
+		"prefix": "mw.ustring.gmatch( string, pattern )",
 		"body": [
-			"mw.ustring.gmatch( ${1:s}, ${2:pattern} )$0"
+			"mw.ustring.gmatch( ${1:string}, ${2:pattern} )$0"
 		],
 		"description": "Creates an iterator for the captures from the given arguments.\n"
 	},
 	"mw.ustring 011": {
-		"prefix": "mw.ustring.gsub( s, pattern, repl[, n] )",
+		"prefix": "mw.ustring.gsub( string, pattern, replacement[, number] )",
 		"body": [
-			"mw.ustring.gsub(${1:s}, ${2:pattern}, ${3:repl}${4:, ${5:n}} )$0"
+			"mw.ustring.gsub(${1:string}, ${2:pattern}, ${3:replacement}${4:, ${5:number}} )$0"
 		],
 		"description": "Returns the ustring with occurences of patterns replaced.\n"
 	},
 	"mw.ustring 012": {
-		"prefix": "mw.ustring.isutf8( s )",
+		"prefix": "mw.ustring.isutf8( string )",
 		"body": [
-			"mw.ustring.isutf8( ${1:s} )$0"
+			"mw.ustring.isutf8( ${1:string} )$0"
 		],
 		"description": "Checks whether the ustring is valid UTF-8.\n"
 	},
 	"mw.ustring 013": {
-		"prefix": "mw.ustring.len( s )",
+		"prefix": "mw.ustring.len( string )",
 		"body": [
-			"mw.ustring.len( ${1:s} )$0"
+			"mw.ustring.len( ${1:string} )$0"
 		],
 		"description": "Calculates the length of the string in bytes.\n"
 	},
 	"mw.ustring 014": {
-		"prefix": "mw.ustring.lower( s )",
+		"prefix": "mw.ustring.lower( string )",
 		"body": [
-			"mw.ustring.lower( ${1:s} )$0"
+			"mw.ustring.lower( ${1:string} )$0"
 		],
 		"description": "Change all unicode uppercase letters to lowercase.\n"
 	},
 	"mw.ustring 015": {
-		"prefix": "mw.ustring.match( s, pattern[, init] )",
+		"prefix": "mw.ustring.match( string, pattern[, init] )",
 		"body": [
-			"mw.ustring.match( ${1:s}, ${2:pattern}${3:, ${4:init}} )$0"
+			"mw.ustring.match( ${1:string}, ${2:pattern}${3:, ${4:init}} )$0"
 		],
 		"description": "Returns the first part matched by pattern.\n"
 	},
 	"mw.ustring 016": {
-		"prefix": "mw.ustring.rep( s, n )",
+		"prefix": "mw.ustring.rep( string, number )",
 		"body": [
-			"mw.ustring.rep( ${1:s}, ${2:n} )$0"
+			"mw.ustring.rep( ${1:string}, ${2:number} )$0"
 		],
-		"description": "Returns a string with n copies of s.\n"
+		"description": "Returns a string with number copies of string.\n"
 	},
 	"mw.ustring 017": {
-		"prefix": "mw.ustring.sub( s, i[, j] )",
+		"prefix": "mw.ustring.sub( string, firstIndex[, lastIndex] )",
 		"body": [
-			"mw.ustring.sub( ${1:s}, ${2:i}${3:, ${4:j}} )$0"
+			"mw.ustring.sub( ${1:string}, ${2:firstIndex}${3:, ${4:lastIndex}} )$0"
 		],
 		"description": "Returns the part given by the arguments.\n"
 	},
 	"mw.ustring 018": {
-		"prefix": "mw.ustring.toNFC( s )",
+		"prefix": "mw.ustring.toNFC( string )",
 		"body": [
-			"mw.ustring.toNFC( ${1:s} )$0"
+			"mw.ustring.toNFC( ${1:string} )$0"
 		],
 		"description": "Converts the string to Normalization Form C.\n"
 	},
 	"mw.ustring 019": {
-		"prefix": "mw.ustring.toNFD( s )",
+		"prefix": "mw.ustring.toNFD( string )",
 		"body": [
-			"mw.ustring.toNFD( ${1:s} )$0"
+			"mw.ustring.toNFD( ${1:string} )$0"
 		],
 		"description": "Converts the string to Normalization Form D.\n"
 	},
 	"mw.ustring 020": {
-		"prefix": "mw.ustring.upper( s )",
+		"prefix": "mw.ustring.upper( string )",
 		"body": [
-			"mw.ustring.upper( ${1:s} )$0"
+			"mw.ustring.upper( ${1:string} )$0"
 		],
 		"description": "Change all unicode lowercase letters to uppercase.\n"
 	}

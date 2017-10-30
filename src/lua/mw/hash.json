@@ -7,9 +7,9 @@
 		]
 	},
 	"mw.hash 001": {
-		"prefix": "mw.hash.hashValue( algo, value )",
+		"prefix": "mw.hash.hashValue( algorithm, value )",
 		"body": [
-			"mw.hash.hashValue( ${1:algo}, ${2:value} )$0"
+			"mw.hash.hashValue( ${1:algorithm}, ${2:value} )$0"
 		],
 		"description": "Hashes a string value with the specified algorithm.\n"
 	},

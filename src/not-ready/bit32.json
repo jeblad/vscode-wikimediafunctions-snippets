@@ -42,51 +42,51 @@
 		"description": "Bitwise \"xor\" of all arguments.\n"
 	},
 	"bit32 006": {
-		"prefix": "bit32.extract( n, field, width)",
+		"prefix": "bit32.extract( number, field, width)",
 		"body": [
-			"bit32.extract( ${1:n}, ${2:field}${3:, ${4:width}} )$0"
+			"bit32.extract( ${1:number}, ${2:field}${3:, ${4:width}} )$0"
 		],
 		"description": "Bitwise extract.\n"
 	},
 	"bit32 007": {
-		"prefix": "bit32.replace( n, v, field, width)",
+		"prefix": "bit32.replace( number, v, field, width)",
 		"body": [
-			"bit32.replace( ${1:n}, ${2:v}, ${3:field}${4:, ${5:width}} )$0"
+			"bit32.replace( ${1:number}, ${2:v}, ${3:field}${4:, ${5:width}} )$0"
 		],
 		"description": "Bitwise replace, "
 	},
 	"bit32 008": {
-		"prefix": "bit32.lshift( n, disp )",
+		"prefix": "bit32.lshift( number, disp )",
 		"body": [
-			"bit32.lshift( ${1:n}, ${2:disp} )$0"
+			"bit32.lshift( ${1:number}, ${2:disp} )$0"
 		],
 		"description": "Bitwise left shift.\n"
 	},
 	"bit32 009": {
-		"prefix": "bit32.rshift( n, disp )",
+		"prefix": "bit32.rshift( number, disp )",
 		"body": [
-			"bit32.rshift( ${1:n}, ${2:disp} )$0"
+			"bit32.rshift( ${1:number}, ${2:disp} )$0"
 		],
 		"description": "Bitwise right shift.\n"
 	},
 	"bit32 010": {
-		"prefix": "bit32.arshift( n, disp )",
+		"prefix": "bit32.arshift( number, disp )",
 		"body": [
-			"bit32.arshift( ${1:n}, ${2:disp} )$0"
+			"bit32.arshift( ${1:number}, ${2:disp} )$0"
 		],
 		"description": "Bitwise arithmetic shift.\n"
 	},
 	"bit32 011": {
-		"prefix": "bit32.lrotate( n, disp )",
+		"prefix": "bit32.lrotate( number, disp )",
 		"body": [
-			"bit32.lrotate( ${1:n}, ${2:disp} )$0"
+			"bit32.lrotate( ${1:number}, ${2:disp} )$0"
 		],
 		"description": "Bitwise left rotate.\n"
 	},
 	"bit32 012": {
-		"prefix": "bit32.rrotate( n, disp )",
+		"prefix": "bit32.rrotate( number, disp )",
 		"body": [
-			"bit32.rrotate( ${1:n}, ${2:disp} )$0"
+			"bit32.rrotate( ${1:number}, ${2:disp} )$0"
 		],
 		"description": "Bitwise right rotate.\n"
 	}

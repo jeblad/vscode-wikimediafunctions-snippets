@@ -35,53 +35,53 @@
 		"description": "Returns a language object for the default content language.\n"
 	},
 	"mw.language 005": {
-		"prefix": "mw.language.getFallbacksFor( code )",
+		"prefix": "mw.language.getFallbacksFor( langCode )",
 		"body": [
-			"mw.language.getFallbacksFor( ${1:code} )$0"
+			"mw.language.getFallbacksFor( ${1:langCode} )$0"
 		],
 		"description": "Returns a list of fallback language codes for the given code.\n"
 	},
 	"mw.language 006": {
-		"prefix": "mw.language.isKnownLanguageTag( code )",
+		"prefix": "mw.language.isKnownLanguageTag( langCode )",
 		"body": [
-			"mw.language.isKnownLanguageTag( ${1:code} )$0"
+			"mw.language.isKnownLanguageTag( ${1:langCode} )$0"
 		],
 		"description": "Checks whether language code is a valid built-in code with known denomyn.\n"
 	},
 	"mw.language 007": {
-		"prefix": "mw.language.isSupportedLanguage( code )",
+		"prefix": "mw.language.isSupportedLanguage( langCode )",
 		"body": [
-			"mw.language.isSupportedLanguage( ${1:code} )$0"
+			"mw.language.isSupportedLanguage( ${1:langCode} )$0"
 		],
 		"description": "Checks whether localisation is available for the language code.\n"
 	},
 	"mw.language 008": {
-		"prefix": "mw.language.isValidBuiltInCode( code )",
+		"prefix": "mw.language.isValidBuiltInCode( langCode )",
 		"body": [
-			"mw.language.isValidBuiltInCode( ${1:code} )$0"
+			"mw.language.isValidBuiltInCode( ${1:langCode} )$0"
 		],
 		"description": "Checks whether the language code is valid for internal customisation.\n"
 	},
 	"mw.language 009": {
-		"prefix": "mw.language.isValidCode( code )",
+		"prefix": "mw.language.isValidCode( langCode )",
 		"body": [
-			"mw.language.isValidCode( ${1:code} )$0"
+			"mw.language.isValidCode( ${1:langCode} )$0"
 		],
 		"description": "Checks whether the language code is superficially valid.\n"
 	},
 	"mw.language 010": {
-		"prefix": "mw.language.new( code )",
+		"prefix": "mw.language.new( langCode )",
 		"body": [
-			"mw.language.new( ${1:code} )$0"
+			"mw.language.new( ${1:langCode} )$0"
 		],
-		"description": "Creates a new language object."
+		"description": "Creates a new language object for the language code."
 	},
 	"mw.language 011": {
-		"prefix": "mw.getLanguage( code )",
+		"prefix": "mw.getLanguage( langCode )",
 		"body": [
-			"mw.getLanguage( ${1:code} )$0"
+			"mw.getLanguage( ${1:langCode} )$0"
 		],
-		"description": "Creates a new language object."
+		"description": "Creates a new language object for the language object."
 	},
 	"mw.language 012": {
 		"prefix": "mw.language:getCode()",
@@ -105,44 +105,44 @@
 		"description": "Checks whether the language code is right-to-left.\n"
 	},
 	"mw.language 015": {
-		"prefix": "mw.language:lc( s )",
+		"prefix": "mw.language:lc( string )",
 		"body": [
-			":lc( ${1:s} )$0"
+			":lc( ${1:string} )$0"
 		],
 		"description": "Converts the whole string to lowercase.\n"
 	},
 	"mw.language 016": {
-		"prefix": "mw.language:lcfirst( s )",
+		"prefix": "mw.language:lcfirst( string )",
 		"body": [
-			":lcfirst( ${1:s} )$0"
+			":lcfirst( ${1:string} )$0"
 		],
 		"description": "Converts the first char in the string to lowercase.\n"
 	},
 	"mw.language 017": {
-		"prefix": "mw.language:uc( s )",
+		"prefix": "mw.language:uc( string )",
 		"body": [
-			":uc( ${1:s} )$0"
+			":uc( ${1:string} )$0"
 		],
 		"description": "Converts the whole string to uppercase.\n"
 	},
 	"mw.language 018": {
-		"prefix": "mw.language:ucfirst( s )",
+		"prefix": "mw.language:ucfirst( string )",
 		"body": [
-			":ucfirst( ${1:s} )$0"
+			":ucfirst( ${1:string} )$0"
 		],
 		"description": "Converts the first char in the string to uppercase.\n"
 	},
 	"mw.language 019": {
-		"prefix": "mw.language:caseFold( s )",
+		"prefix": "mw.language:caseFold( string )",
 		"body": [
-			":caseFold( ${1:s} )$0"
+			":caseFold( ${1:string} )$0"
 		],
 		"description": "Converts the string for case-insensitive comparison.\n"
 	},
 	"mw.language 020": {
-		"prefix": "mw.language:formatNum( n, options )",
+		"prefix": "mw.language:formatNum( number, options )",
 		"body": [
-			":formatNum( ${1:n}${2:, ${3:options}} )$0"
+			":formatNum( ${1:number}${2:, ${3:options}} )$0"
 		],
 		"description": "Formats a number according to rules for the given language.\n"
 	},
@@ -161,37 +161,37 @@
 		"description": "Formats a duration according to rules for the given language.\n"
 	},
 	"mw.language 023": {
-		"prefix": "mw.language:parseFormattedNumber( s )",
+		"prefix": "mw.language:parseFormattedNumber( string )",
 		"body": [
-			":parseFormattedNumber( ${1:s} )$0"
+			":parseFormattedNumber( ${1:string} )$0"
 		],
 		"description": "Inverts a formatted number in a given language into its source form.\n"
 	},
 	"mw.language 024": {
-		"prefix": "mw.language:convertPlural( n, ... )",
+		"prefix": "mw.language:convertPlural( number, ... )",
 		"body": [
-			":convertPlural( ${1:n}, ${2:...} )$0"
+			":convertPlural( ${1:number}, ${2:...} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 025": {
-		"prefix": "mw.language:convertPlural( n, forms )",
+		"prefix": "mw.language:convertPlural( number, forms )",
 		"body": [
-			":convertPlural( ${1:n}, ${2:forms} )$0"
+			":convertPlural( ${1:number}, ${2:forms} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 026": {
-		"prefix": "mw.language:plural( n, ... )",
+		"prefix": "mw.language:plural( number, ... )",
 		"body": [
-			":plural( ${1:n}, ${2:...} )$0"
+			":plural( ${1:number}, ${2:...} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
 	"mw.language 027": {
-		"prefix": "mw.language:plural( n, forms )",
+		"prefix": "mw.language:plural( number, forms )",
 		"body": [
-			":plural( ${1:n}, ${2:forms} )$0"
+			":plural( ${1:number}, ${2:forms} )$0"
 		],
 		"description": "Choose the appropriate grammatical form given the language.\n"
 	},
