@@ -2,6 +2,8 @@
 
 This extension for Visual Studio Code adds snippets for various languages in use by Wikimedia at its sites running [MediaWiki](http://www.mediawiki.org) software. Among those languages are Lua, which is used as a templating language by the [Scribunto extension](https://www.mediawiki.org/wiki/Extension:Scribunto).
 
+The extension is hosted at [GitHub](https://github.com/jeblad/vscode-wikimediafunctions-snippets) and [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jeblad-3.WMFsnippets).
+
 ## Usage
 
 Type part of a snippet, typically by writing something like `mw.ustring.byte`, make sure the highlighted entry is the one you want, press `tab` or `enter`, and the snippet unfolds. Inside the snippet there are one or more highlighted areas, these can be replaced, and it is then possible to tab to next item that can be replaced. Sometimes the highlighted area cover the comma before the argument, that happen when the following is an optional argument.
