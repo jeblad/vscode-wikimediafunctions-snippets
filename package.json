@@ -26,6 +26,14 @@
     "categories": [
         "Snippets"
     ],
+    "keywords": [
+        "lua",
+        "keybindings",
+        "snippet",
+        "format",
+        "mediawiki",
+        "scribunto"
+    ],    
     "contributes": {
         "snippets": [
             {
